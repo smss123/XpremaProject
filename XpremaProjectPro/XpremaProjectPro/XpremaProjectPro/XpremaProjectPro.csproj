@@ -73,6 +73,30 @@
       <DependentUpon>ProjectFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User ManagmentForms\AddUsersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User ManagmentForms\AddUsersFrm.Designer.cs">
+      <DependentUpon>AddUsersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User ManagmentForms\frmGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User ManagmentForms\frmGroup.Designer.cs">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User ManagmentForms\GroupAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User ManagmentForms\GroupAddFrm.Designer.cs">
+      <DependentUpon>GroupAddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User ManagmentForms\managmentUserFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User ManagmentForms\managmentUserFrm.Designer.cs">
+      <DependentUpon>managmentUserFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +116,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User ManagmentForms\AddUsersFrm.resx">
+      <DependentUpon>AddUsersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User ManagmentForms\frmGroup.resx">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User ManagmentForms\GroupAddFrm.resx">
+      <DependentUpon>GroupAddFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User ManagmentForms\managmentUserFrm.resx">
+      <DependentUpon>managmentUserFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\Xprema.Base.Account.datasource" />
     <None Include="Properties\DataSources\Xprema.Base.Attachment.datasource" />
     <None Include="Properties\DataSources\Xprema.Base.Contract.datasource" />

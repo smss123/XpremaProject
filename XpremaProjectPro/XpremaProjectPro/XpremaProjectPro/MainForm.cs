@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Navigation;
+using XpremaProjectPro.User_ManagmentForms;
 
 namespace XpremaProjectPro
 {
@@ -34,6 +35,18 @@ namespace XpremaProjectPro
         {
             ProjectFrm pro = new ProjectFrm();
             pro.ShowDialog();
+        }
+
+        private void gropManagmentBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmGroup Frg = new frmGroup();
+            Frg.ShowDialog();
+        }
+
+        private void AddGrpBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GroupAddFrm Gadd = new GroupAddFrm();
+            Gadd.ShowDialog();
         }
     }
 }

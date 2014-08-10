@@ -26,3 +26,5 @@ C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\Xprema.Base.pdb
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.xml
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.ProjectFrm.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.User_ManagmentForms.frmGroup.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.User_ManagmentForms.GroupAddFrm.resources
