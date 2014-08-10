@@ -32,6 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,11 +59,30 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectFrm.Designer.cs">
+      <DependentUpon>ProjectFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectFrm.resx">
+      <DependentUpon>ProjectFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -64,6 +92,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Xprema.Base.Account.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.Attachment.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.Contract.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.DailyMovemnt.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.Employee.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.GroupPermession.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.ProjectActivity.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.ProjectExpens.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.ProjectOrder.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.ProjectProfile.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.ProjectSubActivity.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.SubTheFinancerAndProject.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.Supplier.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.SystemPermession.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.Thefinancier.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.Transaction.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.UserGroup.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.UserSystem.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.View_AccountDetails.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.View_Account_ByBalance.datasource" />
+    <None Include="Properties\DataSources\Xprema.Base.Xprema_PrjectEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,6 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xprema.Base\Xprema.Base.csproj">
+      <Project>{f56a7353-2e36-41f4-ab78-f2fbc7d759cd}</Project>
+      <Name>Xprema.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
