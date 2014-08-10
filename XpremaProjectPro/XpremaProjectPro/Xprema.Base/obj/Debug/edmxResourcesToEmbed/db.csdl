@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataX" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccountDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Coin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNatural" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Transactions" Relationship="Self.FK_AccountTransaction" FromRole="Accounts" ToRole="Transactions" />
+    <NavigationProperty Name="ProjectActivities" Relationship="Self.FK_ProjectActivities_Accounts" FromRole="Accounts" ToRole="ProjectActivities" />
+    <NavigationProperty Name="ProjectExpenses" Relationship="Self.FK_ProjectExpenses_Accounts" FromRole="Accounts" ToRole="ProjectExpenses" />
+    <NavigationProperty Name="ProjectProfiles" Relationship="Self.FK_ProjectProfiles_Accounts" FromRole="Accounts" ToRole="ProjectProfiles" />
+    <NavigationProperty Name="ProjectSubActivities" Relationship="Self.FK_ProjectSubActivities_Accounts" FromRole="Accounts" ToRole="ProjectSubActivities" />
+    <NavigationProperty Name="Thefinanciers" Relationship="Self.FK_Thefinanciers_Accounts" FromRole="Accounts" ToRole="Thefinanciers" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachmentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fileContent" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProjectProfile_ID" Type="Int32" />
+    <Property Name="ProjectOrder_ID" Type="Int32" />
+    <NavigationProperty Name="ProjectOrder" Relationship="Self.FK_ProjectOrderAttachment" FromRole="Attachments" ToRole="ProjectOrders" />
+    <NavigationProperty Name="ProjectProfile" Relationship="Self.FK_ProjectProfileAttachment" FromRole="Attachments" ToRole="ProjectProfiles" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SelaryAmount" Type="Double" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="EmplyeeAccount_ID" Type="Int32" />
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectProfile_ID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="UserSystem" Relationship="Self.FK_Contracts_Accounts" FromRole="Contracts" ToRole="UserSystems" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_EmployeeContract" FromRole="Contracts" ToRole="Employees" />
+    <NavigationProperty Name="ProjectProfile" Relationship="Self.FK_ProjectProfileContract" FromRole="Contracts" ToRole="ProjectProfiles" />
+  </EntityType>
+  <EntityType Name="DailyMovemnt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FromAccout" Type="Int32" Nullable="false" />
+    <Property Name="ToAccount" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfProcess" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeejobNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeGender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeNationalNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobilenumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Contracts" Relationship="Self.FK_EmployeeContract" FromRole="Employees" ToRole="Contracts" />
+  </EntityType>
+  <EntityType Name="GroupPermession">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="permessionValue" Type="Boolean" Nullable="false" />
+    <Property Name="SystemPermession_Id" Type="Int32" Nullable="false" />
+    <Property Name="UserGroup_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SystemPermession" Relationship="Self.FK_SystemPermessionGroupPermession" FromRole="GroupPermessions" ToRole="SystemPermessions" />
+    <NavigationProperty Name="UserGroup" Relationship="Self.FK_UserGroupGroupPermession" FromRole="GroupPermessions" ToRole="UserGroups" />
+  </EntityType>
+  <EntityType Name="ProjectActivity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Progress" Type="Int32" Nullable="false" />
+    <Property Name="TotalCost" Type="Double" Nullable="false" />
+    <Property Name="ProjectProfile_ID" Type="Int32" Nullable="false" />
+    <Property Name="Account_ID" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_ProjectActivities_Accounts" FromRole="ProjectActivities" ToRole="Accounts" />
+    <NavigationProperty Name="ProjectSubActivities" Relationship="Self.FK_ProjectActivityProjectSubActivity" FromRole="ProjectActivities" ToRole="ProjectSubActivities" />
+    <NavigationProperty Name="ProjectProfile" Relationship="Self.FK_ProjectProfileProjectActivity" FromRole="ProjectActivities" ToRole="ProjectProfiles" />
+  </EntityType>
+  <EntityType Name="ProjectExpens">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpensesName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateofProcess" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BillNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequiarAmount" Type="Double" Nullable="false" />
+    <Property Name="CashingNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectSubActivity_ID" Type="Int32" Nullable="false" />
+    <Property Name="Account_ID" Type="Int32" />
+    <Property Name="Supplier_ID" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_ProjectExpenses_Accounts" FromRole="ProjectExpenses" ToRole="Accounts" />
+    <NavigationProperty Name="ProjectSubActivity" Relationship="Self.FK_ProjectSubActivityProjectExpens" FromRole="ProjectExpenses" ToRole="ProjectSubActivities" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_SupplierProjectExpens" FromRole="ProjectExpenses" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="ProjectOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OrderBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ProjectProfile_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Attachments" Relationship="Self.FK_ProjectOrderAttachment" FromRole="ProjectOrders" ToRole="Attachments" />
+    <NavigationProperty Name="ProjectProfile" Relationship="Self.FK_ProjectProfileProjectOrder" FromRole="ProjectOrders" ToRole="ProjectProfiles" />
+  </EntityType>
+  <EntityType Name="ProjectProfile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="progress" Type="Int32" Nullable="false" />
+    <Property Name="TotalCost" Type="Double" Nullable="false" />
+    <Property Name="AccountID" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_ProjectProfiles_Accounts" FromRole="ProjectProfiles" ToRole="Accounts" />
+    <NavigationProperty Name="Attachments" Relationship="Self.FK_ProjectProfileAttachment" FromRole="ProjectProfiles" ToRole="Attachments" />
+    <NavigationProperty Name="Contracts" Relationship="Self.FK_ProjectProfileContract" FromRole="ProjectProfiles" ToRole="Contracts" />
+    <NavigationProperty Name="ProjectActivities" Relationship="Self.FK_ProjectProfileProjectActivity" FromRole="ProjectProfiles" ToRole="ProjectActivities" />
+    <NavigationProperty Name="ProjectOrders" Relationship="Self.FK_ProjectProfileProjectOrder" FromRole="ProjectProfiles" ToRole="ProjectOrders" />
+    <NavigationProperty Name="SubTheFinancerAndProjects" Relationship="Self.FK_SubTheFinancerAndProject_ProjectProfiles" FromRole="ProjectProfiles" ToRole="SubTheFinancerAndProject" />
+  </EntityType>
+  <EntityType Name="ProjectSubActivity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubActivityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Startdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Persentage" Type="Int32" Nullable="false" />
+    <Property Name="TotalCost" Type="Double" Nullable="false" />
+    <Property Name="ProjectActivity_ID" Type="Int32" Nullable="false" />
+    <Property Name="Account_ID" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_ProjectSubActivities_Accounts" FromRole="ProjectSubActivities" ToRole="Accounts" />
+    <NavigationProperty Name="ProjectActivity" Relationship="Self.FK_ProjectActivityProjectSubActivity" FromRole="ProjectSubActivities" ToRole="ProjectActivities" />
+    <NavigationProperty Name="ProjectExpenses" Relationship="Self.FK_ProjectSubActivityProjectExpens" FromRole="ProjectSubActivities" ToRole="ProjectExpenses" />
+  </EntityType>
+  <EntityType Name="SubTheFinancerAndProject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="FinacerID" Type="Int32" />
+    <NavigationProperty Name="ProjectProfile" Relationship="Self.FK_SubTheFinancerAndProject_ProjectProfiles" FromRole="SubTheFinancerAndProject" ToRole="ProjectProfiles" />
+    <NavigationProperty Name="Thefinancier" Relationship="Self.FK_SubTheFinancerAndProject_Thefinanciers" FromRole="SubTheFinancerAndProject" ToRole="Thefinanciers" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SuppliersNatural" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adderss" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProjectExpenses" Relationship="Self.FK_SupplierProjectExpens" FromRole="Suppliers" ToRole="ProjectExpenses" />
+  </EntityType>
+  <EntityType Name="SystemPermession">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermessionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PropertyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="GroupPermessions" Relationship="Self.FK_SystemPermessionGroupPermession" FromRole="SystemPermessions" ToRole="GroupPermessions" />
+  </EntityType>
+  <EntityType Name="Thefinancier">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="financiername" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="agentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adderss" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_Thefinanciers_Accounts" FromRole="Thefinanciers" ToRole="Accounts" />
+    <NavigationProperty Name="SubTheFinancerAndProjects" Relationship="Self.FK_SubTheFinancerAndProject_Thefinanciers" FromRole="Thefinanciers" ToRole="SubTheFinancerAndProject" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateOfTransaction" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TotalIn" Type="Double" Nullable="false" />
+    <Property Name="TotalOut" Type="Double" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CommandNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Account_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_AccountTransaction" FromRole="Transactions" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="GroupPermessions" Relationship="Self.FK_UserGroupGroupPermession" FromRole="UserGroups" ToRole="GroupPermessions" />
+    <NavigationProperty Name="UserSystems" Relationship="Self.FK_UserGroupUserSystem" FromRole="UserGroups" ToRole="UserSystems" />
+  </EntityType>
+  <EntityType Name="UserSystem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserGroup_Id" Type="Int32" />
+    <NavigationProperty Name="Contracts" Relationship="Self.FK_Contracts_Accounts" FromRole="UserSystems" ToRole="Contracts" />
+    <NavigationProperty Name="UserGroup" Relationship="Self.FK_UserGroupUserSystem" FromRole="UserSystems" ToRole="UserGroups" />
+  </EntityType>
+  <EntityType Name="View_Account_ByBalance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccountDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Coin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="balance" Type="Double" />
+    <Property Name="FormatedBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_AccountDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ProcessID" />
+      <PropertyRef Name="DateOfTransaction" />
+      <PropertyRef Name="TotalIn" />
+      <PropertyRef Name="TotalOut" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="AccountName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccountDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Coin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Balance" Type="Double" />
+    <Property Name="AllDeposes" Type="Double" />
+    <Property Name="AllWishdrowls" Type="Double" />
+    <Property Name="ProcessID" Type="Int32" Nullable="false" />
+    <Property Name="DateOfTransaction" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TotalIn" Type="Double" Nullable="false" />
+    <Property Name="TotalOut" Type="Double" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_AccountTransaction">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="1" />
+    <End Role="Transactions" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectActivities_Accounts">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ProjectActivities" Type="Self.ProjectActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectActivities">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectExpenses_Accounts">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ProjectExpenses" Type="Self.ProjectExpens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectExpenses">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfiles_Accounts">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ProjectProfiles" Type="Self.ProjectProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectProfiles">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSubActivities_Accounts">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ProjectSubActivities" Type="Self.ProjectSubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectSubActivities">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Thefinanciers_Accounts">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="1" />
+    <End Role="Thefinanciers" Type="Self.Thefinancier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Thefinanciers">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectOrderAttachment">
+    <End Role="ProjectOrders" Type="Self.ProjectOrder" Multiplicity="0..1" />
+    <End Role="Attachments" Type="Self.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectOrders">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="ProjectOrder_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileAttachment">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfile" Multiplicity="0..1" />
+    <End Role="Attachments" Type="Self.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contracts_Accounts">
+    <End Role="UserSystems" Type="Self.UserSystem" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Contracts" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSystems">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeContract">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Contracts" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="Employee_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileContract">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfile" Multiplicity="1" />
+    <End Role="Contracts" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemPermessionGroupPermession">
+    <End Role="SystemPermessions" Type="Self.SystemPermession" Multiplicity="1" />
+    <End Role="GroupPermessions" Type="Self.GroupPermession" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemPermessions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupPermessions">
+        <PropertyRef Name="SystemPermession_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGroupGroupPermession">
+    <End Role="UserGroups" Type="Self.UserGroup" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="GroupPermessions" Type="Self.GroupPermession" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupPermessions">
+        <PropertyRef Name="UserGroup_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectActivityProjectSubActivity">
+    <End Role="ProjectActivities" Type="Self.ProjectActivity" Multiplicity="1" />
+    <End Role="ProjectSubActivities" Type="Self.ProjectSubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectActivities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectSubActivities">
+        <PropertyRef Name="ProjectActivity_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileProjectActivity">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfile" Multiplicity="1" />
+    <End Role="ProjectActivities" Type="Self.ProjectActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectActivities">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSubActivityProjectExpens">
+    <End Role="ProjectSubActivities" Type="Self.ProjectSubActivity" Multiplicity="1" />
+    <End Role="ProjectExpenses" Type="Self.ProjectExpens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectSubActivities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectExpenses">
+        <PropertyRef Name="ProjectSubActivity_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierProjectExpens">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="ProjectExpenses" Type="Self.ProjectExpens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectExpenses">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileProjectOrder">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfile" Multiplicity="1" />
+    <End Role="ProjectOrders" Type="Self.ProjectOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectOrders">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTheFinancerAndProject_ProjectProfiles">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfile" Multiplicity="0..1" />
+    <End Role="SubTheFinancerAndProject" Type="Self.SubTheFinancerAndProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubTheFinancerAndProject">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTheFinancerAndProject_Thefinanciers">
+    <End Role="Thefinanciers" Type="Self.Thefinancier" Multiplicity="0..1" />
+    <End Role="SubTheFinancerAndProject" Type="Self.SubTheFinancerAndProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Thefinanciers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubTheFinancerAndProject">
+        <PropertyRef Name="FinacerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGroupUserSystem">
+    <End Role="UserGroups" Type="Self.UserGroup" Multiplicity="0..1" />
+    <End Role="UserSystems" Type="Self.UserSystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserSystems">
+        <PropertyRef Name="UserGroup_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Xprema_PrjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Attachments" EntityType="Self.Attachment" />
+    <EntitySet Name="Contracts" EntityType="Self.Contract" />
+    <EntitySet Name="DailyMovemnts" EntityType="Self.DailyMovemnt" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="GroupPermessions" EntityType="Self.GroupPermession" />
+    <EntitySet Name="ProjectActivities" EntityType="Self.ProjectActivity" />
+    <EntitySet Name="ProjectExpenses" EntityType="Self.ProjectExpens" />
+    <EntitySet Name="ProjectOrders" EntityType="Self.ProjectOrder" />
+    <EntitySet Name="ProjectProfiles" EntityType="Self.ProjectProfile" />
+    <EntitySet Name="ProjectSubActivities" EntityType="Self.ProjectSubActivity" />
+    <EntitySet Name="SubTheFinancerAndProjects" EntityType="Self.SubTheFinancerAndProject" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="SystemPermessions" EntityType="Self.SystemPermession" />
+    <EntitySet Name="Thefinanciers" EntityType="Self.Thefinancier" />
+    <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+    <EntitySet Name="UserGroups" EntityType="Self.UserGroup" />
+    <EntitySet Name="UserSystems" EntityType="Self.UserSystem" />
+    <EntitySet Name="View_Account_ByBalance" EntityType="Self.View_Account_ByBalance" />
+    <EntitySet Name="View_AccountDetails" EntityType="Self.View_AccountDetails" />
+    <AssociationSet Name="FK_AccountTransaction" Association="Self.FK_AccountTransaction">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectActivities_Accounts" Association="Self.FK_ProjectActivities_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectActivities" EntitySet="ProjectActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectExpenses_Accounts" Association="Self.FK_ProjectExpenses_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectExpenses" EntitySet="ProjectExpenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfiles_Accounts" Association="Self.FK_ProjectProfiles_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSubActivities_Accounts" Association="Self.FK_ProjectSubActivities_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectSubActivities" EntitySet="ProjectSubActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Thefinanciers_Accounts" Association="Self.FK_Thefinanciers_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Thefinanciers" EntitySet="Thefinanciers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectOrderAttachment" Association="Self.FK_ProjectOrderAttachment">
+      <End Role="ProjectOrders" EntitySet="ProjectOrders" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileAttachment" Association="Self.FK_ProjectProfileAttachment">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contracts_Accounts" Association="Self.FK_Contracts_Accounts">
+      <End Role="UserSystems" EntitySet="UserSystems" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeContract" Association="Self.FK_EmployeeContract">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileContract" Association="Self.FK_ProjectProfileContract">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemPermessionGroupPermession" Association="Self.FK_SystemPermessionGroupPermession">
+      <End Role="SystemPermessions" EntitySet="SystemPermessions" />
+      <End Role="GroupPermessions" EntitySet="GroupPermessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGroupGroupPermession" Association="Self.FK_UserGroupGroupPermession">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="GroupPermessions" EntitySet="GroupPermessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectActivityProjectSubActivity" Association="Self.FK_ProjectActivityProjectSubActivity">
+      <End Role="ProjectActivities" EntitySet="ProjectActivities" />
+      <End Role="ProjectSubActivities" EntitySet="ProjectSubActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileProjectActivity" Association="Self.FK_ProjectProfileProjectActivity">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="ProjectActivities" EntitySet="ProjectActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSubActivityProjectExpens" Association="Self.FK_ProjectSubActivityProjectExpens">
+      <End Role="ProjectSubActivities" EntitySet="ProjectSubActivities" />
+      <End Role="ProjectExpenses" EntitySet="ProjectExpenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierProjectExpens" Association="Self.FK_SupplierProjectExpens">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="ProjectExpenses" EntitySet="ProjectExpenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileProjectOrder" Association="Self.FK_ProjectProfileProjectOrder">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="ProjectOrders" EntitySet="ProjectOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTheFinancerAndProject_ProjectProfiles" Association="Self.FK_SubTheFinancerAndProject_ProjectProfiles">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="SubTheFinancerAndProject" EntitySet="SubTheFinancerAndProjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTheFinancerAndProject_Thefinanciers" Association="Self.FK_SubTheFinancerAndProject_Thefinanciers">
+      <End Role="Thefinanciers" EntitySet="Thefinanciers" />
+      <End Role="SubTheFinancerAndProject" EntitySet="SubTheFinancerAndProjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGroupUserSystem" Association="Self.FK_UserGroupUserSystem">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="UserSystems" EntitySet="UserSystems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

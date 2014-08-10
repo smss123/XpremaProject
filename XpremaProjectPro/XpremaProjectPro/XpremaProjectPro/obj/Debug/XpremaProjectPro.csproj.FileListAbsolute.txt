@@ -1,0 +1,12 @@
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\XpremaProjectPro.exe.config
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\XpremaProjectPro.exe
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\XpremaProjectPro.pdb
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.csprojResolveAssemblyReference.cache
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.frmMain.resources
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.Properties.Resources.resources
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.csproj.GenerateResource.Cache
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.exe
+C:\Users\xprema\OneDrive\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.pdb
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\XpremaProjectPro.exe.config
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.exe
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.pdb

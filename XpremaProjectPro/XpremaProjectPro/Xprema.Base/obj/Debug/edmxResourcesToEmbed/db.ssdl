@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataX.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountName" Type="nvarchar(max)" />
+    <Property Name="AccountDescription" Type="nvarchar(max)" />
+    <Property Name="Coin" Type="nvarchar(max)" />
+    <Property Name="AccountNatural" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Attachments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttachmentName" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="fileContent" Type="image" Nullable="false" />
+    <Property Name="ProjectProfile_ID" Type="int" />
+    <Property Name="ProjectOrder_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Contracts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="SelaryAmount" Type="float" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="EmplyeeAccount_ID" Type="int" />
+    <Property Name="Employee_ID" Type="int" Nullable="false" />
+    <Property Name="ProjectProfile_ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="DailyMovemnts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromAccout" Type="int" Nullable="false" />
+    <Property Name="ToAccount" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="DateOfProcess" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar(max)" />
+    <Property Name="EmployeejobNumber" Type="nvarchar(max)" />
+    <Property Name="EmployeeGender" Type="nvarchar(max)" />
+    <Property Name="EmployeeNationalNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="Mobilenumber" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="GroupPermessions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="permessionValue" Type="bit" Nullable="false" />
+    <Property Name="SystemPermession_Id" Type="int" Nullable="false" />
+    <Property Name="UserGroup_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjectActivities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityName" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Progress" Type="int" Nullable="false" />
+    <Property Name="TotalCost" Type="float" Nullable="false" />
+    <Property Name="ProjectProfile_ID" Type="int" Nullable="false" />
+    <Property Name="Account_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectExpenses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpensesName" Type="nvarchar(max)" />
+    <Property Name="DateofProcess" Type="datetime" Nullable="false" />
+    <Property Name="BillNumber" Type="nvarchar(max)" />
+    <Property Name="RequiarAmount" Type="float" Nullable="false" />
+    <Property Name="CashingNumber" Type="nvarchar(max)" />
+    <Property Name="ProjectSubActivity_ID" Type="int" Nullable="false" />
+    <Property Name="Account_ID" Type="int" />
+    <Property Name="Supplier_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectOrders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderTitle" Type="nvarchar(max)" />
+    <Property Name="OrderBody" Type="nvarchar(max)" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="ProjectProfile_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjectProfiles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar(max)" />
+    <Property Name="ProjectDescription" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="progress" Type="int" Nullable="false" />
+    <Property Name="TotalCost" Type="float" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectSubActivities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubActivityName" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Startdate" Type="datetime" Nullable="false" />
+    <Property Name="enddate" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Persentage" Type="int" Nullable="false" />
+    <Property Name="TotalCost" Type="float" Nullable="false" />
+    <Property Name="ProjectActivity_ID" Type="int" Nullable="false" />
+    <Property Name="Account_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="SubTheFinancerAndProject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="FinacerID" Type="int" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="SuppliersNatural" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Adderss" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SystemPermessions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermessionName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PropertyName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Thefinanciers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="financiername" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="agentName" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Adderss" Type="nvarchar(max)" />
+    <Property Name="AccountID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateOfTransaction" Type="datetime" Nullable="false" />
+    <Property Name="TotalIn" Type="float" Nullable="false" />
+    <Property Name="TotalOut" Type="float" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CommandNames" Type="nvarchar(max)" />
+    <Property Name="Account_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GroupDescription" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSystems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserGroup_Id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Xprema Prject.dbo.View_Account_ByBalance' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_Account_ByBalance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountName" Type="nvarchar(max)" />
+    <Property Name="AccountDescription" Type="nvarchar(max)" />
+    <Property Name="Coin" Type="nvarchar(max)" />
+    <Property Name="balance" Type="float" />
+    <Property Name="FormatedBalance" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Xprema Prject.dbo.View_AccountDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_AccountDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ProcessID" />
+      <PropertyRef Name="DateOfTransaction" />
+      <PropertyRef Name="TotalIn" />
+      <PropertyRef Name="TotalOut" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="AccountName" Type="nvarchar(max)" />
+    <Property Name="AccountDescription" Type="nvarchar(max)" />
+    <Property Name="Coin" Type="nvarchar(max)" />
+    <Property Name="Balance" Type="float" />
+    <Property Name="AllDeposes" Type="float" />
+    <Property Name="AllWishdrowls" Type="float" />
+    <Property Name="ProcessID" Type="int" Nullable="false" />
+    <Property Name="DateOfTransaction" Type="datetime" Nullable="false" />
+    <Property Name="TotalIn" Type="float" Nullable="false" />
+    <Property Name="TotalOut" Type="float" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Xprema Prject.dbo.View_AccountNameAndCoin' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="View_AccountNameAndCoin">
+          <Property Name="AccountName" Type="nvarchar(max)" />
+          <Property Name="Coin" Type="nvarchar(max)" />
+        </EntityType>-->
+  <Association Name="FK_AccountTransaction">
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
+    <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contracts_Accounts">
+    <End Role="UserSystems" Type="Self.UserSystems" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSystems">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeContract">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="Employee_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectActivities_Accounts">
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="0..1" />
+    <End Role="ProjectActivities" Type="Self.ProjectActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectActivities">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectActivityProjectSubActivity">
+    <End Role="ProjectActivities" Type="Self.ProjectActivities" Multiplicity="1" />
+    <End Role="ProjectSubActivities" Type="Self.ProjectSubActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectActivities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectSubActivities">
+        <PropertyRef Name="ProjectActivity_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectExpenses_Accounts">
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="0..1" />
+    <End Role="ProjectExpenses" Type="Self.ProjectExpenses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectExpenses">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectOrderAttachment">
+    <End Role="ProjectOrders" Type="Self.ProjectOrders" Multiplicity="0..1" />
+    <End Role="Attachments" Type="Self.Attachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectOrders">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="ProjectOrder_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileAttachment">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfiles" Multiplicity="0..1" />
+    <End Role="Attachments" Type="Self.Attachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileContract">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfiles" Multiplicity="1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileProjectActivity">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfiles" Multiplicity="1" />
+    <End Role="ProjectActivities" Type="Self.ProjectActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectActivities">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfileProjectOrder">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfiles" Multiplicity="1" />
+    <End Role="ProjectOrders" Type="Self.ProjectOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectOrders">
+        <PropertyRef Name="ProjectProfile_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectProfiles_Accounts">
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="0..1" />
+    <End Role="ProjectProfiles" Type="Self.ProjectProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectProfiles">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSubActivities_Accounts">
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="0..1" />
+    <End Role="ProjectSubActivities" Type="Self.ProjectSubActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectSubActivities">
+        <PropertyRef Name="Account_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSubActivityProjectExpens">
+    <End Role="ProjectSubActivities" Type="Self.ProjectSubActivities" Multiplicity="1" />
+    <End Role="ProjectExpenses" Type="Self.ProjectExpenses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectSubActivities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectExpenses">
+        <PropertyRef Name="ProjectSubActivity_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTheFinancerAndProject_ProjectProfiles">
+    <End Role="ProjectProfiles" Type="Self.ProjectProfiles" Multiplicity="0..1" />
+    <End Role="SubTheFinancerAndProject" Type="Self.SubTheFinancerAndProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectProfiles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubTheFinancerAndProject">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTheFinancerAndProject_Thefinanciers">
+    <End Role="Thefinanciers" Type="Self.Thefinanciers" Multiplicity="0..1" />
+    <End Role="SubTheFinancerAndProject" Type="Self.SubTheFinancerAndProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Thefinanciers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubTheFinancerAndProject">
+        <PropertyRef Name="FinacerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierProjectExpens">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+    <End Role="ProjectExpenses" Type="Self.ProjectExpenses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectExpenses">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemPermessionGroupPermession">
+    <End Role="SystemPermessions" Type="Self.SystemPermessions" Multiplicity="1" />
+    <End Role="GroupPermessions" Type="Self.GroupPermessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemPermessions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupPermessions">
+        <PropertyRef Name="SystemPermession_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Thefinanciers_Accounts">
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
+    <End Role="Thefinanciers" Type="Self.Thefinanciers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Thefinanciers">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGroupGroupPermession">
+    <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="GroupPermessions" Type="Self.GroupPermessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupPermessions">
+        <PropertyRef Name="UserGroup_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGroupUserSystem">
+    <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="0..1" />
+    <End Role="UserSystems" Type="Self.UserSystems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserSystems">
+        <PropertyRef Name="UserGroup_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetBalance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="accountID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalCostOfActivty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="ProjectID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalCostOfExpenses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="SubActivity_ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalCostOfSubActivty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="Activty" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="accountID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetTotalOut" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="accountID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="DataXStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attachments" EntityType="Self.Attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyMovemnts" EntityType="Self.DailyMovemnts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupPermessions" EntityType="Self.GroupPermessions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectActivities" EntityType="Self.ProjectActivities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectExpenses" EntityType="Self.ProjectExpenses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectOrders" EntityType="Self.ProjectOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectProfiles" EntityType="Self.ProjectProfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectSubActivities" EntityType="Self.ProjectSubActivities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubTheFinancerAndProject" EntityType="Self.SubTheFinancerAndProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemPermessions" EntityType="Self.SystemPermessions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Thefinanciers" EntityType="Self.Thefinanciers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserGroups" EntityType="Self.UserGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserSystems" EntityType="Self.UserSystems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_Account_ByBalance" EntityType="Self.View_Account_ByBalance" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_Account_ByBalance].[ID] AS [ID], 
+    [View_Account_ByBalance].[AccountName] AS [AccountName], 
+    [View_Account_ByBalance].[AccountDescription] AS [AccountDescription], 
+    [View_Account_ByBalance].[Coin] AS [Coin], 
+    [View_Account_ByBalance].[balance] AS [balance], 
+    [View_Account_ByBalance].[FormatedBalance] AS [FormatedBalance]
+    FROM [dbo].[View_Account_ByBalance] AS [View_Account_ByBalance]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_AccountDetails" EntityType="Self.View_AccountDetails" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_AccountDetails].[ID] AS [ID], 
+    [View_AccountDetails].[AccountName] AS [AccountName], 
+    [View_AccountDetails].[AccountDescription] AS [AccountDescription], 
+    [View_AccountDetails].[Coin] AS [Coin], 
+    [View_AccountDetails].[Balance] AS [Balance], 
+    [View_AccountDetails].[AllDeposes] AS [AllDeposes], 
+    [View_AccountDetails].[AllWishdrowls] AS [AllWishdrowls], 
+    [View_AccountDetails].[ProcessID] AS [ProcessID], 
+    [View_AccountDetails].[DateOfTransaction] AS [DateOfTransaction], 
+    [View_AccountDetails].[TotalIn] AS [TotalIn], 
+    [View_AccountDetails].[TotalOut] AS [TotalOut], 
+    [View_AccountDetails].[Description] AS [Description]
+    FROM [dbo].[View_AccountDetails] AS [View_AccountDetails]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AccountTransaction" Association="Self.FK_AccountTransaction">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contracts_Accounts" Association="Self.FK_Contracts_Accounts">
+      <End Role="UserSystems" EntitySet="UserSystems" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeContract" Association="Self.FK_EmployeeContract">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectActivities_Accounts" Association="Self.FK_ProjectActivities_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectActivities" EntitySet="ProjectActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectActivityProjectSubActivity" Association="Self.FK_ProjectActivityProjectSubActivity">
+      <End Role="ProjectActivities" EntitySet="ProjectActivities" />
+      <End Role="ProjectSubActivities" EntitySet="ProjectSubActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectExpenses_Accounts" Association="Self.FK_ProjectExpenses_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectExpenses" EntitySet="ProjectExpenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectOrderAttachment" Association="Self.FK_ProjectOrderAttachment">
+      <End Role="ProjectOrders" EntitySet="ProjectOrders" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileAttachment" Association="Self.FK_ProjectProfileAttachment">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileContract" Association="Self.FK_ProjectProfileContract">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileProjectActivity" Association="Self.FK_ProjectProfileProjectActivity">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="ProjectActivities" EntitySet="ProjectActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfileProjectOrder" Association="Self.FK_ProjectProfileProjectOrder">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="ProjectOrders" EntitySet="ProjectOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectProfiles_Accounts" Association="Self.FK_ProjectProfiles_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSubActivities_Accounts" Association="Self.FK_ProjectSubActivities_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="ProjectSubActivities" EntitySet="ProjectSubActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSubActivityProjectExpens" Association="Self.FK_ProjectSubActivityProjectExpens">
+      <End Role="ProjectSubActivities" EntitySet="ProjectSubActivities" />
+      <End Role="ProjectExpenses" EntitySet="ProjectExpenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTheFinancerAndProject_ProjectProfiles" Association="Self.FK_SubTheFinancerAndProject_ProjectProfiles">
+      <End Role="ProjectProfiles" EntitySet="ProjectProfiles" />
+      <End Role="SubTheFinancerAndProject" EntitySet="SubTheFinancerAndProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTheFinancerAndProject_Thefinanciers" Association="Self.FK_SubTheFinancerAndProject_Thefinanciers">
+      <End Role="Thefinanciers" EntitySet="Thefinanciers" />
+      <End Role="SubTheFinancerAndProject" EntitySet="SubTheFinancerAndProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierProjectExpens" Association="Self.FK_SupplierProjectExpens">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="ProjectExpenses" EntitySet="ProjectExpenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemPermessionGroupPermession" Association="Self.FK_SystemPermessionGroupPermession">
+      <End Role="SystemPermessions" EntitySet="SystemPermessions" />
+      <End Role="GroupPermessions" EntitySet="GroupPermessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Thefinanciers_Accounts" Association="Self.FK_Thefinanciers_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Thefinanciers" EntitySet="Thefinanciers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGroupGroupPermession" Association="Self.FK_UserGroupGroupPermession">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="GroupPermessions" EntitySet="GroupPermessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGroupUserSystem" Association="Self.FK_UserGroupUserSystem">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="UserSystems" EntitySet="UserSystems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

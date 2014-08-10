@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataXStoreContainer" CdmEntityContainer="Xprema_PrjectEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="DataX.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+          <ScalarProperty Name="Coin" ColumnName="Coin" />
+          <ScalarProperty Name="AccountNatural" ColumnName="AccountNatural" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachments">
+      <EntityTypeMapping TypeName="DataX.Attachment">
+        <MappingFragment StoreEntitySet="Attachments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="fileContent" ColumnName="fileContent" />
+          <ScalarProperty Name="ProjectProfile_ID" ColumnName="ProjectProfile_ID" />
+          <ScalarProperty Name="ProjectOrder_ID" ColumnName="ProjectOrder_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="DataX.Contract">
+        <MappingFragment StoreEntitySet="Contracts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="SelaryAmount" ColumnName="SelaryAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EmplyeeAccount_ID" ColumnName="EmplyeeAccount_ID" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="ProjectProfile_ID" ColumnName="ProjectProfile_ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyMovemnts">
+      <EntityTypeMapping TypeName="DataX.DailyMovemnt">
+        <MappingFragment StoreEntitySet="DailyMovemnts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FromAccout" ColumnName="FromAccout" />
+          <ScalarProperty Name="ToAccount" ColumnName="ToAccount" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateOfProcess" ColumnName="DateOfProcess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="DataX.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeejobNumber" ColumnName="EmployeejobNumber" />
+          <ScalarProperty Name="EmployeeGender" ColumnName="EmployeeGender" />
+          <ScalarProperty Name="EmployeeNationalNumber" ColumnName="EmployeeNationalNumber" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Mobilenumber" ColumnName="Mobilenumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupPermessions">
+      <EntityTypeMapping TypeName="DataX.GroupPermession">
+        <MappingFragment StoreEntitySet="GroupPermessions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="permessionValue" ColumnName="permessionValue" />
+          <ScalarProperty Name="SystemPermession_Id" ColumnName="SystemPermession_Id" />
+          <ScalarProperty Name="UserGroup_Id" ColumnName="UserGroup_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectActivities">
+      <EntityTypeMapping TypeName="DataX.ProjectActivity">
+        <MappingFragment StoreEntitySet="ProjectActivities">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="ProjectProfile_ID" ColumnName="ProjectProfile_ID" />
+          <ScalarProperty Name="Account_ID" ColumnName="Account_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectExpenses">
+      <EntityTypeMapping TypeName="DataX.ProjectExpens">
+        <MappingFragment StoreEntitySet="ProjectExpenses">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ExpensesName" ColumnName="ExpensesName" />
+          <ScalarProperty Name="DateofProcess" ColumnName="DateofProcess" />
+          <ScalarProperty Name="BillNumber" ColumnName="BillNumber" />
+          <ScalarProperty Name="RequiarAmount" ColumnName="RequiarAmount" />
+          <ScalarProperty Name="CashingNumber" ColumnName="CashingNumber" />
+          <ScalarProperty Name="ProjectSubActivity_ID" ColumnName="ProjectSubActivity_ID" />
+          <ScalarProperty Name="Account_ID" ColumnName="Account_ID" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectOrders">
+      <EntityTypeMapping TypeName="DataX.ProjectOrder">
+        <MappingFragment StoreEntitySet="ProjectOrders">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderTitle" ColumnName="OrderTitle" />
+          <ScalarProperty Name="OrderBody" ColumnName="OrderBody" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="ProjectProfile_ID" ColumnName="ProjectProfile_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectProfiles">
+      <EntityTypeMapping TypeName="DataX.ProjectProfile">
+        <MappingFragment StoreEntitySet="ProjectProfiles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="progress" ColumnName="progress" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectSubActivities">
+      <EntityTypeMapping TypeName="DataX.ProjectSubActivity">
+        <MappingFragment StoreEntitySet="ProjectSubActivities">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SubActivityName" ColumnName="SubActivityName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Persentage" ColumnName="Persentage" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="ProjectActivity_ID" ColumnName="ProjectActivity_ID" />
+          <ScalarProperty Name="Account_ID" ColumnName="Account_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubTheFinancerAndProjects">
+      <EntityTypeMapping TypeName="DataX.SubTheFinancerAndProject">
+        <MappingFragment StoreEntitySet="SubTheFinancerAndProject">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="FinacerID" ColumnName="FinacerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="DataX.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SuppliersNatural" ColumnName="SuppliersNatural" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adderss" ColumnName="Adderss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemPermessions">
+      <EntityTypeMapping TypeName="DataX.SystemPermession">
+        <MappingFragment StoreEntitySet="SystemPermessions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PermessionName" ColumnName="PermessionName" />
+          <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Thefinanciers">
+      <EntityTypeMapping TypeName="DataX.Thefinancier">
+        <MappingFragment StoreEntitySet="Thefinanciers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="financiername" ColumnName="financiername" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="agentName" ColumnName="agentName" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adderss" ColumnName="Adderss" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="DataX.Transaction">
+        <MappingFragment StoreEntitySet="Transactions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateOfTransaction" ColumnName="DateOfTransaction" />
+          <ScalarProperty Name="TotalIn" ColumnName="TotalIn" />
+          <ScalarProperty Name="TotalOut" ColumnName="TotalOut" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CommandNames" ColumnName="CommandNames" />
+          <ScalarProperty Name="Account_ID" ColumnName="Account_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroups">
+      <EntityTypeMapping TypeName="DataX.UserGroup">
+        <MappingFragment StoreEntitySet="UserGroups">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupDescription" ColumnName="GroupDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSystems">
+      <EntityTypeMapping TypeName="DataX.UserSystem">
+        <MappingFragment StoreEntitySet="UserSystems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserGroup_Id" ColumnName="UserGroup_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Account_ByBalance">
+      <EntityTypeMapping TypeName="DataX.View_Account_ByBalance">
+        <MappingFragment StoreEntitySet="View_Account_ByBalance">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+          <ScalarProperty Name="Coin" ColumnName="Coin" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="FormatedBalance" ColumnName="FormatedBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_AccountDetails">
+      <EntityTypeMapping TypeName="DataX.View_AccountDetails">
+        <MappingFragment StoreEntitySet="View_AccountDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+          <ScalarProperty Name="Coin" ColumnName="Coin" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="AllDeposes" ColumnName="AllDeposes" />
+          <ScalarProperty Name="AllWishdrowls" ColumnName="AllWishdrowls" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="DateOfTransaction" ColumnName="DateOfTransaction" />
+          <ScalarProperty Name="TotalIn" ColumnName="TotalIn" />
+          <ScalarProperty Name="TotalOut" ColumnName="TotalOut" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
