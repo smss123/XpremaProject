@@ -17,5 +17,11 @@ namespace XpremaProjectPro.User_ManagmentForms
         {
             InitializeComponent();
         }
+
+        private void AddBtn_ItemClick(object sender, TileItemEventArgs e)
+        {
+            AddUsersFrm adUser = new AddUsersFrm();
+            adUser.ShowDialog();
+        }
     }
 }

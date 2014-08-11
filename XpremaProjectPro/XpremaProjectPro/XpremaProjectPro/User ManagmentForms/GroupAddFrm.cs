@@ -17,5 +17,10 @@ namespace XpremaProjectPro.User_ManagmentForms
         {
             InitializeComponent();
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

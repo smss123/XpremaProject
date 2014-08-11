@@ -48,5 +48,17 @@ namespace XpremaProjectPro
             GroupAddFrm Gadd = new GroupAddFrm();
             Gadd.ShowDialog();
         }
+
+        private void AddUserBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddUsersFrm addUserfrm = new AddUsersFrm();
+            addUserfrm.ShowDialog();
+        }
+
+        private void managmentUserBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            managmentUserFrm MngUserfrm = new managmentUserFrm();
+            MngUserfrm.ShowDialog();
+        }
     }
 }

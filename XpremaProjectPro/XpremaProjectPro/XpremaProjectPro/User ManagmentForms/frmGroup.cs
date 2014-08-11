@@ -22,5 +22,16 @@ namespace XpremaProjectPro.User_ManagmentForms
         {
            
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AddBtn_ItemClick(object sender, TileItemEventArgs e)
+        {
+            GroupAddFrm gadd = new GroupAddFrm();
+            gadd.ShowDialog();
+        }
     }
 }

@@ -563,14 +563,20 @@
             // AddUserBtn
             // 
             this.AddUserBtn.Caption = "add User";
+            this.AddUserBtn.Glyph = ((System.Drawing.Image)(resources.GetObject("AddUserBtn.Glyph")));
             this.AddUserBtn.Id = 24;
+            this.AddUserBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("AddUserBtn.LargeGlyph")));
             this.AddUserBtn.Name = "AddUserBtn";
+            this.AddUserBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AddUserBtn_ItemClick);
             // 
             // managmentUserBtn
             // 
             this.managmentUserBtn.Caption = "Managment User";
+            this.managmentUserBtn.Glyph = ((System.Drawing.Image)(resources.GetObject("managmentUserBtn.Glyph")));
             this.managmentUserBtn.Id = 25;
+            this.managmentUserBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("managmentUserBtn.LargeGlyph")));
             this.managmentUserBtn.Name = "managmentUserBtn";
+            this.managmentUserBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.managmentUserBtn_ItemClick);
             // 
             // newEmployeeBtn
             // 
@@ -751,6 +757,7 @@
             this.colID.Name = "colID";
             this.colID.Visible = true;
             this.colID.VisibleIndex = 0;
+            this.colID.Width = 53;
             // 
             // colProjectName
             // 
@@ -758,6 +765,7 @@
             this.colProjectName.Name = "colProjectName";
             this.colProjectName.Visible = true;
             this.colProjectName.VisibleIndex = 1;
+            this.colProjectName.Width = 53;
             // 
             // colProjectDescription
             // 
@@ -765,6 +773,7 @@
             this.colProjectDescription.Name = "colProjectDescription";
             this.colProjectDescription.Visible = true;
             this.colProjectDescription.VisibleIndex = 2;
+            this.colProjectDescription.Width = 53;
             // 
             // colStartDate
             // 
@@ -772,6 +781,7 @@
             this.colStartDate.Name = "colStartDate";
             this.colStartDate.Visible = true;
             this.colStartDate.VisibleIndex = 3;
+            this.colStartDate.Width = 53;
             // 
             // colEndDate
             // 
@@ -779,6 +789,7 @@
             this.colEndDate.Name = "colEndDate";
             this.colEndDate.Visible = true;
             this.colEndDate.VisibleIndex = 4;
+            this.colEndDate.Width = 84;
             // 
             // colStatus
             // 
@@ -786,6 +797,7 @@
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 5;
+            this.colStatus.Width = 64;
             // 
             // colprogress
             // 
@@ -793,6 +805,7 @@
             this.colprogress.Name = "colprogress";
             this.colprogress.Visible = true;
             this.colprogress.VisibleIndex = 6;
+            this.colprogress.Width = 73;
             // 
             // colTotalCost
             // 
@@ -800,6 +813,7 @@
             this.colTotalCost.Name = "colTotalCost";
             this.colTotalCost.Visible = true;
             this.colTotalCost.VisibleIndex = 7;
+            this.colTotalCost.Width = 70;
             // 
             // colAccountID
             // 
@@ -807,6 +821,7 @@
             this.colAccountID.Name = "colAccountID";
             this.colAccountID.Visible = true;
             this.colAccountID.VisibleIndex = 8;
+            this.colAccountID.Width = 39;
             // 
             // colAccount
             // 
@@ -814,6 +829,7 @@
             this.colAccount.Name = "colAccount";
             this.colAccount.Visible = true;
             this.colAccount.VisibleIndex = 9;
+            this.colAccount.Width = 39;
             // 
             // colAttachments
             // 
@@ -821,6 +837,7 @@
             this.colAttachments.Name = "colAttachments";
             this.colAttachments.Visible = true;
             this.colAttachments.VisibleIndex = 10;
+            this.colAttachments.Width = 39;
             // 
             // colContracts
             // 
@@ -828,6 +845,7 @@
             this.colContracts.Name = "colContracts";
             this.colContracts.Visible = true;
             this.colContracts.VisibleIndex = 11;
+            this.colContracts.Width = 39;
             // 
             // colProjectActivities
             // 
@@ -835,6 +853,7 @@
             this.colProjectActivities.Name = "colProjectActivities";
             this.colProjectActivities.Visible = true;
             this.colProjectActivities.VisibleIndex = 12;
+            this.colProjectActivities.Width = 39;
             // 
             // colProjectOrders
             // 
@@ -842,6 +861,7 @@
             this.colProjectOrders.Name = "colProjectOrders";
             this.colProjectOrders.Visible = true;
             this.colProjectOrders.VisibleIndex = 13;
+            this.colProjectOrders.Width = 39;
             // 
             // colSubTheFinancerAndProjects
             // 
@@ -849,6 +869,7 @@
             this.colSubTheFinancerAndProjects.Name = "colSubTheFinancerAndProjects";
             this.colSubTheFinancerAndProjects.Visible = true;
             this.colSubTheFinancerAndProjects.VisibleIndex = 14;
+            this.colSubTheFinancerAndProjects.Width = 66;
             // 
             // button1
             // 
