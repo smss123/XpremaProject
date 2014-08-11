@@ -543,6 +543,7 @@
             this.AddGrpBtn.Id = 17;
             this.AddGrpBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("AddGrpBtn.LargeGlyph")));
             this.AddGrpBtn.Name = "AddGrpBtn";
+            this.AddGrpBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AddGrpBtn_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -557,6 +558,7 @@
             this.gropManagmentBtn.Id = 23;
             this.gropManagmentBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("gropManagmentBtn.LargeGlyph")));
             this.gropManagmentBtn.Name = "gropManagmentBtn";
+            this.gropManagmentBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.gropManagmentBtn_ItemClick);
             // 
             // AddUserBtn
             // 
