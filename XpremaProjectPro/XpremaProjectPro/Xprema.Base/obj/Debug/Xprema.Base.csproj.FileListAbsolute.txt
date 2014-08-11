@@ -18,3 +18,13 @@ C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.csprojResolveAssemblyReference.cache
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.dll
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.pdb
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\Xprema.Base.dll.config
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\Xprema.Base.dll
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\Xprema.Base.pdb
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.dll
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.xml
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.csprojResolveAssemblyReference.cache
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.dll
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.pdb

@@ -26,3 +26,16 @@ C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\Xprema.Base.pdb
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.xml
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.ProjectFrm.resources
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\XpremaProjectPro.exe
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\XpremaProjectPro.pdb
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\Xprema.Base.dll
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.dll
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\Xprema.Base.pdb
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.xml
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.csprojResolveAssemblyReference.cache
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.frmMain.resources
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.MainForm.resources
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.ProjectFrm.resources
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.Properties.Resources.resources
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.csproj.GenerateResource.Cache
+C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.exe.licenses
