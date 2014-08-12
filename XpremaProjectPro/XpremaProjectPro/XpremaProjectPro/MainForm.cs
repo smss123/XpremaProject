@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Navigation;
 using XpremaProjectPro.User_ManagmentForms;
+using XpremaProjectPro.Employee;
+using XpremaProjectPro.SupplierForms;
 
 namespace XpremaProjectPro
 {
@@ -59,6 +61,36 @@ namespace XpremaProjectPro
         {
             managmentUserFrm MngUserfrm = new managmentUserFrm();
             MngUserfrm.ShowDialog();
+        }
+
+        private void newEmployeeBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddEmployeeFrm AddEmpfrm = new AddEmployeeFrm();
+            AddEmpfrm.ShowDialog();
+        }
+
+        private void ManagmentEmployeeBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            EmployeeMangmentFrm empmang = new EmployeeMangmentFrm();
+            empmang.ShowDialog();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SupplierAddFrm Supadd = new SupplierAddFrm();
+            Supadd.ShowDialog();
+        }
+
+        private void AddFinanciersbtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            financierAddfrm fricadd = new financierAddfrm();
+            fricadd.ShowDialog();
+        }
+
+        private void managmentfinanciersBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            financierMangementfrm frcmng = new financierMangementfrm();
+            frcmng.ShowDialog();
         }
     }
 }

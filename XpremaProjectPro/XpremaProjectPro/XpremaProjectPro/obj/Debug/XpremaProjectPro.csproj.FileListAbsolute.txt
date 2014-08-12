@@ -30,3 +30,9 @@ C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.User_ManagmentForms.GroupAddFrm.resources
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.User_ManagmentForms.AddUsersFrm.resources
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.User_ManagmentForms.managmentUserFrm.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.SupplierAddFrm.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.SupplierMangmentFrm.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.Employee.AddEmployeeFrm.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.Employee.EmployeeMangmentFrm.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.financierAddfrm.resources
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.financierMangementfrm.resources

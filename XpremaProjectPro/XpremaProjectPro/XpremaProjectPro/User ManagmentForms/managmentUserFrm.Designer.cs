@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.SaveBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.DeltBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.UsersgridControl = new DevExpress.XtraGrid.GridControl();
             this.userSystemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,8 +48,7 @@
             this.colUserGroup_Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colContracts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserGroup = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -75,11 +75,21 @@
             this.tileBarGroup2.Items.Add(this.RefreshBtn);
             this.tileBarGroup2.Name = "tileBarGroup2";
             // 
+            // AddBtn
+            // 
+            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement5.Text = "Add";
+            this.AddBtn.Elements.Add(tileItemElement5);
+            this.AddBtn.Id = 7;
+            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.AddBtn_ItemClick);
+            // 
             // SaveBtn
             // 
             this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.Text = "Save";
-            this.SaveBtn.Elements.Add(tileItemElement2);
+            tileItemElement6.Text = "Save";
+            this.SaveBtn.Elements.Add(tileItemElement6);
             this.SaveBtn.Id = 4;
             this.SaveBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.SaveBtn.Name = "SaveBtn";
@@ -87,8 +97,8 @@
             // DeltBtn
             // 
             this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Text = "Delete";
-            this.DeltBtn.Elements.Add(tileItemElement3);
+            tileItemElement7.Text = "Delete";
+            this.DeltBtn.Elements.Add(tileItemElement7);
             this.DeltBtn.Id = 6;
             this.DeltBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.DeltBtn.Name = "DeltBtn";
@@ -96,23 +106,23 @@
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement4);
+            tileItemElement8.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement8);
             this.RefreshBtn.Id = 5;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
             // 
-            // gridControl1
+            // UsersgridControl
             // 
-            this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl1.DataSource = this.userSystemBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 98);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(884, 483);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.UsersgridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.UsersgridControl.DataSource = this.userSystemBindingSource;
+            this.UsersgridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UsersgridControl.Location = new System.Drawing.Point(0, 98);
+            this.UsersgridControl.MainView = this.gridView1;
+            this.UsersgridControl.Name = "UsersgridControl";
+            this.UsersgridControl.Size = new System.Drawing.Size(884, 483);
+            this.UsersgridControl.TabIndex = 2;
+            this.UsersgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // userSystemBindingSource
@@ -128,7 +138,7 @@
             this.colUserGroup_Id,
             this.colContracts,
             this.colUserGroup});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.UsersgridControl;
             this.gridView1.Name = "gridView1";
             // 
             // colId
@@ -173,26 +183,16 @@
             this.colUserGroup.Visible = true;
             this.colUserGroup.VisibleIndex = 5;
             // 
-            // AddBtn
-            // 
-            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Text = "Add";
-            this.AddBtn.Elements.Add(tileItemElement1);
-            this.AddBtn.Id = 7;
-            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.AddBtn_ItemClick);
-            // 
             // managmentUserFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 581);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.UsersgridControl);
             this.Controls.Add(this.tileBar1);
             this.Name = "managmentUserFrm";
             this.Text = "managmentUserFrm";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -206,7 +206,7 @@
         private DevExpress.XtraBars.Navigation.TileBarItem SaveBtn;
         private DevExpress.XtraBars.Navigation.TileBarItem RefreshBtn;
         private DevExpress.XtraBars.Navigation.TileBarItem DeltBtn;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl UsersgridControl;
         private System.Windows.Forms.BindingSource userSystemBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
