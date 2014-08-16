@@ -58,13 +58,31 @@ namespace XpremaProjectPro.SupplierForms
             //    PhoneNumber = phoneNumberTextBox.Text,
             //    SuppliersNatural = suppliersNaturalTextBox.Text
             //};
-            state = ChangeToError(state);
-            if (emailTextBox.Text="")
-            {
-                
-            }
+            state = ChangeToError(adderssTextBox);
+            state = ChangeToError(emailTextBox);
+            state = ChangeToError(faxTextBox);
+            state = ChangeToError(nameTextBox);
+            state = ChangeToError(phoneNumberTextBox);
+            state = ChangeToError(suppliersNaturalTextBox);
+
 
             return state;
+        }
+
+        private bool ChangeToError(TextBox txt)
+        {
+            if (txt.Text == "")
+            {
+                txt.Text = "";
+                txt.BackColor = Color.Red; //Color.FromArgb(255, 255, 192);
+                return false;
+            }
+            else
+            {
+                txt.BackColor = Color.White;
+                return true;
+            }
+            
         }
 
         private bool ChangeToError(TextEdit txt)
@@ -75,7 +93,11 @@ namespace XpremaProjectPro.SupplierForms
                 txt.BackColor = Color.Red; //Color.FromArgb(255, 255, 192);
                 return false;
             }
-            return true;
+            else
+            {
+                txt.BackColor = Color.White;
+                return true;
+            }
         }
     }
 }
