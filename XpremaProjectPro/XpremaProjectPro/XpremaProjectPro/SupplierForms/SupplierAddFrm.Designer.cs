@@ -30,34 +30,34 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.suppliersNaturalTextBox = new System.Windows.Forms.TextBox();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.faxTextBox = new System.Windows.Forms.TextBox();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.adderssTextBox = new System.Windows.Forms.TextBox();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.BtnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.adderssTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.faxTextBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.suppliersNaturalTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -69,6 +69,15 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(358, 266);
             this.groupControl1.TabIndex = 0;
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Location = new System.Drawing.Point(12, 204);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(159, 42);
+            this.BtnAdd.TabIndex = 1;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // layoutControl1
             // 
@@ -85,6 +94,54 @@
             this.layoutControl1.Size = new System.Drawing.Size(354, 177);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // adderssTextBox
+            // 
+            this.adderssTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Adderss", true));
+            this.adderssTextBox.Location = new System.Drawing.Point(100, 132);
+            this.adderssTextBox.Name = "adderssTextBox";
+            this.adderssTextBox.Size = new System.Drawing.Size(242, 20);
+            this.adderssTextBox.TabIndex = 10;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(100, 108);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(242, 20);
+            this.emailTextBox.TabIndex = 9;
+            // 
+            // faxTextBox
+            // 
+            this.faxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Fax", true));
+            this.faxTextBox.Location = new System.Drawing.Point(100, 84);
+            this.faxTextBox.Name = "faxTextBox";
+            this.faxTextBox.Size = new System.Drawing.Size(242, 20);
+            this.faxTextBox.TabIndex = 8;
+            // 
+            // phoneNumberTextBox
+            // 
+            this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "PhoneNumber", true));
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(100, 60);
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(242, 20);
+            this.phoneNumberTextBox.TabIndex = 7;
+            // 
+            // suppliersNaturalTextBox
+            // 
+            this.suppliersNaturalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "SuppliersNatural", true));
+            this.suppliersNaturalTextBox.Location = new System.Drawing.Point(100, 36);
+            this.suppliersNaturalTextBox.Name = "suppliersNaturalTextBox";
+            this.suppliersNaturalTextBox.Size = new System.Drawing.Size(242, 20);
+            this.suppliersNaturalTextBox.TabIndex = 6;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(100, 12);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(242, 20);
+            this.nameTextBox.TabIndex = 5;
             // 
             // layoutControlGroup1
             // 
@@ -104,18 +161,6 @@
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // supplierBindingSource
-            // 
-            this.supplierBindingSource.DataSource = typeof(Xprema.Base.Supplier);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(101, 12);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(241, 20);
-            this.nameTextBox.TabIndex = 5;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.nameTextBox;
@@ -125,14 +170,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem2.Text = "name:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // suppliersNaturalTextBox
-            // 
-            this.suppliersNaturalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "SuppliersNatural", true));
-            this.suppliersNaturalTextBox.Location = new System.Drawing.Point(101, 36);
-            this.suppliersNaturalTextBox.Name = "suppliersNaturalTextBox";
-            this.suppliersNaturalTextBox.Size = new System.Drawing.Size(241, 20);
-            this.suppliersNaturalTextBox.TabIndex = 6;
             // 
             // layoutControlItem3
             // 
@@ -144,14 +181,6 @@
             this.layoutControlItem3.Text = "Suppliers Natural:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(85, 13);
             // 
-            // phoneNumberTextBox
-            // 
-            this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "PhoneNumber", true));
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(101, 60);
-            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(241, 20);
-            this.phoneNumberTextBox.TabIndex = 7;
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.phoneNumberTextBox;
@@ -161,14 +190,6 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem4.Text = "Phone Number:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // faxTextBox
-            // 
-            this.faxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Fax", true));
-            this.faxTextBox.Location = new System.Drawing.Point(101, 84);
-            this.faxTextBox.Name = "faxTextBox";
-            this.faxTextBox.Size = new System.Drawing.Size(241, 20);
-            this.faxTextBox.TabIndex = 8;
             // 
             // layoutControlItem5
             // 
@@ -180,14 +201,6 @@
             this.layoutControlItem5.Text = "Fax:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 13);
             // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(101, 108);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(241, 20);
-            this.emailTextBox.TabIndex = 9;
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.emailTextBox;
@@ -197,14 +210,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem6.Text = "Email:";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // adderssTextBox
-            // 
-            this.adderssTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Adderss", true));
-            this.adderssTextBox.Location = new System.Drawing.Point(101, 132);
-            this.adderssTextBox.Name = "adderssTextBox";
-            this.adderssTextBox.Size = new System.Drawing.Size(241, 20);
-            this.adderssTextBox.TabIndex = 10;
             // 
             // layoutControlItem7
             // 
@@ -216,13 +221,9 @@
             this.layoutControlItem7.Text = "Adderss:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(85, 13);
             // 
-            // BtnAdd
+            // supplierBindingSource
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(12, 204);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(159, 42);
-            this.BtnAdd.TabIndex = 1;
-            this.BtnAdd.Text = "Add";
+            this.supplierBindingSource.DataSource = typeof(Xprema.Base.Supplier);
             // 
             // SupplierAddFrm
             // 
@@ -237,13 +238,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
