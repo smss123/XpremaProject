@@ -17,7 +17,7 @@ namespace XpremaProjectPro
         {
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
-            UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Light");
+            UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Blue");
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

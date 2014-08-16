@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeMangmentFrm));
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
@@ -69,6 +70,8 @@
             // AddBtn
             // 
             this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement1.Text = "Add";
             this.AddBtn.Elements.Add(tileItemElement1);
             this.AddBtn.Id = 7;
@@ -78,6 +81,8 @@
             // SaveBtn
             // 
             this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement2.Text = "Save";
             this.SaveBtn.Elements.Add(tileItemElement2);
             this.SaveBtn.Id = 4;
@@ -87,6 +92,8 @@
             // DeltBtn
             // 
             this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement3.Text = "Delete";
             this.DeltBtn.Elements.Add(tileItemElement3);
             this.DeltBtn.Id = 6;
@@ -96,6 +103,8 @@
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
+            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement4.Text = "Refresh";
             this.RefreshBtn.Elements.Add(tileItemElement4);
             this.RefreshBtn.Id = 5;
