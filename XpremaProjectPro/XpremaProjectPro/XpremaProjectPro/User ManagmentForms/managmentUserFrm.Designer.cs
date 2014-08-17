@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -78,8 +78,8 @@
             // AddBtn
             // 
             this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.Text = "Add";
-            this.AddBtn.Elements.Add(tileItemElement5);
+            tileItemElement1.Text = "Add";
+            this.AddBtn.Elements.Add(tileItemElement1);
             this.AddBtn.Id = 7;
             this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.AddBtn.Name = "AddBtn";
@@ -88,8 +88,8 @@
             // SaveBtn
             // 
             this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.Text = "Save";
-            this.SaveBtn.Elements.Add(tileItemElement6);
+            tileItemElement2.Text = "Save";
+            this.SaveBtn.Elements.Add(tileItemElement2);
             this.SaveBtn.Id = 4;
             this.SaveBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.SaveBtn.Name = "SaveBtn";
@@ -97,8 +97,8 @@
             // DeltBtn
             // 
             this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.Text = "Delete";
-            this.DeltBtn.Elements.Add(tileItemElement7);
+            tileItemElement3.Text = "Delete";
+            this.DeltBtn.Elements.Add(tileItemElement3);
             this.DeltBtn.Id = 6;
             this.DeltBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.DeltBtn.Name = "DeltBtn";
@@ -106,8 +106,8 @@
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement8);
+            tileItemElement4.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement4);
             this.RefreshBtn.Id = 5;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
@@ -164,7 +164,7 @@
             // 
             // colUserGroup_Id
             // 
-            this.colUserGroup_Id.FieldName = "UserGroup_Id";
+            this.colUserGroup_Id.FieldName = "UserGroup.GroupName";
             this.colUserGroup_Id.Name = "colUserGroup_Id";
             this.colUserGroup_Id.Visible = true;
             this.colUserGroup_Id.VisibleIndex = 3;

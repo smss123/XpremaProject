@@ -164,7 +164,7 @@
             // 
             // colPhoneNumber
             // 
-            this.colPhoneNumber.FieldName = "PhoneNumber";
+            this.colPhoneNumber.FieldName = "ProjectExpenses";
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
             this.colPhoneNumber.VisibleIndex = 2;
