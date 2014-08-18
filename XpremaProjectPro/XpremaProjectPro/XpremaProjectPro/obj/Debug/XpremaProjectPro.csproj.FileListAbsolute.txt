@@ -64,3 +64,5 @@ C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xpr
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.User_ManagmentForms.managmentUserFrm.resources
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.csproj.GenerateResource.Cache
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.exe.licenses
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.SqlServer.xml
