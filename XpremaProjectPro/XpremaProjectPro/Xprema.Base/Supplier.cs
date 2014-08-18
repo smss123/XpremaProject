@@ -16,7 +16,7 @@ namespace Xprema.Base
     {
         public Supplier()
         {
-            this.ProjectExpenses = new HashSet<ProjectExpens>();
+            this.ProjectExpenses = new List<ProjectExpens>();
         }
     
         public int ID { get; set; }
@@ -26,7 +26,7 @@ namespace Xprema.Base
         public string Fax { get; set; }
         public string Email { get; set; }
         public string Adderss { get; set; }
-    
-        public virtual ICollection<ProjectExpens> ProjectExpenses { get; set; }
+
+        public virtual List<ProjectExpens> ProjectExpenses { get; set; }
     }
 }

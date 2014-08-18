@@ -54,6 +54,7 @@
     <Compile Include="Attachment.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
+    <Compile Include="Commands\GroupCommand.cs" />
     <Compile Include="Contract.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>

@@ -16,13 +16,13 @@ namespace Xprema.Base
     {
         public SystemPermession()
         {
-            this.GroupPermessions = new HashSet<GroupPermession>();
+            this.GroupPermessions = new List<GroupPermession>();
         }
     
         public int Id { get; set; }
         public string PermessionName { get; set; }
         public string PropertyName { get; set; }
-    
-        public virtual ICollection<GroupPermession> GroupPermessions { get; set; }
+
+        public virtual List<GroupPermession> GroupPermessions { get; set; }
     }
 }

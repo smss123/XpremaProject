@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label groupNameLabel;
             System.Windows.Forms.Label groupDescriptionLabel;
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.idLabel = new System.Windows.Forms.Label();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
@@ -51,6 +51,9 @@
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.GroupgridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGroupName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGroupDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             groupNameLabel = new System.Windows.Forms.Label();
             groupDescriptionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -112,8 +115,8 @@
             // AddBtn
             // 
             this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Text = "ADD";
-            this.AddBtn.Elements.Add(tileItemElement1);
+            tileItemElement5.Text = "ADD";
+            this.AddBtn.Elements.Add(tileItemElement5);
             this.AddBtn.Id = 7;
             this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.AddBtn.Name = "AddBtn";
@@ -122,8 +125,8 @@
             // SaveBtn
             // 
             this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.Text = "Save";
-            this.SaveBtn.Elements.Add(tileItemElement2);
+            tileItemElement6.Text = "Save";
+            this.SaveBtn.Elements.Add(tileItemElement6);
             this.SaveBtn.Id = 4;
             this.SaveBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.SaveBtn.Name = "SaveBtn";
@@ -132,8 +135,8 @@
             // DeltBtn
             // 
             this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Text = "Delete";
-            this.DeltBtn.Elements.Add(tileItemElement3);
+            tileItemElement7.Text = "Delete";
+            this.DeltBtn.Elements.Add(tileItemElement7);
             this.DeltBtn.Id = 6;
             this.DeltBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.DeltBtn.Name = "DeltBtn";
@@ -141,8 +144,8 @@
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement4);
+            tileItemElement8.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement8);
             this.RefreshBtn.Id = 5;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
@@ -192,7 +195,7 @@
             this.groupNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userGroupBindingSource, "GroupName", true));
             this.groupNameTextBox.Location = new System.Drawing.Point(107, 61);
             this.groupNameTextBox.Name = "groupNameTextBox";
-            this.groupNameTextBox.Size = new System.Drawing.Size(229, 20);
+            this.groupNameTextBox.Size = new System.Drawing.Size(229, 21);
             this.groupNameTextBox.TabIndex = 1;
             // 
             // checkedListBox1
@@ -200,7 +203,7 @@
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(423, 48);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(447, 139);
+            this.checkedListBox1.Size = new System.Drawing.Size(447, 132);
             this.checkedListBox1.TabIndex = 7;
             // 
             // idTextBox
@@ -208,12 +211,13 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userGroupBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(107, 24);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idTextBox.Size = new System.Drawing.Size(100, 21);
             this.idTextBox.TabIndex = 7;
             // 
             // GroupgridControl
             // 
             this.GroupgridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.GroupgridControl.DataSource = this.userGroupBindingSource;
             this.GroupgridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GroupgridControl.Location = new System.Drawing.Point(0, 319);
             this.GroupgridControl.MainView = this.gridView1;
@@ -225,8 +229,33 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colGroupName,
+            this.colGroupDescription});
             this.gridView1.GridControl = this.GroupgridControl;
             this.gridView1.Name = "gridView1";
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.Visible = true;
+            this.colId.VisibleIndex = 0;
+            // 
+            // colGroupName
+            // 
+            this.colGroupName.FieldName = "GroupName";
+            this.colGroupName.Name = "colGroupName";
+            this.colGroupName.Visible = true;
+            this.colGroupName.VisibleIndex = 1;
+            // 
+            // colGroupDescription
+            // 
+            this.colGroupDescription.FieldName = "GroupDescription";
+            this.colGroupDescription.Name = "colGroupDescription";
+            this.colGroupDescription.Visible = true;
+            this.colGroupDescription.VisibleIndex = 2;
             // 
             // frmGroup
             // 
@@ -238,6 +267,7 @@
             this.Controls.Add(this.tileBar1);
             this.Name = "frmGroup";
             this.Text = "frmGroup";
+            this.Load += new System.EventHandler(this.frmGroup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -266,5 +296,8 @@
         private DevExpress.XtraBars.Navigation.TileBarItem AddBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox groupDescriptionTextBox;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colGroupName;
+        private DevExpress.XtraGrid.Columns.GridColumn colGroupDescription;
     }
 }

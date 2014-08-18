@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Xpro.xprema.net" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="Xpro.xprema.net" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="Xpro.xprema.net">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAccounts">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAccountsResult" type="tns:ArrayOfAccount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Account">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Coin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNatural" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transactions" type="tns:ArrayOfTransaction" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectActivities" type="tns:ArrayOfProjectActivity" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectExpenses" type="tns:ArrayOfProjectExpens" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectProfiles" type="tns:ArrayOfProjectProfile" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectSubActivities" type="tns:ArrayOfProjectSubActivity" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thefinanciers" type="tns:ArrayOfThefinancier" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTransaction">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Transaction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfTransaction" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalIn" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalOut" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommandNames" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Account_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:Account" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectActivity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectActivity" nillable="true" type="tns:ProjectActivity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectActivity">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Progress" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectProfile_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Account_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:Account" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectSubActivities" type="tns:ArrayOfProjectSubActivity" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectProfile" type="tns:ProjectProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectSubActivity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectSubActivity" nillable="true" type="tns:ProjectSubActivity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectSubActivity">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubActivityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Startdate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="enddate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Persentage" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectActivity_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Account_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:Account" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectActivity" type="tns:ProjectActivity" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectExpenses" type="tns:ArrayOfProjectExpens" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectExpens">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectExpens" nillable="true" type="tns:ProjectExpens" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectExpens">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpensesName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateofProcess" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequiarAmount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CashingNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectSubActivity_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Account_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Supplier_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:Account" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectSubActivity" type="tns:ProjectSubActivity" />
+          <s:element minOccurs="0" maxOccurs="1" name="Supplier" type="tns:Supplier" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Supplier">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuppliersNatural" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Adderss" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectExpenses" type="tns:ArrayOfProjectExpens" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectProfile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="progress" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:Account" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachments" type="tns:ArrayOfAttachment" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contracts" type="tns:ArrayOfContract" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectActivities" type="tns:ArrayOfProjectActivity" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectOrders" type="tns:ArrayOfProjectOrder" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubTheFinancerAndProjects" type="tns:ArrayOfSubTheFinancerAndProject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Attachment" nillable="true" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Attachment">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttachmentName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="fileContent" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectProfile_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectOrder_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectOrder" type="tns:ProjectOrder" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectProfile" type="tns:ProjectProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProjectOrder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderBody" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectProfile_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachments" type="tns:ArrayOfAttachment" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectProfile" type="tns:ProjectProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfContract">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Contract" nillable="true" type="tns:Contract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Contract">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SelaryAmount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmplyeeAccount_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Employee_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectProfile_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSystem" type="tns:UserSystem" />
+          <s:element minOccurs="0" maxOccurs="1" name="Employee" type="tns:Employee" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectProfile" type="tns:ProjectProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserSystem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserGroup_Id" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contracts" type="tns:ArrayOfContract" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="tns:UserGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserGroup">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupPermessions" type="tns:ArrayOfGroupPermession" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSystems" type="tns:ArrayOfUserSystem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGroupPermession">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GroupPermession" nillable="true" type="tns:GroupPermession" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GroupPermession">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="permessionValue" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SystemPermession_Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserGroup_Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SystemPermession" type="tns:SystemPermession" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="tns:UserGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SystemPermession">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermessionName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PropertyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupPermessions" type="tns:ArrayOfGroupPermession" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUserSystem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserSystem" nillable="true" type="tns:UserSystem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Employee">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeejobNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeGender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeNationalNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobilenumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contracts" type="tns:ArrayOfContract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectOrder" nillable="true" type="tns:ProjectOrder" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubTheFinancerAndProject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubTheFinancerAndProject" nillable="true" type="tns:SubTheFinancerAndProject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubTheFinancerAndProject">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinacerID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectProfile" type="tns:ProjectProfile" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thefinancier" type="tns:Thefinancier" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Thefinancier">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="financiername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Adderss" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:Account" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubTheFinancerAndProjects" type="tns:ArrayOfSubTheFinancerAndProject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProjectProfile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProjectProfile" nillable="true" type="tns:ProjectProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfThefinancier">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Thefinancier" nillable="true" type="tns:Thefinancier" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllGroupResult" type="tns:ArrayOfUserGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserGroup" nillable="true" type="tns:UserGroup" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAccounts" />
+  </wsdl:message>
+  <wsdl:message name="getAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllGroupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="XpremaConnectorSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccounts">
+      <wsdl:input message="tns:getAccountsSoapIn" />
+      <wsdl:output message="tns:getAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroup">
+      <wsdl:input message="tns:GetAllGroupSoapIn" />
+      <wsdl:output message="tns:GetAllGroupSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="XpremaConnectorSoap" type="tns:XpremaConnectorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="Xpro.xprema.net/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccounts">
+      <soap:operation soapAction="Xpro.xprema.net/getAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroup">
+      <soap:operation soapAction="Xpro.xprema.net/GetAllGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="XpremaConnectorSoap12" type="tns:XpremaConnectorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="Xpro.xprema.net/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccounts">
+      <soap12:operation soapAction="Xpro.xprema.net/getAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroup">
+      <soap12:operation soapAction="Xpro.xprema.net/GetAllGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="XpremaConnector">
+    <wsdl:port name="XpremaConnectorSoap" binding="tns:XpremaConnectorSoap">
+      <soap:address location="http://localhost:16213/XpremaConnector.asmx" />
+    </wsdl:port>
+    <wsdl:port name="XpremaConnectorSoap12" binding="tns:XpremaConnectorSoap12">
+      <soap12:address location="http://localhost:16213/XpremaConnector.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

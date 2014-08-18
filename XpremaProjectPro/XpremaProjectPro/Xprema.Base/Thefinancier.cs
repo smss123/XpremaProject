@@ -16,7 +16,7 @@ namespace Xprema.Base
     {
         public Thefinancier()
         {
-            this.SubTheFinancerAndProjects = new HashSet<SubTheFinancerAndProject>();
+            this.SubTheFinancerAndProjects = new List<SubTheFinancerAndProject>();
         }
     
         public int ID { get; set; }
@@ -29,6 +29,6 @@ namespace Xprema.Base
         public int AccountID { get; set; }
     
         public virtual Account Account { get; set; }
-        public virtual ICollection<SubTheFinancerAndProject> SubTheFinancerAndProjects { get; set; }
+        public virtual List<SubTheFinancerAndProject> SubTheFinancerAndProjects { get; set; }
     }
 }

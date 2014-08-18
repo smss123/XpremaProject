@@ -22,5 +22,10 @@ namespace XpremaProjectPro.User_ManagmentForms
         {
 
         }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

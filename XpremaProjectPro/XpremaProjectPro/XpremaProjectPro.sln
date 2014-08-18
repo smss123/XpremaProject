@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xprema.Base", "Xprema.Base\Xprema.Base.csproj", "{F56A7353-2E36-41F4-AB78-F2FBC7D759CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpremaProjectPro", "XpremaProjectPro\XpremaProjectPro.csproj", "{30CA211B-DE8D-4B3F-A309-C615BCC10E07}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5E03DD8D-4562-4481-99E9-946ECD3B4E10} = {5E03DD8D-4562-4481-99E9-946ECD3B4E10}
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "XpremaConneted", "http://localhost:16213", "{5E03DD8D-4562-4481-99E9-946ECD3B4E10}"
 	ProjectSection(WebsiteProperties) = preProject

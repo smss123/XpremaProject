@@ -16,7 +16,7 @@ namespace Xprema.Base
     {
         public ProjectOrder()
         {
-            this.Attachments = new HashSet<Attachment>();
+            this.Attachments = new List<Attachment>();
         }
     
         public int ID { get; set; }
@@ -24,8 +24,8 @@ namespace Xprema.Base
         public string OrderBody { get; set; }
         public System.DateTime OrderDate { get; set; }
         public int ProjectProfile_ID { get; set; }
-    
-        public virtual ICollection<Attachment> Attachments { get; set; }
+
+        public virtual List<Attachment> Attachments { get; set; }
         public virtual ProjectProfile ProjectProfile { get; set; }
     }
 }

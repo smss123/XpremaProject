@@ -16,7 +16,7 @@ namespace Xprema.Base
     {
         public Employee()
         {
-            this.Contracts = new HashSet<Contract>();
+            this.Contracts = new List<Contract>();
         }
     
         public int ID { get; set; }
@@ -27,7 +27,7 @@ namespace Xprema.Base
         public string PhoneNumber { get; set; }
         public string Mobilenumber { get; set; }
         public string Email { get; set; }
-    
-        public virtual ICollection<Contract> Contracts { get; set; }
+
+        public virtual List<Contract> Contracts { get; set; }
     }
 }

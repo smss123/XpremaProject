@@ -16,12 +16,12 @@ namespace Xprema.Base
     {
         public Account()
         {
-            this.Transactions = new HashSet<Transaction>();
-            this.ProjectActivities = new HashSet<ProjectActivity>();
-            this.ProjectExpenses = new HashSet<ProjectExpens>();
-            this.ProjectProfiles = new HashSet<ProjectProfile>();
-            this.ProjectSubActivities = new HashSet<ProjectSubActivity>();
-            this.Thefinanciers = new HashSet<Thefinancier>();
+            this.Transactions = new List<Transaction>();
+            this.ProjectActivities = new List<ProjectActivity>();
+            this.ProjectExpenses = new List<ProjectExpens>();
+            this.ProjectProfiles = new List<ProjectProfile>();
+            this.ProjectSubActivities = new List<ProjectSubActivity>();
+            this.Thefinanciers = new List<Thefinancier>();
         }
     
         public int ID { get; set; }
@@ -29,12 +29,12 @@ namespace Xprema.Base
         public string AccountDescription { get; set; }
         public string Coin { get; set; }
         public string AccountNatural { get; set; }
-    
-        public virtual ICollection<Transaction> Transactions { get; set; }
-        public virtual ICollection<ProjectActivity> ProjectActivities { get; set; }
-        public virtual ICollection<ProjectExpens> ProjectExpenses { get; set; }
-        public virtual ICollection<ProjectProfile> ProjectProfiles { get; set; }
-        public virtual ICollection<ProjectSubActivity> ProjectSubActivities { get; set; }
-        public virtual ICollection<Thefinancier> Thefinanciers { get; set; }
+
+        public virtual List<Transaction> Transactions { get; set; }
+        public virtual List<ProjectActivity> ProjectActivities { get; set; }
+        public virtual List<ProjectExpens> ProjectExpenses { get; set; }
+        public virtual List<ProjectProfile> ProjectProfiles { get; set; }
+        public virtual List<ProjectSubActivity> ProjectSubActivities { get; set; }
+        public virtual List<Thefinancier> Thefinanciers { get; set; }
     }
 }

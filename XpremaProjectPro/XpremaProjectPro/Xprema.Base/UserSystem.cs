@@ -16,15 +16,15 @@ namespace Xprema.Base
     {
         public UserSystem()
         {
-            this.Contracts = new HashSet<Contract>();
+            this.Contracts = new List<Contract>();
         }
     
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public Nullable<int> UserGroup_Id { get; set; }
-    
-        public virtual ICollection<Contract> Contracts { get; set; }
+
+        public virtual List<Contract> Contracts { get; set; }
         public virtual UserGroup UserGroup { get; set; }
     }
 }

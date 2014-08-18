@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using XpremaProjectPro.XpConnected;
 
 namespace XpremaProjectPro.User_ManagmentForms
 {
@@ -32,6 +33,14 @@ namespace XpremaProjectPro.User_ManagmentForms
         {
             GroupAddFrm gadd = new GroupAddFrm();
             gadd.ShowDialog();
+        }
+
+        private void frmGroup_Load(object sender, EventArgs e)
+        {
+            XpremaConnectorSoapClient proxy = new XpremaConnectorSoapClient();
+            userGroupBindingSource.DataSource = proxy.GetAllGroup();
+            
+           
         }
     }
 }

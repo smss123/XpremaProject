@@ -30,18 +30,18 @@
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.groupNameTextBox = new System.Windows.Forms.TextBox();
+            this.groupDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
             this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.groupDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -82,20 +82,28 @@
             this.layoutControl1.TabIndex = 12;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(104, 98);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(273, 124);
-            this.checkedListBox1.TabIndex = 10;
-            // 
             // groupNameTextBox
             // 
             this.groupNameTextBox.Location = new System.Drawing.Point(104, 14);
             this.groupNameTextBox.Name = "groupNameTextBox";
             this.groupNameTextBox.Size = new System.Drawing.Size(273, 20);
             this.groupNameTextBox.TabIndex = 7;
+            // 
+            // groupDescriptionRichTextBox
+            // 
+            this.groupDescriptionRichTextBox.Location = new System.Drawing.Point(104, 40);
+            this.groupDescriptionRichTextBox.Name = "groupDescriptionRichTextBox";
+            this.groupDescriptionRichTextBox.Size = new System.Drawing.Size(273, 52);
+            this.groupDescriptionRichTextBox.TabIndex = 11;
+            this.groupDescriptionRichTextBox.Text = "";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(104, 98);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(273, 132);
+            this.checkedListBox1.TabIndex = 10;
             // 
             // layoutControlGroup1
             // 
@@ -126,14 +134,6 @@
             this.layoutControlItem3.Text = "Permissions:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(89, 13);
             // 
-            // AddBtn
-            // 
-            this.AddBtn.Location = new System.Drawing.Point(12, 293);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(170, 34);
-            this.AddBtn.TabIndex = 11;
-            this.AddBtn.Text = "Add";
-            // 
             // simpleSeparator2
             // 
             this.simpleSeparator2.AllowHotTrack = false;
@@ -151,14 +151,6 @@
             this.simpleSeparator3.Name = "simpleSeparator3";
             this.simpleSeparator3.Size = new System.Drawing.Size(369, 2);
             this.simpleSeparator3.Text = "simpleSeparator3";
-            // 
-            // groupDescriptionRichTextBox
-            // 
-            this.groupDescriptionRichTextBox.Location = new System.Drawing.Point(104, 40);
-            this.groupDescriptionRichTextBox.Name = "groupDescriptionRichTextBox";
-            this.groupDescriptionRichTextBox.Size = new System.Drawing.Size(273, 52);
-            this.groupDescriptionRichTextBox.TabIndex = 11;
-            this.groupDescriptionRichTextBox.Text = "";
             // 
             // layoutControlItem4
             // 
@@ -197,6 +189,15 @@
             this.simpleSeparator4.Name = "simpleSeparator4";
             this.simpleSeparator4.Size = new System.Drawing.Size(369, 2);
             this.simpleSeparator4.Text = "simpleSeparator4";
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(12, 293);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(170, 34);
+            this.AddBtn.TabIndex = 11;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // GroupAddFrm
             // 

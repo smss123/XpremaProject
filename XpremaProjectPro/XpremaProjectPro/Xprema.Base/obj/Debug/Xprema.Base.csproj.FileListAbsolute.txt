@@ -24,6 +24,5 @@ C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xpr
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.xml
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.csprojResolveAssemblyReference.cache
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.dll
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.pdb

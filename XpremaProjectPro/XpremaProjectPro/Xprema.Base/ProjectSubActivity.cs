@@ -16,7 +16,7 @@ namespace Xprema.Base
     {
         public ProjectSubActivity()
         {
-            this.ProjectExpenses = new HashSet<ProjectExpens>();
+            this.ProjectExpenses = new List<ProjectExpens>();
         }
     
         public int ID { get; set; }
@@ -32,6 +32,6 @@ namespace Xprema.Base
     
         public virtual Account Account { get; set; }
         public virtual ProjectActivity ProjectActivity { get; set; }
-        public virtual ICollection<ProjectExpens> ProjectExpenses { get; set; }
+        public virtual List<ProjectExpens> ProjectExpenses { get; set; }
     }
 }

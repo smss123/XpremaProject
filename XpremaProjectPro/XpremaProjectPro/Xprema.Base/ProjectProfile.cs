@@ -16,11 +16,11 @@ namespace Xprema.Base
     {
         public ProjectProfile()
         {
-            this.Attachments = new HashSet<Attachment>();
-            this.Contracts = new HashSet<Contract>();
-            this.ProjectActivities = new HashSet<ProjectActivity>();
-            this.ProjectOrders = new HashSet<ProjectOrder>();
-            this.SubTheFinancerAndProjects = new HashSet<SubTheFinancerAndProject>();
+            this.Attachments = new List<Attachment>();
+            this.Contracts = new List<Contract>();
+            this.ProjectActivities = new List<ProjectActivity>();
+            this.ProjectOrders = new List<ProjectOrder>();
+            this.SubTheFinancerAndProjects = new List<SubTheFinancerAndProject>();
         }
     
         public int ID { get; set; }
@@ -34,10 +34,10 @@ namespace Xprema.Base
         public Nullable<int> AccountID { get; set; }
     
         public virtual Account Account { get; set; }
-        public virtual ICollection<Attachment> Attachments { get; set; }
-        public virtual ICollection<Contract> Contracts { get; set; }
-        public virtual ICollection<ProjectActivity> ProjectActivities { get; set; }
-        public virtual ICollection<ProjectOrder> ProjectOrders { get; set; }
-        public virtual ICollection<SubTheFinancerAndProject> SubTheFinancerAndProjects { get; set; }
+        public virtual List<Attachment> Attachments { get; set; }
+        public virtual List<Contract> Contracts { get; set; }
+        public virtual List<ProjectActivity> ProjectActivities { get; set; }
+        public virtual List<ProjectOrder> ProjectOrders { get; set; }
+        public virtual List<SubTheFinancerAndProject> SubTheFinancerAndProjects { get; set; }
     }
 }
