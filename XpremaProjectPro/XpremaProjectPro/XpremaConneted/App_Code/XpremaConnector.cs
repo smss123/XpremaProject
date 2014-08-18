@@ -36,10 +36,7 @@ public class XpremaConnector : System.Web.Services.WebService {
     [WebMethod]
     public List<UserGroup> GetAllGroup()
     {
-        Xprema_PrjectEntities db = new Xprema_PrjectEntities();
-        db.Configuration.LazyLoadingEnabled = false;
-        db.Configuration.ProxyCreationEnabled = false;
-        return db.UserGroups.ToList();
+      return   Xprema.Base.Commands.GroupCommand.GetAll();
     }
 
     

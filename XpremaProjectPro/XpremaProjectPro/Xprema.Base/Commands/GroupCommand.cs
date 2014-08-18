@@ -68,7 +68,7 @@ namespace Xprema.Base.Commands
            }
        }
 
-       public static bool GetAll()
+       public static List<UserGroup> GetAll()
        {
            db = new Xprema_PrjectEntities();
            db.Configuration.LazyLoadingEnabled = false;
