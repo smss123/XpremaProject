@@ -7,6 +7,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xprema.Base", "Xprema.Base\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpremaProjectPro", "XpremaProjectPro\XpremaProjectPro.csproj", "{30CA211B-DE8D-4B3F-A309-C615BCC10E07}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "XpremaConneted", "http://localhost:16213", "{5E03DD8D-4562-4481-99E9-946ECD3B4E10}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{f56a7353-2e36-41f4-ab78-f2fbc7d759cd}|Xprema.Base.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_16213"
+		Debug.AspNetCompiler.PhysicalPath = "XpremaConneted\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16213\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_16213"
+		Release.AspNetCompiler.PhysicalPath = "XpremaConneted\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16213\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "XpremaConneted\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +44,10 @@ Global
 		{30CA211B-DE8D-4B3F-A309-C615BCC10E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30CA211B-DE8D-4B3F-A309-C615BCC10E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30CA211B-DE8D-4B3F-A309-C615BCC10E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E03DD8D-4562-4481-99E9-946ECD3B4E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E03DD8D-4562-4481-99E9-946ECD3B4E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E03DD8D-4562-4481-99E9-946ECD3B4E10}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E03DD8D-4562-4481-99E9-946ECD3B4E10}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
