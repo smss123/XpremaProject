@@ -38,6 +38,9 @@ public class XpremaConnector : System.Web.Services.WebService {
     {
       return   Xprema.Base.Commands.GroupCommand.GetAll();
     }
-
-    
+      [WebMethod]
+    public List<Supplier> getallsup()
+    {
+        return Xprema.Base.Commands.SupplierCommand.GetAll();
+    }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using XpremaProjectPro.XpConnected;
 
+
 namespace XpremaProjectPro.User_ManagmentForms
 {
     public partial class frmGroup : DevExpress.XtraEditors.XtraForm
@@ -39,8 +40,7 @@ namespace XpremaProjectPro.User_ManagmentForms
         {
             XpremaConnectorSoapClient proxy = new XpremaConnectorSoapClient();
             userGroupBindingSource.DataSource = proxy.GetAllGroup();
-            
-           
+
         }
     }
 }
