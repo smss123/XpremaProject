@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
+            this.userSystemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.GroupNamelookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
-            this.UserAddgroupControl = new DevExpress.XtraEditors.GroupControl();
-            this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -42,10 +41,10 @@
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
             this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.userSystemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.UserAddgroupControl = new DevExpress.XtraEditors.GroupControl();
+            this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupNamelookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserAddgroupControl)).BeginInit();
-            this.UserAddgroupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -55,53 +54,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserAddgroupControl)).BeginInit();
+            this.UserAddgroupControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // userNameTextBox
             // 
             this.userNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userSystemBindingSource, "UserName", true));
-            this.userNameTextBox.Location = new System.Drawing.Point(72, 38);
+            this.userNameTextBox.Location = new System.Drawing.Point(71, 38);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(217, 20);
+            this.userNameTextBox.Size = new System.Drawing.Size(218, 20);
             this.userNameTextBox.TabIndex = 2;
+            // 
+            // userSystemBindingSource
+            // 
+            this.userSystemBindingSource.DataSource = typeof(Xprema.Base.UserSystem);
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userSystemBindingSource, "Password", true));
-            this.passwordTextBox.Location = new System.Drawing.Point(72, 12);
+            this.passwordTextBox.Location = new System.Drawing.Point(71, 12);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(217, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(218, 20);
             this.passwordTextBox.TabIndex = 4;
             // 
             // GroupNamelookUpEdit
             // 
-            this.GroupNamelookUpEdit.Location = new System.Drawing.Point(72, 64);
+            this.GroupNamelookUpEdit.Location = new System.Drawing.Point(71, 64);
             this.GroupNamelookUpEdit.Name = "GroupNamelookUpEdit";
             this.GroupNamelookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.GroupNamelookUpEdit.Size = new System.Drawing.Size(217, 20);
+            this.GroupNamelookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupDescription", "Group Description"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupName", "Group Name")});
+            this.GroupNamelookUpEdit.Properties.DisplayMember = "GroupName";
+            this.GroupNamelookUpEdit.Properties.DropDownRows = 10;
+            this.GroupNamelookUpEdit.Properties.ValueMember = "id";
+            this.GroupNamelookUpEdit.Size = new System.Drawing.Size(218, 20);
             this.GroupNamelookUpEdit.StyleController = this.layoutControl1;
             this.GroupNamelookUpEdit.TabIndex = 5;
-            // 
-            // UserAddgroupControl
-            // 
-            this.UserAddgroupControl.Controls.Add(this.layoutControl1);
-            this.UserAddgroupControl.Controls.Add(this.AddBtn);
-            this.UserAddgroupControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UserAddgroupControl.Location = new System.Drawing.Point(0, 0);
-            this.UserAddgroupControl.Name = "UserAddgroupControl";
-            this.UserAddgroupControl.Size = new System.Drawing.Size(305, 230);
-            this.UserAddgroupControl.TabIndex = 7;
-            this.UserAddgroupControl.Text = "Add User ";
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.Location = new System.Drawing.Point(12, 184);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(150, 34);
-            this.AddBtn.TabIndex = 12;
-            this.AddBtn.Text = "Add";
             // 
             // layoutControl1
             // 
@@ -192,9 +183,26 @@
             this.simpleSeparator3.Size = new System.Drawing.Size(281, 8);
             this.simpleSeparator3.Text = "simpleSeparator3";
             // 
-            // userSystemBindingSource
+            // UserAddgroupControl
             // 
-            this.userSystemBindingSource.DataSource = typeof(Xprema.Base.UserSystem);
+            this.UserAddgroupControl.Controls.Add(this.layoutControl1);
+            this.UserAddgroupControl.Controls.Add(this.AddBtn);
+            this.UserAddgroupControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UserAddgroupControl.Location = new System.Drawing.Point(0, 0);
+            this.UserAddgroupControl.Name = "UserAddgroupControl";
+            this.UserAddgroupControl.Size = new System.Drawing.Size(305, 230);
+            this.UserAddgroupControl.TabIndex = 7;
+            this.UserAddgroupControl.Text = "Add User ";
+            this.UserAddgroupControl.Paint += new System.Windows.Forms.PaintEventHandler(this.UserAddgroupControl_Paint);
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(12, 184);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(150, 34);
+            this.AddBtn.TabIndex = 12;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // AddUsersFrm
             // 
@@ -204,9 +212,9 @@
             this.Controls.Add(this.UserAddgroupControl);
             this.Name = "AddUsersFrm";
             this.Text = "AddUsersFrm";
+            this.Load += new System.EventHandler(this.AddUsersFrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupNamelookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserAddgroupControl)).EndInit();
-            this.UserAddgroupControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -216,7 +224,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserAddgroupControl)).EndInit();
+            this.UserAddgroupControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

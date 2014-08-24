@@ -322,6 +322,125 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="UserGroup" nillable="true" type="tns:UserGroup" />
         </s:sequence>
       </s:complexType>
+      <s:element name="getallsup">
+        <s:complexType />
+      </s:element>
+      <s:element name="getallsupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getallsupResult" type="tns:ArrayOfSupplier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSupplier">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Supplier" nillable="true" type="tns:Supplier" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GroupAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="g" type="tns:UserGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GroupAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="g" type="tns:UserGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GroupEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GroupDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GroupGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GroupGetAllResult" type="tns:ArrayOfUserGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="tns:UserSystem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="tns:UserSystem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="UserGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserGetAllResult" type="tns:ArrayOfUserSystem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -342,6 +461,60 @@
   <wsdl:message name="GetAllGroupSoapOut">
     <wsdl:part name="parameters" element="tns:GetAllGroupResponse" />
   </wsdl:message>
+  <wsdl:message name="getallsupSoapIn">
+    <wsdl:part name="parameters" element="tns:getallsup" />
+  </wsdl:message>
+  <wsdl:message name="getallsupSoapOut">
+    <wsdl:part name="parameters" element="tns:getallsupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GroupAddSoapIn">
+    <wsdl:part name="parameters" element="tns:GroupAdd" />
+  </wsdl:message>
+  <wsdl:message name="GroupAddSoapOut">
+    <wsdl:part name="parameters" element="tns:GroupAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="GroupEditSoapIn">
+    <wsdl:part name="parameters" element="tns:GroupEdit" />
+  </wsdl:message>
+  <wsdl:message name="GroupEditSoapOut">
+    <wsdl:part name="parameters" element="tns:GroupEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GroupDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:GroupDelete" />
+  </wsdl:message>
+  <wsdl:message name="GroupDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:GroupDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GroupGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GroupGetAll" />
+  </wsdl:message>
+  <wsdl:message name="GroupGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GroupGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserAddSoapIn">
+    <wsdl:part name="parameters" element="tns:UserAdd" />
+  </wsdl:message>
+  <wsdl:message name="UserAddSoapOut">
+    <wsdl:part name="parameters" element="tns:UserAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserEditSoapIn">
+    <wsdl:part name="parameters" element="tns:UserEdit" />
+  </wsdl:message>
+  <wsdl:message name="UserEditSoapOut">
+    <wsdl:part name="parameters" element="tns:UserEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:UserDelete" />
+  </wsdl:message>
+  <wsdl:message name="UserDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:UserDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:UserGetAll" />
+  </wsdl:message>
+  <wsdl:message name="UserGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:UserGetAllResponse" />
+  </wsdl:message>
   <wsdl:portType name="XpremaConnectorSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -354,6 +527,42 @@
     <wsdl:operation name="GetAllGroup">
       <wsdl:input message="tns:GetAllGroupSoapIn" />
       <wsdl:output message="tns:GetAllGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getallsup">
+      <wsdl:input message="tns:getallsupSoapIn" />
+      <wsdl:output message="tns:getallsupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupAdd">
+      <wsdl:input message="tns:GroupAddSoapIn" />
+      <wsdl:output message="tns:GroupAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupEdit">
+      <wsdl:input message="tns:GroupEditSoapIn" />
+      <wsdl:output message="tns:GroupEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupDelete">
+      <wsdl:input message="tns:GroupDeleteSoapIn" />
+      <wsdl:output message="tns:GroupDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupGetAll">
+      <wsdl:input message="tns:GroupGetAllSoapIn" />
+      <wsdl:output message="tns:GroupGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <wsdl:input message="tns:UserAddSoapIn" />
+      <wsdl:output message="tns:UserAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserEdit">
+      <wsdl:input message="tns:UserEditSoapIn" />
+      <wsdl:output message="tns:UserEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserDelete">
+      <wsdl:input message="tns:UserDeleteSoapIn" />
+      <wsdl:output message="tns:UserDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGetAll">
+      <wsdl:input message="tns:UserGetAllSoapIn" />
+      <wsdl:output message="tns:UserGetAllSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="XpremaConnectorSoap" type="tns:XpremaConnectorSoap">
@@ -385,6 +594,87 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getallsup">
+      <soap:operation soapAction="Xpro.xprema.net/getallsup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupAdd">
+      <soap:operation soapAction="Xpro.xprema.net/GroupAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupEdit">
+      <soap:operation soapAction="Xpro.xprema.net/GroupEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupDelete">
+      <soap:operation soapAction="Xpro.xprema.net/GroupDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/GroupGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <soap:operation soapAction="Xpro.xprema.net/UserAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserEdit">
+      <soap:operation soapAction="Xpro.xprema.net/UserEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserDelete">
+      <soap:operation soapAction="Xpro.xprema.net/UserDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/UserGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="XpremaConnectorSoap12" type="tns:XpremaConnectorSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -408,6 +698,87 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllGroup">
       <soap12:operation soapAction="Xpro.xprema.net/GetAllGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getallsup">
+      <soap12:operation soapAction="Xpro.xprema.net/getallsup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/GroupAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/GroupEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/GroupDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/GroupGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/UserAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/UserEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/UserDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/UserGetAll" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

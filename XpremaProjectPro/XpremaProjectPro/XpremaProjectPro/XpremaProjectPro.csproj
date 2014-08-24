@@ -86,6 +86,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OperationX.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectFrm.cs">
       <SubType>Form</SubType>
@@ -231,7 +232,13 @@
     <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.Account.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.Supplier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.UserGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.UserSystem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
