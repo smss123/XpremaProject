@@ -13,6 +13,7 @@ namespace Xprema.Base
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
+    
     public partial class Xprema_PrjectEntities : DbContext
     {
         public Xprema_PrjectEntities()
