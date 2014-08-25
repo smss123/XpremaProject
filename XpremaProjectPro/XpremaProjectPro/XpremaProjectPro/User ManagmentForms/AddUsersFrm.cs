@@ -35,7 +35,16 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-                  MessageBox.Show(GroupNamelookUpEdit.Properties.GetDataSourceValue("id", GroupNamelookUpEdit.ItemIndex).ToString());
+             XpremaProjectPro.XpConnected.UserSystem user = new UserSystem()
+            {
+                UserName =userNameTextBox.Text,
+                Password =passwordTextBox.Text,
+                UserGroup_Id= int.Parse(this.GroupNamelookUpEdit.EditValue.ToString()),
+            
+            };
+             proxy.UserAdd(u: user);
+        
+                //  MessageBox.Show(GroupNamelookUpEdit.Properties.GetDataSourceValue("id", GroupNamelookUpEdit.ItemIndex).ToString());
         }
 
         private void GroupNamelookUpEdit_EditValueChanged(object sender, EventArgs e)

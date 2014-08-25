@@ -44,10 +44,10 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void managmentUserFrm_Load(object sender, EventArgs e)
         {
+            
+            userSystemBindingSource.DataSource = proxy.UserGetAll();
+
             userGroupBindingSource.DataSource = proxy.GroupGetAll();
-            //GroupCombo.DataSource = proxy.GroupGetAll();
-         
-          
         }
 
         private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -55,6 +55,11 @@ namespace XpremaProjectPro.User_ManagmentForms
             UserSystem se = (UserSystem)((GridView)UsersgridControl.MainView).GetFocusedRow();
             proxy.UserEdit(se);
             MessageBox.Show(OperationX.DeleteMessage);
+        }
+
+        private void UsersgridControl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

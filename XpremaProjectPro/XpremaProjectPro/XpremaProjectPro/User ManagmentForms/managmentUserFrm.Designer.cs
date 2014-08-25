@@ -43,19 +43,19 @@
             this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserGroup_Id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GroupCombo = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.userGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDeleteX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnEditX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.GroupLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GroupCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userGroupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupLookUpEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar1
@@ -102,13 +102,14 @@
             this.UsersgridControl.MainView = this.gridView1;
             this.UsersgridControl.Name = "UsersgridControl";
             this.UsersgridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.GroupCombo,
             this.btnDelete,
-            this.btnEdit});
+            this.btnEdit,
+            this.GroupLookUpEdit});
             this.UsersgridControl.Size = new System.Drawing.Size(884, 483);
             this.UsersgridControl.TabIndex = 2;
             this.UsersgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.UsersgridControl.Click += new System.EventHandler(this.UsersgridControl_Click);
             // 
             // userSystemBindingSource
             // 
@@ -153,31 +154,12 @@
             // 
             // colUserGroup_Id
             // 
-            this.colUserGroup_Id.ColumnEdit = this.GroupCombo;
-            this.colUserGroup_Id.FieldName = "UserGroup.GroupName";
+            this.colUserGroup_Id.ColumnEdit = this.GroupLookUpEdit;
+            this.colUserGroup_Id.FieldName = "UserGroup_Id";
             this.colUserGroup_Id.Name = "colUserGroup_Id";
             this.colUserGroup_Id.Visible = true;
             this.colUserGroup_Id.VisibleIndex = 3;
             this.colUserGroup_Id.Width = 164;
-            // 
-            // GroupCombo
-            // 
-            this.GroupCombo.AutoHeight = false;
-            this.GroupCombo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.GroupCombo.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "ID"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupName", "Group Name"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupDescription", "Group Description")});
-            this.GroupCombo.DataSource = this.userGroupBindingSource;
-            this.GroupCombo.DisplayMember = "GroupName";
-            this.GroupCombo.HideSelection = false;
-            this.GroupCombo.Name = "GroupCombo";
-            this.GroupCombo.NullText = "#";
-            this.GroupCombo.ReadOnly = true;
-            this.GroupCombo.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.GroupCombo.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.GroupCombo.ValueMember = "Id";
             // 
             // userGroupBindingSource
             // 
@@ -189,7 +171,7 @@
             this.btnDeleteX.ColumnEdit = this.btnDelete;
             this.btnDeleteX.Name = "btnDeleteX";
             this.btnDeleteX.Visible = true;
-            this.btnDeleteX.VisibleIndex = 4;
+            this.btnDeleteX.VisibleIndex = 5;
             // 
             // btnDelete
             // 
@@ -206,7 +188,7 @@
             this.btnEditX.ColumnEdit = this.btnEdit;
             this.btnEditX.Name = "btnEditX";
             this.btnEditX.Visible = true;
-            this.btnEditX.VisibleIndex = 5;
+            this.btnEditX.VisibleIndex = 4;
             // 
             // btnEdit
             // 
@@ -216,6 +198,17 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEdit_ButtonClick);
+            // 
+            // GroupLookUpEdit
+            // 
+            this.GroupLookUpEdit.AutoHeight = false;
+            this.GroupLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.GroupLookUpEdit.DataSource = this.userGroupBindingSource;
+            this.GroupLookUpEdit.DisplayMember = "GroupName";
+            this.GroupLookUpEdit.Name = "GroupLookUpEdit";
+            this.GroupLookUpEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.GroupLookUpEdit.ValueMember = "Id";
             // 
             // managmentUserFrm
             // 
@@ -230,10 +223,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GroupCombo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userGroupBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupLookUpEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,12 +243,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colUserName;
         private DevExpress.XtraGrid.Columns.GridColumn colPassword;
         private DevExpress.XtraGrid.Columns.GridColumn colUserGroup_Id;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit GroupCombo;
         private DevExpress.XtraGrid.Columns.GridColumn btnDeleteX;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
         private DevExpress.XtraGrid.Columns.GridColumn btnEditX;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnEdit;
         private System.Windows.Forms.BindingSource userGroupBindingSource;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit GroupLookUpEdit;
 
     }
 }
