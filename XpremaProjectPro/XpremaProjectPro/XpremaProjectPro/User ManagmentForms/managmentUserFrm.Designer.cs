@@ -30,14 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(managmentUserFrm));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.SaveBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.DeltBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.UsersgridControl = new DevExpress.XtraGrid.GridControl();
             this.userSystemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,13 +43,19 @@
             this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserGroup_Id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colContracts = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserGroup = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.GroupCombo = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.userGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDeleteX = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnEditX = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupCombo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userGroupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar1
@@ -75,56 +78,20 @@
             // 
             // tileBarGroup2
             // 
-            this.tileBarGroup2.Items.Add(this.AddBtn);
-            this.tileBarGroup2.Items.Add(this.SaveBtn);
-            this.tileBarGroup2.Items.Add(this.DeltBtn);
             this.tileBarGroup2.Items.Add(this.RefreshBtn);
             this.tileBarGroup2.Name = "tileBarGroup2";
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.AddBtn;
-            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement1.Text = "Add";
-            this.AddBtn.Elements.Add(tileItemElement1);
-            this.AddBtn.Id = 7;
-            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.AddBtn_ItemClick);
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.Image = global::XpremaProjectPro.Properties.Resources.savebt;
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement2.Text = "Save";
-            this.SaveBtn.Elements.Add(tileItemElement2);
-            this.SaveBtn.Id = 4;
-            this.SaveBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.SaveBtn.Name = "SaveBtn";
-            // 
-            // DeltBtn
-            // 
-            this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Image = global::XpremaProjectPro.Properties.Resources.delbtn;
-            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement3.Text = "Delete";
-            this.DeltBtn.Elements.Add(tileItemElement3);
-            this.DeltBtn.Id = 6;
-            this.DeltBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.DeltBtn.Name = "DeltBtn";
             // 
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
-            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement4.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement4);
+            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement1.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement1);
             this.RefreshBtn.Id = 5;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.RefreshBtn_ItemClick);
             // 
             // UsersgridControl
             // 
@@ -135,7 +102,9 @@
             this.UsersgridControl.MainView = this.gridView1;
             this.UsersgridControl.Name = "UsersgridControl";
             this.UsersgridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEdit1});
+            this.GroupCombo,
+            this.btnDelete,
+            this.btnEdit});
             this.UsersgridControl.Size = new System.Drawing.Size(884, 483);
             this.UsersgridControl.TabIndex = 2;
             this.UsersgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -152,8 +121,8 @@
             this.colUserName,
             this.colPassword,
             this.colUserGroup_Id,
-            this.colContracts,
-            this.colUserGroup});
+            this.btnDeleteX,
+            this.btnEditX});
             this.gridView1.GridControl = this.UsersgridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
@@ -184,35 +153,69 @@
             // 
             // colUserGroup_Id
             // 
-            this.colUserGroup_Id.ColumnEdit = this.repositoryItemLookUpEdit1;
+            this.colUserGroup_Id.ColumnEdit = this.GroupCombo;
             this.colUserGroup_Id.FieldName = "UserGroup.GroupName";
             this.colUserGroup_Id.Name = "colUserGroup_Id";
             this.colUserGroup_Id.Visible = true;
             this.colUserGroup_Id.VisibleIndex = 3;
             this.colUserGroup_Id.Width = 164;
             // 
-            // colContracts
+            // GroupCombo
             // 
-            this.colContracts.FieldName = "Contracts";
-            this.colContracts.Name = "colContracts";
-            this.colContracts.Visible = true;
-            this.colContracts.VisibleIndex = 4;
-            this.colContracts.Width = 134;
-            // 
-            // colUserGroup
-            // 
-            this.colUserGroup.FieldName = "UserGroup";
-            this.colUserGroup.Name = "colUserGroup";
-            this.colUserGroup.Visible = true;
-            this.colUserGroup.VisibleIndex = 5;
-            this.colUserGroup.Width = 136;
-            // 
-            // repositoryItemLookUpEdit1
-            // 
-            this.repositoryItemLookUpEdit1.AutoHeight = false;
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.GroupCombo.AutoHeight = false;
+            this.GroupCombo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.GroupCombo.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "ID"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupName", "Group Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupDescription", "Group Description")});
+            this.GroupCombo.DataSource = this.userGroupBindingSource;
+            this.GroupCombo.DisplayMember = "GroupName";
+            this.GroupCombo.HideSelection = false;
+            this.GroupCombo.Name = "GroupCombo";
+            this.GroupCombo.NullText = "#";
+            this.GroupCombo.ReadOnly = true;
+            this.GroupCombo.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.GroupCombo.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.GroupCombo.ValueMember = "Id";
+            // 
+            // userGroupBindingSource
+            // 
+            this.userGroupBindingSource.DataSource = typeof(Xprema.Base.UserGroup);
+            // 
+            // btnDeleteX
+            // 
+            this.btnDeleteX.Caption = "Delete";
+            this.btnDeleteX.ColumnEdit = this.btnDelete;
+            this.btnDeleteX.Name = "btnDeleteX";
+            this.btnDeleteX.Visible = true;
+            this.btnDeleteX.VisibleIndex = 4;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AutoHeight = false;
+            this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick);
+            // 
+            // btnEditX
+            // 
+            this.btnEditX.Caption = "btnEdit";
+            this.btnEditX.ColumnEdit = this.btnEdit;
+            this.btnEditX.Name = "btnEditX";
+            this.btnEditX.Visible = true;
+            this.btnEditX.VisibleIndex = 5;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.AutoHeight = false;
+            this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEdit_ButtonClick);
             // 
             // managmentUserFrm
             // 
@@ -223,10 +226,14 @@
             this.Controls.Add(this.tileBar1);
             this.Name = "managmentUserFrm";
             this.Text = "managmentUserFrm";
+            this.Load += new System.EventHandler(this.managmentUserFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupCombo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userGroupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,9 +242,7 @@
 
         private DevExpress.XtraBars.Navigation.TileBar tileBar1;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
-        private DevExpress.XtraBars.Navigation.TileBarItem SaveBtn;
         private DevExpress.XtraBars.Navigation.TileBarItem RefreshBtn;
-        private DevExpress.XtraBars.Navigation.TileBarItem DeltBtn;
         private DevExpress.XtraGrid.GridControl UsersgridControl;
         private System.Windows.Forms.BindingSource userSystemBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -245,10 +250,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colUserName;
         private DevExpress.XtraGrid.Columns.GridColumn colPassword;
         private DevExpress.XtraGrid.Columns.GridColumn colUserGroup_Id;
-        private DevExpress.XtraGrid.Columns.GridColumn colContracts;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserGroup;
-        private DevExpress.XtraBars.Navigation.TileBarItem AddBtn;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit GroupCombo;
+        private DevExpress.XtraGrid.Columns.GridColumn btnDeleteX;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn btnEditX;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnEdit;
+        private System.Windows.Forms.BindingSource userGroupBindingSource;
 
     }
 }

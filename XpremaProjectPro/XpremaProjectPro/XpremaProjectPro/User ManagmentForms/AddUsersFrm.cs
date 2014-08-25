@@ -35,7 +35,7 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-                        MessageBox.Show(GroupNamelookUpEdit.Properties.GetDataSourceValue("id", GroupNamelookUpEdit.ItemIndex).ToString());
+                  MessageBox.Show(GroupNamelookUpEdit.Properties.GetDataSourceValue("id", GroupNamelookUpEdit.ItemIndex).ToString());
         }
 
         private void GroupNamelookUpEdit_EditValueChanged(object sender, EventArgs e)

@@ -32,6 +32,19 @@ namespace XpremaProjectPro
 
         }
 
+
+        private static string _DeletedMessage;
+
+        public static string DeletedMessage
+        {
+            get
+            {
+                OperationX._DeletedMessage = "Record Deleted";
+                return OperationX._DeletedMessage;
+            }
+
+        }
+
         private static readonly string enterName = "Please enter the name";
 
         public static string EnterName
