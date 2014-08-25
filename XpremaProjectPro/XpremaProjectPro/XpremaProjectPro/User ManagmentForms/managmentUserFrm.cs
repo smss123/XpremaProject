@@ -39,7 +39,7 @@ namespace XpremaProjectPro.User_ManagmentForms
         {
             UserSystem se = (UserSystem)((GridView)UsersgridControl.MainView).GetFocusedRow();
             proxy.UserDelete(se.Id);
-            MessageBox.Show(OperationX.DeleteMessage);
+            MessageBox.Show(OperationX.DeletedMessage);
         }
 
         private void managmentUserFrm_Load(object sender, EventArgs e)
