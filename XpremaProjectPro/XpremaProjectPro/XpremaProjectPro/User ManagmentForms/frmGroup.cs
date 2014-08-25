@@ -44,8 +44,8 @@ namespace XpremaProjectPro.User_ManagmentForms
             {
                 groupDescriptionTextBox.BackColor = Color.White;
             }
-
-
+             if (XtraMessageBox.Show(OperationX.SaveMessage,"Save",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==System.Windows.Forms.DialogResult.Yes)
+             { 
             XpremaProjectPro.XpConnected.UserGroup g = new UserGroup() { 
              GroupDescription= groupDescriptionTextBox.Text,
               GroupName=groupNameTextBox.Text,
@@ -53,7 +53,7 @@ namespace XpremaProjectPro.User_ManagmentForms
             };
             proxy.GroupEdit(g);
         }
-
+        }
         private void groupControl1_Paint(object sender, PaintEventArgs e)
         {
 

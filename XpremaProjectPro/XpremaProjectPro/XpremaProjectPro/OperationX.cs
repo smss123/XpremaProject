@@ -26,10 +26,43 @@ namespace XpremaProjectPro
         {
             get
             {
-                OperationX._DeleteMessage = "Delete This Record?";
+                OperationX._DeleteMessage = "Do You Want To Delete This Record?";
                 return OperationX._DeleteMessage;
             }
 
         }
+
+        private static readonly string enterName = "Please enter the name";
+
+        public static string EnterName
+        {
+            get { return OperationX.enterName; }
+        }
+
+        private static readonly string saveMessage = "Do You Want To Save Changes";
+
+        public static string SaveMessage
+        {
+            get { return OperationX.saveMessage; }
+
+        }
+
+        private static readonly string editMessage = "Save Changes Done";
+
+        public static string EditMessage
+        {
+            get { return OperationX.editMessage; }
+
+        }
+
+        private static readonly string saveMessageDone = "Add Record Done";
+
+        public static string SaveMessageDone
+        {
+            get { return OperationX.saveMessageDone; }
+
+        }
+
+
     }
 }

@@ -48,14 +48,20 @@
             this.colUserGroup_Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colContracts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserGroup = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar1
             // 
             this.tileBar1.AllowDrag = false;
+            this.tileBar1.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tileBar1.AppearanceItem.Normal.Options.UseFont = true;
+            this.tileBar1.AppearanceText.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tileBar1.AppearanceText.Options.UseFont = true;
             this.tileBar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.tileBar1.Groups.Add(this.tileBarGroup2);
@@ -78,6 +84,8 @@
             // AddBtn
             // 
             this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.AddBtn;
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement1.Text = "Add";
             this.AddBtn.Elements.Add(tileItemElement1);
             this.AddBtn.Id = 7;
@@ -88,6 +96,8 @@
             // SaveBtn
             // 
             this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement2.Image = global::XpremaProjectPro.Properties.Resources.savebt;
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement2.Text = "Save";
             this.SaveBtn.Elements.Add(tileItemElement2);
             this.SaveBtn.Id = 4;
@@ -97,6 +107,8 @@
             // DeltBtn
             // 
             this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement3.Image = global::XpremaProjectPro.Properties.Resources.delbtn;
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement3.Text = "Delete";
             this.DeltBtn.Elements.Add(tileItemElement3);
             this.DeltBtn.Id = 6;
@@ -106,6 +118,8 @@
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement4.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
+            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement4.Text = "Refresh";
             this.RefreshBtn.Elements.Add(tileItemElement4);
             this.RefreshBtn.Id = 5;
@@ -120,6 +134,8 @@
             this.UsersgridControl.Location = new System.Drawing.Point(0, 98);
             this.UsersgridControl.MainView = this.gridView1;
             this.UsersgridControl.Name = "UsersgridControl";
+            this.UsersgridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit1});
             this.UsersgridControl.Size = new System.Drawing.Size(884, 483);
             this.UsersgridControl.TabIndex = 2;
             this.UsersgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -140,6 +156,7 @@
             this.colUserGroup});
             this.gridView1.GridControl = this.UsersgridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
             // 
             // colId
             // 
@@ -147,6 +164,7 @@
             this.colId.Name = "colId";
             this.colId.Visible = true;
             this.colId.VisibleIndex = 0;
+            this.colId.Width = 144;
             // 
             // colUserName
             // 
@@ -154,6 +172,7 @@
             this.colUserName.Name = "colUserName";
             this.colUserName.Visible = true;
             this.colUserName.VisibleIndex = 1;
+            this.colUserName.Width = 144;
             // 
             // colPassword
             // 
@@ -161,13 +180,16 @@
             this.colPassword.Name = "colPassword";
             this.colPassword.Visible = true;
             this.colPassword.VisibleIndex = 2;
+            this.colPassword.Width = 144;
             // 
             // colUserGroup_Id
             // 
+            this.colUserGroup_Id.ColumnEdit = this.repositoryItemLookUpEdit1;
             this.colUserGroup_Id.FieldName = "UserGroup.GroupName";
             this.colUserGroup_Id.Name = "colUserGroup_Id";
             this.colUserGroup_Id.Visible = true;
             this.colUserGroup_Id.VisibleIndex = 3;
+            this.colUserGroup_Id.Width = 164;
             // 
             // colContracts
             // 
@@ -175,6 +197,7 @@
             this.colContracts.Name = "colContracts";
             this.colContracts.Visible = true;
             this.colContracts.VisibleIndex = 4;
+            this.colContracts.Width = 134;
             // 
             // colUserGroup
             // 
@@ -182,6 +205,14 @@
             this.colUserGroup.Name = "colUserGroup";
             this.colUserGroup.Visible = true;
             this.colUserGroup.VisibleIndex = 5;
+            this.colUserGroup.Width = 136;
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
             // 
             // managmentUserFrm
             // 
@@ -195,6 +226,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsersgridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,6 +248,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colContracts;
         private DevExpress.XtraGrid.Columns.GridColumn colUserGroup;
         private DevExpress.XtraBars.Navigation.TileBarItem AddBtn;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
 
     }
 }

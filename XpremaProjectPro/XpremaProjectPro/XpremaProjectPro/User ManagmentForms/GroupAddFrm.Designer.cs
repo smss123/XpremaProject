@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupAddFrm));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupNameTextBox = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(393, 342);
             this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "groupControl1";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // layoutControl1
@@ -79,34 +79,38 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(693, 97, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(389, 250);
-            this.layoutControl1.TabIndex = 12;
+            this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // groupNameTextBox
             // 
-            this.groupNameTextBox.Location = new System.Drawing.Point(104, 14);
+            this.groupNameTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupNameTextBox.Location = new System.Drawing.Point(121, 14);
             this.groupNameTextBox.Name = "groupNameTextBox";
-            this.groupNameTextBox.Size = new System.Drawing.Size(273, 20);
+            this.groupNameTextBox.Size = new System.Drawing.Size(256, 20);
             this.groupNameTextBox.TabIndex = 7;
             // 
             // groupDescriptionRichTextBox
             // 
-            this.groupDescriptionRichTextBox.Location = new System.Drawing.Point(104, 40);
+            this.groupDescriptionRichTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupDescriptionRichTextBox.Location = new System.Drawing.Point(121, 40);
             this.groupDescriptionRichTextBox.Name = "groupDescriptionRichTextBox";
-            this.groupDescriptionRichTextBox.Size = new System.Drawing.Size(273, 52);
+            this.groupDescriptionRichTextBox.Size = new System.Drawing.Size(256, 52);
             this.groupDescriptionRichTextBox.TabIndex = 11;
             this.groupDescriptionRichTextBox.Text = "";
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(104, 98);
+            this.checkedListBox1.Location = new System.Drawing.Point(121, 98);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(273, 132);
+            this.checkedListBox1.Size = new System.Drawing.Size(256, 124);
             this.checkedListBox1.TabIndex = 10;
             // 
             // layoutControlGroup1
             // 
+            this.layoutControlGroup1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlGroup1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -132,7 +136,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(369, 142);
             this.layoutControlItem3.Text = "Permissions:";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(89, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(106, 16);
             // 
             // simpleSeparator2
             // 
@@ -160,7 +164,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(369, 56);
             this.layoutControlItem4.Text = "Group Description:";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(89, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(106, 16);
             // 
             // layoutControlItem1
             // 
@@ -170,7 +174,7 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(369, 24);
             this.layoutControlItem1.Text = "Group Name:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(89, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(106, 16);
             // 
             // simpleSeparator1
             // 
@@ -192,10 +196,14 @@
             // 
             // AddBtn
             // 
-            this.AddBtn.Location = new System.Drawing.Point(12, 293);
+            this.AddBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBtn.Appearance.Options.UseFont = true;
+            this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBtn.Image")));
+            this.AddBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.AddBtn.Location = new System.Drawing.Point(12, 277);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(170, 34);
-            this.AddBtn.TabIndex = 11;
+            this.AddBtn.Size = new System.Drawing.Size(117, 50);
+            this.AddBtn.TabIndex = 2;
             this.AddBtn.Text = "Add";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -206,7 +214,7 @@
             this.ClientSize = new System.Drawing.Size(393, 342);
             this.Controls.Add(this.groupControl1);
             this.Name = "GroupAddFrm";
-            this.Text = "GroupAddFrm";
+            this.Text = "Add Group";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

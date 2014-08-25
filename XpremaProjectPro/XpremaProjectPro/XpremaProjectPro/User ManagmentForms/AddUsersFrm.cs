@@ -27,15 +27,20 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void AddUsersFrm_Load(object sender, EventArgs e)
         {
-            GroupNamelookUpEdit.Properties.DataSource = proxy.GroupGetAll();
-            GroupNamelookUpEdit.Properties.DisplayMember = "GroupName";
-            GroupNamelookUpEdit.Properties.ValueMember = "id";
+            userGroupBindingSource.DataSource = proxy.GroupGetAll();
+            //GroupNamelookUpEdit.Properties.DisplayMember = "GroupName";
+            //GroupNamelookUpEdit.Properties.ValueMember = "id";
             
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
                         MessageBox.Show(GroupNamelookUpEdit.Properties.GetDataSourceValue("id", GroupNamelookUpEdit.ItemIndex).ToString());
+        }
+
+        private void GroupNamelookUpEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

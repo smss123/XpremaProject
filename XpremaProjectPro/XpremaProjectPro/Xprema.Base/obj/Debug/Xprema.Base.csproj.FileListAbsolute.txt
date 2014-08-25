@@ -36,3 +36,4 @@ C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro
 C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.dll
 C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.pdb
 C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.csprojResolveAssemblyReference.cache
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.csprojResolveAssemblyReference.cache
