@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using XpremaProjectPro.XpConnected;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
+
 namespace XpremaProjectPro.User_ManagmentForms
 {
     public partial class managmentUserFrm : DevExpress.XtraEditors.XtraForm
@@ -37,13 +38,17 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void btnDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+             if (XtraMessageBox.Show(OperationX.DeleteMessage,"Delete",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==System.Windows.Forms.DialogResult.Yes){
+
             UserSystem se = (UserSystem)((GridView)UsersgridControl.MainView).GetFocusedRow();
             proxy.UserDelete(se.Id);
-            MessageBox.Show(OperationX.DeletedMessage);
+            XtraMessageBox.Show(OperationX.DeletedMessage);
+        }
         }
 
         private void managmentUserFrm_Load(object sender, EventArgs e)
         {
+            gridView1.OptionsBehavior.KeepFocusedRowOnUpdate = false;
             
             userSystemBindingSource.DataSource = proxy.UserGetAll();
 
@@ -52,14 +57,23 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            UserSystem se = (UserSystem)((GridView)UsersgridControl.MainView).GetFocusedRow();
-            proxy.UserEdit(se);
-            MessageBox.Show(OperationX.DeleteMessage);
+            if (XtraMessageBox.Show(OperationX.SaveMessage, "save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                UserSystem se = (UserSystem)((GridView)UsersgridControl.MainView).GetFocusedRow();
+                proxy.UserEdit(se);
+                XtraMessageBox.Show(OperationX.SaveMessagedone);
+            }
         }
-
         private void UsersgridControl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UsersgridControl_DoubleClick(object sender, EventArgs e)
+        {
+            
+            //gridView1.RowClick
+            //gridView1.OptionsBehavior.ReadOnly = false;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Xprema.Base.Commands
     public  class EmployeeCommand
     {
         static Xprema_PrjectEntities db = new Xprema_PrjectEntities();
-        public static bool NewEmployee(Employee emp)
+        public static bool addEmployee(Employee emp)
         {
             try
             {

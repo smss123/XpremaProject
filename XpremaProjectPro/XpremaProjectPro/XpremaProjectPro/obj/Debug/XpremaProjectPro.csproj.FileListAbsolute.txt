@@ -32,8 +32,6 @@ C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.User_ManagmentForms.managmentUserFrm.resources
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.SupplierAddFrm.resources
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.SupplierMangmentFrm.resources
-C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.Employee.AddEmployeeFrm.resources
-C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.Employee.EmployeeMangmentFrm.resources
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.financierAddfrm.resources
 C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.SupplierForms.financierMangementfrm.resources
 C:\Users\xprema\Source\Repos\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\XpremaProjectPro.exe.config
@@ -91,3 +89,4 @@ C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro
 C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.exe.licenses
 C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.xml
 C:\Users\xprema\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\XpremaProjectPro\obj\Debug\XpremaProjectPro.Employee_forms.addEmployeefrm.resources

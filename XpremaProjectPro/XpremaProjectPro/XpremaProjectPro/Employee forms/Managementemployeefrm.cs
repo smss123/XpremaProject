@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace XpremaProjectPro.Employee
+namespace XpremaProjectPro.Employee_forms
 {
-    public partial class EmployeeMangmentFrm : DevExpress.XtraEditors.XtraForm
+    public partial class Managementemployeefrm : DevExpress.XtraEditors.XtraForm
     {
-        public EmployeeMangmentFrm()
+        public Managementemployeefrm()
         {
             InitializeComponent();
         }

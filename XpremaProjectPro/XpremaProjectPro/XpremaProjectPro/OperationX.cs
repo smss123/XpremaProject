@@ -60,19 +60,19 @@ namespace XpremaProjectPro
 
         }
 
-        private static readonly string editMessage = "Save Changes Done";
+        private static readonly string saveMessagedone = "Save Changes Done";
 
-        public static string EditMessage
+        public static string SaveMessagedone
         {
-            get { return OperationX.editMessage; }
+            get { return OperationX.saveMessagedone; }
 
         }
 
-        private static readonly string saveMessageDone = "Add Record Done";
+        private static readonly string addMessageDone = "Add Record Done";
 
-        public static string SaveMessageDone
+        public static string AddMessageDone
         {
-            get { return OperationX.saveMessageDone; }
+            get { return OperationX.addMessageDone; }
 
         }
 

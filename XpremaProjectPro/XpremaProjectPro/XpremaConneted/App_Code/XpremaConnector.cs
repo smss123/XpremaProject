@@ -108,4 +108,31 @@ public class XpremaConnector : System.Web.Services.WebService {
     #endregion
 
 
+    #region"Employees"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+     public bool EmployeeAdd(Employee em)
+     {
+         return EmployeeCommand.addEmployee(em);
+     }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool EmployeeEdit(Employee em)
+    {
+        return EmployeeCommand.EditEmployee (em);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool EmployeeDelete(int ID)
+    {
+        return EmployeeCommand.DeleteEmployee(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<Employee> EmployeeGetAll()
+    {
+        return EmployeeCommand.GetAll();
+    }
+    
+
+    #endregion
 }

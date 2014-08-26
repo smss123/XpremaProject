@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Navigation;
 using XpremaProjectPro.User_ManagmentForms;
-using XpremaProjectPro.Employee;
+using XpremaProjectPro.Employee_forms;
 using XpremaProjectPro.SupplierForms;
 
 namespace XpremaProjectPro
@@ -65,13 +65,13 @@ namespace XpremaProjectPro
 
         private void newEmployeeBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AddEmployeeFrm AddEmpfrm = new AddEmployeeFrm();
+            addEmployeefrm AddEmpfrm = new addEmployeefrm();
             AddEmpfrm.ShowDialog();
         }
 
         private void ManagmentEmployeeBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            EmployeeMangmentFrm empmang = new EmployeeMangmentFrm();
+            Managementemployeefrm empmang = new Managementemployeefrm();
             empmang.ShowDialog();
         }
 

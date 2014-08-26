@@ -2984,6 +2984,41 @@ namespace XpremaProjectPro.XpConnected {
         System.IAsyncResult BeginUserGetAll(XpremaProjectPro.XpConnected.UserGetAllRequest request, System.AsyncCallback callback, object asyncState);
         
         XpremaProjectPro.XpConnected.UserGetAllResponse EndUserGetAll(System.IAsyncResult result);
+        
+        // CODEGEN: Generating message contract since element name em from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/EmployeeAdd", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.EmployeeAddResponse EmployeeAdd(XpremaProjectPro.XpConnected.EmployeeAddRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="Xpro.xprema.net/EmployeeAdd", ReplyAction="*")]
+        System.IAsyncResult BeginEmployeeAdd(XpremaProjectPro.XpConnected.EmployeeAddRequest request, System.AsyncCallback callback, object asyncState);
+        
+        XpremaProjectPro.XpConnected.EmployeeAddResponse EndEmployeeAdd(System.IAsyncResult result);
+        
+        // CODEGEN: Generating message contract since element name em from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/EmployeeEdit", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.EmployeeEditResponse EmployeeEdit(XpremaProjectPro.XpConnected.EmployeeEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="Xpro.xprema.net/EmployeeEdit", ReplyAction="*")]
+        System.IAsyncResult BeginEmployeeEdit(XpremaProjectPro.XpConnected.EmployeeEditRequest request, System.AsyncCallback callback, object asyncState);
+        
+        XpremaProjectPro.XpConnected.EmployeeEditResponse EndEmployeeEdit(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/EmployeeDelete", ReplyAction="*")]
+        bool EmployeeDelete(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="Xpro.xprema.net/EmployeeDelete", ReplyAction="*")]
+        System.IAsyncResult BeginEmployeeDelete(int ID, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEmployeeDelete(System.IAsyncResult result);
+        
+        // CODEGEN: Generating message contract since element name EmployeeGetAllResult from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/EmployeeGetAll", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.EmployeeGetAllResponse EmployeeGetAll(XpremaProjectPro.XpConnected.EmployeeGetAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="Xpro.xprema.net/EmployeeGetAll", ReplyAction="*")]
+        System.IAsyncResult BeginEmployeeGetAll(XpremaProjectPro.XpConnected.EmployeeGetAllRequest request, System.AsyncCallback callback, object asyncState);
+        
+        XpremaProjectPro.XpConnected.EmployeeGetAllResponse EndEmployeeGetAll(System.IAsyncResult result);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3624,6 +3659,203 @@ namespace XpremaProjectPro.XpConnected {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EmployeeAddRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EmployeeAdd", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.EmployeeAddRequestBody Body;
+        
+        public EmployeeAddRequest() {
+        }
+        
+        public EmployeeAddRequest(XpremaProjectPro.XpConnected.EmployeeAddRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class EmployeeAddRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.Employee em;
+        
+        public EmployeeAddRequestBody() {
+        }
+        
+        public EmployeeAddRequestBody(XpremaProjectPro.XpConnected.Employee em) {
+            this.em = em;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EmployeeAddResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EmployeeAddResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.EmployeeAddResponseBody Body;
+        
+        public EmployeeAddResponse() {
+        }
+        
+        public EmployeeAddResponse(XpremaProjectPro.XpConnected.EmployeeAddResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class EmployeeAddResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool EmployeeAddResult;
+        
+        public EmployeeAddResponseBody() {
+        }
+        
+        public EmployeeAddResponseBody(bool EmployeeAddResult) {
+            this.EmployeeAddResult = EmployeeAddResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EmployeeEditRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EmployeeEdit", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.EmployeeEditRequestBody Body;
+        
+        public EmployeeEditRequest() {
+        }
+        
+        public EmployeeEditRequest(XpremaProjectPro.XpConnected.EmployeeEditRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class EmployeeEditRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.Employee em;
+        
+        public EmployeeEditRequestBody() {
+        }
+        
+        public EmployeeEditRequestBody(XpremaProjectPro.XpConnected.Employee em) {
+            this.em = em;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EmployeeEditResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EmployeeEditResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.EmployeeEditResponseBody Body;
+        
+        public EmployeeEditResponse() {
+        }
+        
+        public EmployeeEditResponse(XpremaProjectPro.XpConnected.EmployeeEditResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class EmployeeEditResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool EmployeeEditResult;
+        
+        public EmployeeEditResponseBody() {
+        }
+        
+        public EmployeeEditResponseBody(bool EmployeeEditResult) {
+            this.EmployeeEditResult = EmployeeEditResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EmployeeGetAllRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EmployeeGetAll", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.EmployeeGetAllRequestBody Body;
+        
+        public EmployeeGetAllRequest() {
+        }
+        
+        public EmployeeGetAllRequest(XpremaProjectPro.XpConnected.EmployeeGetAllRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class EmployeeGetAllRequestBody {
+        
+        public EmployeeGetAllRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EmployeeGetAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EmployeeGetAllResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.EmployeeGetAllResponseBody Body;
+        
+        public EmployeeGetAllResponse() {
+        }
+        
+        public EmployeeGetAllResponse(XpremaProjectPro.XpConnected.EmployeeGetAllResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class EmployeeGetAllResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> EmployeeGetAllResult;
+        
+        public EmployeeGetAllResponseBody() {
+        }
+        
+        public EmployeeGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> EmployeeGetAllResult) {
+            this.EmployeeGetAllResult = EmployeeGetAllResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface XpremaConnectorSoapChannel : XpremaProjectPro.XpConnected.XpremaConnectorSoap, System.ServiceModel.IClientChannel {
     }
@@ -3858,6 +4090,82 @@ namespace XpremaProjectPro.XpConnected {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EmployeeAddCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EmployeeAddCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EmployeeEditCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EmployeeEditCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EmployeeDeleteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EmployeeDeleteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EmployeeGetAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EmployeeGetAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class XpremaConnectorSoapClient : System.ServiceModel.ClientBase<XpremaProjectPro.XpConnected.XpremaConnectorSoap>, XpremaProjectPro.XpConnected.XpremaConnectorSoap {
         
         private BeginOperationDelegate onBeginHelloWorldDelegate;
@@ -3932,6 +4240,30 @@ namespace XpremaProjectPro.XpConnected {
         
         private System.Threading.SendOrPostCallback onUserGetAllCompletedDelegate;
         
+        private BeginOperationDelegate onBeginEmployeeAddDelegate;
+        
+        private EndOperationDelegate onEndEmployeeAddDelegate;
+        
+        private System.Threading.SendOrPostCallback onEmployeeAddCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEmployeeEditDelegate;
+        
+        private EndOperationDelegate onEndEmployeeEditDelegate;
+        
+        private System.Threading.SendOrPostCallback onEmployeeEditCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEmployeeDeleteDelegate;
+        
+        private EndOperationDelegate onEndEmployeeDeleteDelegate;
+        
+        private System.Threading.SendOrPostCallback onEmployeeDeleteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEmployeeGetAllDelegate;
+        
+        private EndOperationDelegate onEndEmployeeGetAllDelegate;
+        
+        private System.Threading.SendOrPostCallback onEmployeeGetAllCompletedDelegate;
+        
         public XpremaConnectorSoapClient() {
         }
         
@@ -3974,6 +4306,14 @@ namespace XpremaProjectPro.XpConnected {
         public event System.EventHandler<UserDeleteCompletedEventArgs> UserDeleteCompleted;
         
         public event System.EventHandler<UserGetAllCompletedEventArgs> UserGetAllCompleted;
+        
+        public event System.EventHandler<EmployeeAddCompletedEventArgs> EmployeeAddCompleted;
+        
+        public event System.EventHandler<EmployeeEditCompletedEventArgs> EmployeeEditCompleted;
+        
+        public event System.EventHandler<EmployeeDeleteCompletedEventArgs> EmployeeDeleteCompleted;
+        
+        public event System.EventHandler<EmployeeGetAllCompletedEventArgs> EmployeeGetAllCompleted;
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         XpremaProjectPro.XpConnected.HelloWorldResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.HelloWorld(XpremaProjectPro.XpConnected.HelloWorldRequest request) {
@@ -4779,6 +5119,271 @@ namespace XpremaProjectPro.XpConnected {
                 this.onUserGetAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnUserGetAllCompleted);
             }
             base.InvokeAsync(this.onBeginUserGetAllDelegate, null, this.onEndUserGetAllDelegate, this.onUserGetAllCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.EmployeeAddResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.EmployeeAdd(XpremaProjectPro.XpConnected.EmployeeAddRequest request) {
+            return base.Channel.EmployeeAdd(request);
+        }
+        
+        public bool EmployeeAdd(XpremaProjectPro.XpConnected.Employee em) {
+            XpremaProjectPro.XpConnected.EmployeeAddRequest inValue = new XpremaProjectPro.XpConnected.EmployeeAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.EmployeeAddRequestBody();
+            inValue.Body.em = em;
+            XpremaProjectPro.XpConnected.EmployeeAddResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).EmployeeAdd(inValue);
+            return retVal.Body.EmployeeAddResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult XpremaProjectPro.XpConnected.XpremaConnectorSoap.BeginEmployeeAdd(XpremaProjectPro.XpConnected.EmployeeAddRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEmployeeAdd(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginEmployeeAdd(XpremaProjectPro.XpConnected.Employee em, System.AsyncCallback callback, object asyncState) {
+            XpremaProjectPro.XpConnected.EmployeeAddRequest inValue = new XpremaProjectPro.XpConnected.EmployeeAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.EmployeeAddRequestBody();
+            inValue.Body.em = em;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).BeginEmployeeAdd(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.EmployeeAddResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.EndEmployeeAdd(System.IAsyncResult result) {
+            return base.Channel.EndEmployeeAdd(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndEmployeeAdd(System.IAsyncResult result) {
+            XpremaProjectPro.XpConnected.EmployeeAddResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).EndEmployeeAdd(result);
+            return retVal.Body.EmployeeAddResult;
+        }
+        
+        private System.IAsyncResult OnBeginEmployeeAdd(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            XpremaProjectPro.XpConnected.Employee em = ((XpremaProjectPro.XpConnected.Employee)(inValues[0]));
+            return this.BeginEmployeeAdd(em, callback, asyncState);
+        }
+        
+        private object[] OnEndEmployeeAdd(System.IAsyncResult result) {
+            bool retVal = this.EndEmployeeAdd(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEmployeeAddCompleted(object state) {
+            if ((this.EmployeeAddCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EmployeeAddCompleted(this, new EmployeeAddCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EmployeeAddAsync(XpremaProjectPro.XpConnected.Employee em) {
+            this.EmployeeAddAsync(em, null);
+        }
+        
+        public void EmployeeAddAsync(XpremaProjectPro.XpConnected.Employee em, object userState) {
+            if ((this.onBeginEmployeeAddDelegate == null)) {
+                this.onBeginEmployeeAddDelegate = new BeginOperationDelegate(this.OnBeginEmployeeAdd);
+            }
+            if ((this.onEndEmployeeAddDelegate == null)) {
+                this.onEndEmployeeAddDelegate = new EndOperationDelegate(this.OnEndEmployeeAdd);
+            }
+            if ((this.onEmployeeAddCompletedDelegate == null)) {
+                this.onEmployeeAddCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEmployeeAddCompleted);
+            }
+            base.InvokeAsync(this.onBeginEmployeeAddDelegate, new object[] {
+                        em}, this.onEndEmployeeAddDelegate, this.onEmployeeAddCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.EmployeeEditResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.EmployeeEdit(XpremaProjectPro.XpConnected.EmployeeEditRequest request) {
+            return base.Channel.EmployeeEdit(request);
+        }
+        
+        public bool EmployeeEdit(XpremaProjectPro.XpConnected.Employee em) {
+            XpremaProjectPro.XpConnected.EmployeeEditRequest inValue = new XpremaProjectPro.XpConnected.EmployeeEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.EmployeeEditRequestBody();
+            inValue.Body.em = em;
+            XpremaProjectPro.XpConnected.EmployeeEditResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).EmployeeEdit(inValue);
+            return retVal.Body.EmployeeEditResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult XpremaProjectPro.XpConnected.XpremaConnectorSoap.BeginEmployeeEdit(XpremaProjectPro.XpConnected.EmployeeEditRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEmployeeEdit(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginEmployeeEdit(XpremaProjectPro.XpConnected.Employee em, System.AsyncCallback callback, object asyncState) {
+            XpremaProjectPro.XpConnected.EmployeeEditRequest inValue = new XpremaProjectPro.XpConnected.EmployeeEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.EmployeeEditRequestBody();
+            inValue.Body.em = em;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).BeginEmployeeEdit(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.EmployeeEditResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.EndEmployeeEdit(System.IAsyncResult result) {
+            return base.Channel.EndEmployeeEdit(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndEmployeeEdit(System.IAsyncResult result) {
+            XpremaProjectPro.XpConnected.EmployeeEditResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).EndEmployeeEdit(result);
+            return retVal.Body.EmployeeEditResult;
+        }
+        
+        private System.IAsyncResult OnBeginEmployeeEdit(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            XpremaProjectPro.XpConnected.Employee em = ((XpremaProjectPro.XpConnected.Employee)(inValues[0]));
+            return this.BeginEmployeeEdit(em, callback, asyncState);
+        }
+        
+        private object[] OnEndEmployeeEdit(System.IAsyncResult result) {
+            bool retVal = this.EndEmployeeEdit(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEmployeeEditCompleted(object state) {
+            if ((this.EmployeeEditCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EmployeeEditCompleted(this, new EmployeeEditCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EmployeeEditAsync(XpremaProjectPro.XpConnected.Employee em) {
+            this.EmployeeEditAsync(em, null);
+        }
+        
+        public void EmployeeEditAsync(XpremaProjectPro.XpConnected.Employee em, object userState) {
+            if ((this.onBeginEmployeeEditDelegate == null)) {
+                this.onBeginEmployeeEditDelegate = new BeginOperationDelegate(this.OnBeginEmployeeEdit);
+            }
+            if ((this.onEndEmployeeEditDelegate == null)) {
+                this.onEndEmployeeEditDelegate = new EndOperationDelegate(this.OnEndEmployeeEdit);
+            }
+            if ((this.onEmployeeEditCompletedDelegate == null)) {
+                this.onEmployeeEditCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEmployeeEditCompleted);
+            }
+            base.InvokeAsync(this.onBeginEmployeeEditDelegate, new object[] {
+                        em}, this.onEndEmployeeEditDelegate, this.onEmployeeEditCompletedDelegate, userState);
+        }
+        
+        public bool EmployeeDelete(int ID) {
+            return base.Channel.EmployeeDelete(ID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginEmployeeDelete(int ID, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEmployeeDelete(ID, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndEmployeeDelete(System.IAsyncResult result) {
+            return base.Channel.EndEmployeeDelete(result);
+        }
+        
+        private System.IAsyncResult OnBeginEmployeeDelete(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int ID = ((int)(inValues[0]));
+            return this.BeginEmployeeDelete(ID, callback, asyncState);
+        }
+        
+        private object[] OnEndEmployeeDelete(System.IAsyncResult result) {
+            bool retVal = this.EndEmployeeDelete(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEmployeeDeleteCompleted(object state) {
+            if ((this.EmployeeDeleteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EmployeeDeleteCompleted(this, new EmployeeDeleteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EmployeeDeleteAsync(int ID) {
+            this.EmployeeDeleteAsync(ID, null);
+        }
+        
+        public void EmployeeDeleteAsync(int ID, object userState) {
+            if ((this.onBeginEmployeeDeleteDelegate == null)) {
+                this.onBeginEmployeeDeleteDelegate = new BeginOperationDelegate(this.OnBeginEmployeeDelete);
+            }
+            if ((this.onEndEmployeeDeleteDelegate == null)) {
+                this.onEndEmployeeDeleteDelegate = new EndOperationDelegate(this.OnEndEmployeeDelete);
+            }
+            if ((this.onEmployeeDeleteCompletedDelegate == null)) {
+                this.onEmployeeDeleteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEmployeeDeleteCompleted);
+            }
+            base.InvokeAsync(this.onBeginEmployeeDeleteDelegate, new object[] {
+                        ID}, this.onEndEmployeeDeleteDelegate, this.onEmployeeDeleteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.EmployeeGetAllResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.EmployeeGetAll(XpremaProjectPro.XpConnected.EmployeeGetAllRequest request) {
+            return base.Channel.EmployeeGetAll(request);
+        }
+        
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> EmployeeGetAll() {
+            XpremaProjectPro.XpConnected.EmployeeGetAllRequest inValue = new XpremaProjectPro.XpConnected.EmployeeGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.EmployeeGetAllRequestBody();
+            XpremaProjectPro.XpConnected.EmployeeGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).EmployeeGetAll(inValue);
+            return retVal.Body.EmployeeGetAllResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult XpremaProjectPro.XpConnected.XpremaConnectorSoap.BeginEmployeeGetAll(XpremaProjectPro.XpConnected.EmployeeGetAllRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEmployeeGetAll(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginEmployeeGetAll(System.AsyncCallback callback, object asyncState) {
+            XpremaProjectPro.XpConnected.EmployeeGetAllRequest inValue = new XpremaProjectPro.XpConnected.EmployeeGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.EmployeeGetAllRequestBody();
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).BeginEmployeeGetAll(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.EmployeeGetAllResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.EndEmployeeGetAll(System.IAsyncResult result) {
+            return base.Channel.EndEmployeeGetAll(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> EndEmployeeGetAll(System.IAsyncResult result) {
+            XpremaProjectPro.XpConnected.EmployeeGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).EndEmployeeGetAll(result);
+            return retVal.Body.EmployeeGetAllResult;
+        }
+        
+        private System.IAsyncResult OnBeginEmployeeGetAll(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginEmployeeGetAll(callback, asyncState);
+        }
+        
+        private object[] OnEndEmployeeGetAll(System.IAsyncResult result) {
+            System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> retVal = this.EndEmployeeGetAll(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEmployeeGetAllCompleted(object state) {
+            if ((this.EmployeeGetAllCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EmployeeGetAllCompleted(this, new EmployeeGetAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EmployeeGetAllAsync() {
+            this.EmployeeGetAllAsync(null);
+        }
+        
+        public void EmployeeGetAllAsync(object userState) {
+            if ((this.onBeginEmployeeGetAllDelegate == null)) {
+                this.onBeginEmployeeGetAllDelegate = new BeginOperationDelegate(this.OnBeginEmployeeGetAll);
+            }
+            if ((this.onEndEmployeeGetAllDelegate == null)) {
+                this.onEndEmployeeGetAllDelegate = new EndOperationDelegate(this.OnEndEmployeeGetAll);
+            }
+            if ((this.onEmployeeGetAllCompletedDelegate == null)) {
+                this.onEmployeeGetAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEmployeeGetAllCompleted);
+            }
+            base.InvokeAsync(this.onBeginEmployeeGetAllDelegate, null, this.onEndEmployeeGetAllDelegate, this.onEmployeeGetAllCompletedDelegate, userState);
         }
     }
 }

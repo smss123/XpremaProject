@@ -35,6 +35,37 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+            if (userNameTextBox.Text == "")
+            {
+                userNameTextBox.BackColor = Color.OrangeRed;
+                userNameTextBox.Text = OperationX.RequiredField;
+                return;
+            }
+            else
+            {
+                userNameTextBox.BackColor = Color.White;
+            }
+            if (passwordTextBox.Text == "")
+            {
+                passwordTextBox.BackColor = Color.OrangeRed;
+                passwordTextBox.Text = OperationX.RequiredField;
+                return;
+            }
+            else
+            {
+                passwordTextBox.BackColor = Color.White;
+            }
+            if (GroupNamelookUpEdit.EditValue==null)
+            {
+                GroupNamelookUpEdit.BackColor = Color.OrangeRed;
+                GroupNamelookUpEdit.Text = OperationX.RequiredField;
+                return;
+            }
+            else
+            {
+                GroupNamelookUpEdit.BackColor = Color.White;
+            }
+
              XpremaProjectPro.XpConnected.UserSystem user = new UserSystem()
             {
                 UserName =userNameTextBox.Text,
@@ -43,8 +74,8 @@ namespace XpremaProjectPro.User_ManagmentForms
             
             };
              proxy.UserAdd(u: user);
-        
-                //  MessageBox.Show(GroupNamelookUpEdit.Properties.GetDataSourceValue("id", GroupNamelookUpEdit.ItemIndex).ToString());
+
+             XtraMessageBox.Show(OperationX.AddMessageDone, "Add");
         }
 
         private void GroupNamelookUpEdit_EditValueChanged(object sender, EventArgs e)

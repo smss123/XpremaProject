@@ -441,6 +441,63 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="EmployeeAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="em" type="tns:Employee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="em" type="tns:Employee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="EmployeeGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeGetAllResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -515,6 +572,30 @@
   <wsdl:message name="UserGetAllSoapOut">
     <wsdl:part name="parameters" element="tns:UserGetAllResponse" />
   </wsdl:message>
+  <wsdl:message name="EmployeeAddSoapIn">
+    <wsdl:part name="parameters" element="tns:EmployeeAdd" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeAddSoapOut">
+    <wsdl:part name="parameters" element="tns:EmployeeAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeEditSoapIn">
+    <wsdl:part name="parameters" element="tns:EmployeeEdit" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeEditSoapOut">
+    <wsdl:part name="parameters" element="tns:EmployeeEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:EmployeeDelete" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:EmployeeDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:EmployeeGetAll" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:EmployeeGetAllResponse" />
+  </wsdl:message>
   <wsdl:portType name="XpremaConnectorSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -563,6 +644,22 @@
     <wsdl:operation name="UserGetAll">
       <wsdl:input message="tns:UserGetAllSoapIn" />
       <wsdl:output message="tns:UserGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeAdd">
+      <wsdl:input message="tns:EmployeeAddSoapIn" />
+      <wsdl:output message="tns:EmployeeAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeEdit">
+      <wsdl:input message="tns:EmployeeEditSoapIn" />
+      <wsdl:output message="tns:EmployeeEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeDelete">
+      <wsdl:input message="tns:EmployeeDeleteSoapIn" />
+      <wsdl:output message="tns:EmployeeDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeGetAll">
+      <wsdl:input message="tns:EmployeeGetAllSoapIn" />
+      <wsdl:output message="tns:EmployeeGetAllSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="XpremaConnectorSoap" type="tns:XpremaConnectorSoap">
@@ -675,6 +772,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="EmployeeAdd">
+      <soap:operation soapAction="Xpro.xprema.net/EmployeeAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeEdit">
+      <soap:operation soapAction="Xpro.xprema.net/EmployeeEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeDelete">
+      <soap:operation soapAction="Xpro.xprema.net/EmployeeDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/EmployeeGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="XpremaConnectorSoap12" type="tns:XpremaConnectorSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -779,6 +912,42 @@
     </wsdl:operation>
     <wsdl:operation name="UserGetAll">
       <soap12:operation soapAction="Xpro.xprema.net/UserGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/EmployeeAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/EmployeeEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/EmployeeDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/EmployeeGetAll" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
