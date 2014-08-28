@@ -62,6 +62,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProjectSenario\frmProjectAddBasicInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectAddBasicInfo.Designer.cs">
+      <DependentUpon>frmProjectAddBasicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectBegin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectBegin.Designer.cs">
+      <DependentUpon>frmProjectBegin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectContract.Designer.cs">
+      <DependentUpon>frmProjectContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectFinanacer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectFinanacer.Designer.cs">
+      <DependentUpon>frmProjectFinanacer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProjectSenario\ProjectPlane\frmProjectActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\ProjectPlane\frmProjectActivity.Designer.cs">
+      <DependentUpon>frmProjectActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProjectSenario\ProjectPlane\frmProjectSubActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\ProjectPlane\frmProjectSubActivity.Designer.cs">
+      <DependentUpon>frmProjectSubActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee forms\addEmployeefrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,8 +184,29 @@
     <Compile Include="User ManagmentForms\managmentUserFrm.Designer.cs">
       <DependentUpon>managmentUserFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddProjectSenario\frmProjectAddBasicInfo.resx">
+      <DependentUpon>frmProjectAddBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectSenario\frmProjectBegin.resx">
+      <DependentUpon>frmProjectBegin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectSenario\frmProjectContract.resx">
+      <DependentUpon>frmProjectContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectSenario\frmProjectFinanacer.resx">
+      <DependentUpon>frmProjectFinanacer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectSenario\ProjectPlane\frmProjectActivity.resx">
+      <DependentUpon>frmProjectActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectSenario\ProjectPlane\frmProjectSubActivity.resx">
+      <DependentUpon>frmProjectSubActivity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee forms\addEmployeefrm.resx">
       <DependentUpon>addEmployeefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee forms\Managementemployeefrm.resx">
+      <DependentUpon>Managementemployeefrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -233,7 +290,67 @@
     <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.Employee.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.EmployeeAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.EmployeeEditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.EmployeeGetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.financierAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.financierEditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.financierGetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.getAccountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.GetAllGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.getallsupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.GroupAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.GroupEditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.GroupGetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.Supplier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.SupplierAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.SupplierEditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.SupplierGetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.Thefinancier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.UserAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.UserEditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.UserGetAllResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\XpConnected\XpremaProjectPro.XpConnected.UserGroup.datasource">
@@ -256,6 +373,21 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\AddBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savebt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Service References\XpConnected\" />
   </ItemGroup>
   <ItemGroup>
@@ -273,18 +405,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AddBtn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delbtn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refbtn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\savebt.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

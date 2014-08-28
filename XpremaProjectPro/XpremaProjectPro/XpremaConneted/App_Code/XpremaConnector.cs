@@ -22,40 +22,40 @@ public class XpremaConnector : System.Web.Services.WebService {
     }
 
     [WebMethod]
-    public string HelloWorld() {
+    public string HelloWorld()
+    {
         return "Hello World";
     }
     [WebMethod]
     public List<Account> getAccounts()
     {
         Xprema_PrjectEntities db = new Xprema_PrjectEntities();
-        db.Configuration.LazyLoadingEnabled=false;
-        db.Configuration.ProxyCreationEnabled=false;
+        db.Configuration.LazyLoadingEnabled = false;
+        db.Configuration.ProxyCreationEnabled = false;
         return db.Accounts.ToList();
     }
 
     [WebMethod]
     public List<UserGroup> GetAllGroup()
     {
-      return   Xprema.Base.Commands.GroupCommand.GetAll();
+        return Xprema.Base.Commands.GroupCommand.GetAll();
     }
-      [WebMethod]
+    [WebMethod]
     public List<Supplier> getallsup()
     {
         return Xprema.Base.Commands.SupplierCommand.GetAll();
     }
 
-
     //[WebMethod]
-    //public  Xprema_PrjectEntities dbX()
-    //  {
+    //public Xprema_PrjectEntities dbX()
+    //{
 
-    //      Xprema_PrjectEntities db = new Xprema_PrjectEntities();
-    //      db.Configuration.AutoDetectChangesEnabled = false;
-    //      db.Configuration.LazyLoadingEnabled = false;
-    //      db.Configuration.ProxyCreationEnabled = false;
-    //      return db;
-    //  }
+    //    Xprema_PrjectEntities db = new Xprema_PrjectEntities();
+    //    db.Configuration.AutoDetectChangesEnabled = false;
+    //    db.Configuration.LazyLoadingEnabled = false;
+    //    db.Configuration.ProxyCreationEnabled = false;
+    //    return db;
+    //}
 
 #region"Groups"
       [WebMethod(true,System.EnterpriseServices.TransactionOption.RequiresNew)]
@@ -82,7 +82,7 @@ public class XpremaConnector : System.Web.Services.WebService {
     }
 #endregion
 
- #region"Users"
+#region"Users"
      [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
     public bool UserAdd(UserSystem u)
       {
@@ -108,7 +108,7 @@ public class XpremaConnector : System.Web.Services.WebService {
     #endregion
 
 
-    #region"Employees"
+#region"Employees"
     [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
      public bool EmployeeAdd(Employee em)
      {
@@ -133,6 +133,63 @@ public class XpremaConnector : System.Web.Services.WebService {
         return EmployeeCommand.GetAll();
     }
     
+
+    #endregion
+
+#region"Supplier"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool SupplierAdd(Supplier sp)
+    {
+        return SupplierCommand.newSupplier(sp);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool SupplierEdit(Supplier sp)
+    {
+        return SupplierCommand.EditSupplier(sp);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool SupplierDelete(int ID)
+    {
+        return SupplierCommand.DeleteSupplier(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<Supplier> SupplierGetAll()
+    {
+        return SupplierCommand.GetAll();
+    }
+
+
+    #endregion
+
+
+    #region"Thefinancier"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.Supported)]
+    public bool financierAdd(Thefinancier fc)
+    {
+        return ThefinancierCommand.Newfinancier(fc);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool financierEdit(Thefinancier fc)
+    {
+        return ThefinancierCommand.Editfinancier(fc);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool financierDelete(int ID)
+    {
+        return ThefinancierCommand.Deletefinancier(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<Thefinancier> financierGetAll()
+    {
+        return ThefinancierCommand.GetAll();
+    }
+
 
     #endregion
 }

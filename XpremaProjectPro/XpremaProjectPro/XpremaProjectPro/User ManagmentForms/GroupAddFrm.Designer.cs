@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupAddFrm));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupNameTextBox = new System.Windows.Forms.TextBox();
@@ -66,6 +65,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(393, 342);
             this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Add Group";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // layoutControl1
@@ -198,7 +198,7 @@
             // 
             this.AddBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.Appearance.Options.UseFont = true;
-            this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBtn.Image")));
+            this.AddBtn.Image = global::XpremaProjectPro.Properties.Resources.add_32x32;
             this.AddBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.AddBtn.Location = new System.Drawing.Point(12, 277);
             this.AddBtn.Name = "AddBtn";

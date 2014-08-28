@@ -69,12 +69,17 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(358, 266);
             this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Add Supplier";
             // 
             // BtnAdd
             // 
+            this.BtnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BtnAdd.Appearance.Options.UseFont = true;
+            this.BtnAdd.Image = global::XpremaProjectPro.Properties.Resources.add_32x32;
+            this.BtnAdd.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.BtnAdd.Location = new System.Drawing.Point(12, 204);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(159, 42);
+            this.BtnAdd.Size = new System.Drawing.Size(117, 50);
             this.BtnAdd.TabIndex = 1;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
@@ -98,49 +103,49 @@
             // adderssTextBox
             // 
             this.adderssTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Adderss", true));
-            this.adderssTextBox.Location = new System.Drawing.Point(100, 132);
+            this.adderssTextBox.Location = new System.Drawing.Point(118, 132);
             this.adderssTextBox.Name = "adderssTextBox";
-            this.adderssTextBox.Size = new System.Drawing.Size(242, 20);
+            this.adderssTextBox.Size = new System.Drawing.Size(224, 20);
             this.adderssTextBox.TabIndex = 10;
             // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(100, 108);
+            this.emailTextBox.Location = new System.Drawing.Point(118, 108);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(242, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(224, 20);
             this.emailTextBox.TabIndex = 9;
             // 
             // faxTextBox
             // 
             this.faxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "Fax", true));
-            this.faxTextBox.Location = new System.Drawing.Point(100, 84);
+            this.faxTextBox.Location = new System.Drawing.Point(118, 84);
             this.faxTextBox.Name = "faxTextBox";
-            this.faxTextBox.Size = new System.Drawing.Size(242, 20);
+            this.faxTextBox.Size = new System.Drawing.Size(224, 20);
             this.faxTextBox.TabIndex = 8;
             // 
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "PhoneNumber", true));
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(100, 60);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(118, 60);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(242, 20);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(224, 20);
             this.phoneNumberTextBox.TabIndex = 7;
             // 
             // suppliersNaturalTextBox
             // 
             this.suppliersNaturalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "SuppliersNatural", true));
-            this.suppliersNaturalTextBox.Location = new System.Drawing.Point(100, 36);
+            this.suppliersNaturalTextBox.Location = new System.Drawing.Point(118, 36);
             this.suppliersNaturalTextBox.Name = "suppliersNaturalTextBox";
-            this.suppliersNaturalTextBox.Size = new System.Drawing.Size(242, 20);
+            this.suppliersNaturalTextBox.Size = new System.Drawing.Size(224, 20);
             this.suppliersNaturalTextBox.TabIndex = 6;
             // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.supplierBindingSource, "name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(100, 12);
+            this.nameTextBox.Location = new System.Drawing.Point(118, 12);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(242, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(224, 20);
             this.nameTextBox.TabIndex = 5;
             // 
             // layoutControlGroup1
@@ -163,63 +168,75 @@
             // 
             // layoutControlItem2
             // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.nameTextBox;
             this.layoutControlItem2.CustomizationFormText = "name:";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem2.Text = "name:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(103, 16);
             // 
             // layoutControlItem3
             // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.suppliersNaturalTextBox;
             this.layoutControlItem3.CustomizationFormText = "Suppliers Natural:";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem3.Text = "Suppliers Natural:";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(103, 16);
             // 
             // layoutControlItem4
             // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.phoneNumberTextBox;
             this.layoutControlItem4.CustomizationFormText = "Phone Number:";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem4.Text = "Phone Number:";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(103, 16);
             // 
             // layoutControlItem5
             // 
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem5.Control = this.faxTextBox;
             this.layoutControlItem5.CustomizationFormText = "Fax:";
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem5.Text = "Fax:";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(103, 16);
             // 
             // layoutControlItem6
             // 
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.emailTextBox;
             this.layoutControlItem6.CustomizationFormText = "Email:";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(334, 24);
             this.layoutControlItem6.Text = "Email:";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(103, 16);
             // 
             // layoutControlItem7
             // 
+            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.Control = this.adderssTextBox;
             this.layoutControlItem7.CustomizationFormText = "Adderss:";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(334, 37);
             this.layoutControlItem7.Text = "Adderss:";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(103, 16);
             // 
             // supplierBindingSource
             // 

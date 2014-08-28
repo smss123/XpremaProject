@@ -68,7 +68,7 @@ namespace XpremaProjectPro.User_ManagmentForms
         private void frmGroup_Load(object sender, EventArgs e)
         {
            
-            userGroupBindingSource.DataSource = proxy.GetAllGroup();
+            userGroupBindingSource.DataSource = proxy.GroupGetAll();
 
         }
 
@@ -83,7 +83,7 @@ namespace XpremaProjectPro.User_ManagmentForms
 
         private void RefreshBtn_ItemClick(object sender, TileItemEventArgs e)
         {
-            userGroupBindingSource.DataSource = proxy.GetAllGroup();
+            userGroupBindingSource.DataSource = proxy.GroupGetAll();
         }
     }
 }

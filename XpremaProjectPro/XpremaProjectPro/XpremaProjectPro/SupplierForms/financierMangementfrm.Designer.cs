@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(financierMangementfrm));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.SaveBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.DeltBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.FinanciergridControl = new DevExpress.XtraGrid.GridControl();
             this.thefinancierBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,9 +49,15 @@
             this.colAccountID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAccount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSubTheFinancerAndProjects = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SaveColm = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SaveBtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.DeleteColom = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BtnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.FinanciergridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar1
@@ -67,50 +70,20 @@
             this.tileBar1.MaxId = 8;
             this.tileBar1.Name = "tileBar1";
             this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.tileBar1.Size = new System.Drawing.Size(948, 98);
+            this.tileBar1.Size = new System.Drawing.Size(1103, 98);
             this.tileBar1.TabIndex = 3;
             this.tileBar1.Text = "tileBar1";
             // 
             // tileBarGroup2
             // 
-            this.tileBarGroup2.Items.Add(this.AddBtn);
-            this.tileBarGroup2.Items.Add(this.SaveBtn);
-            this.tileBarGroup2.Items.Add(this.DeltBtn);
             this.tileBarGroup2.Items.Add(this.RefreshBtn);
             this.tileBarGroup2.Name = "tileBarGroup2";
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.Text = "Add";
-            this.AddBtn.Elements.Add(tileItemElement5);
-            this.AddBtn.Id = 7;
-            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.AddBtn.Name = "AddBtn";
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.Text = "Save";
-            this.SaveBtn.Elements.Add(tileItemElement6);
-            this.SaveBtn.Id = 4;
-            this.SaveBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.SaveBtn.Name = "SaveBtn";
-            // 
-            // DeltBtn
-            // 
-            this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.Text = "Delete";
-            this.DeltBtn.Elements.Add(tileItemElement7);
-            this.DeltBtn.Id = 6;
-            this.DeltBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.DeltBtn.Name = "DeltBtn";
             // 
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement8);
+            tileItemElement1.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement1);
             this.RefreshBtn.Id = 5;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
@@ -123,10 +96,14 @@
             this.FinanciergridControl.Location = new System.Drawing.Point(0, 98);
             this.FinanciergridControl.MainView = this.gridView1;
             this.FinanciergridControl.Name = "FinanciergridControl";
-            this.FinanciergridControl.Size = new System.Drawing.Size(948, 471);
+            this.FinanciergridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.SaveBtn,
+            this.BtnDelete});
+            this.FinanciergridControl.Size = new System.Drawing.Size(1103, 471);
             this.FinanciergridControl.TabIndex = 4;
             this.FinanciergridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.FinanciergridControl.Click += new System.EventHandler(this.FinanciergridControl_Click);
             // 
             // thefinancierBindingSource
             // 
@@ -144,7 +121,9 @@
             this.colAdderss,
             this.colAccountID,
             this.colAccount,
-            this.colSubTheFinancerAndProjects});
+            this.colSubTheFinancerAndProjects,
+            this.SaveColm,
+            this.DeleteColom});
             this.gridView1.GridControl = this.FinanciergridControl;
             this.gridView1.Name = "gridView1";
             // 
@@ -218,18 +197,53 @@
             this.colSubTheFinancerAndProjects.Visible = true;
             this.colSubTheFinancerAndProjects.VisibleIndex = 9;
             // 
+            // SaveColm
+            // 
+            this.SaveColm.ColumnEdit = this.SaveBtn;
+            this.SaveColm.Name = "SaveColm";
+            this.SaveColm.Visible = true;
+            this.SaveColm.VisibleIndex = 10;
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.AutoHeight = false;
+            this.SaveBtn.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("SaveBtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // DeleteColom
+            // 
+            this.DeleteColom.ColumnEdit = this.BtnDelete;
+            this.DeleteColom.Name = "DeleteColom";
+            this.DeleteColom.Visible = true;
+            this.DeleteColom.VisibleIndex = 11;
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.AutoHeight = false;
+            this.BtnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("BtnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
             // financierMangementfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 569);
+            this.ClientSize = new System.Drawing.Size(1103, 569);
             this.Controls.Add(this.FinanciergridControl);
             this.Controls.Add(this.tileBar1);
             this.Name = "financierMangementfrm";
             this.Text = "financierMangementfrm";
+            this.Load += new System.EventHandler(this.financierMangementfrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FinanciergridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnDelete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,9 +252,6 @@
 
         private DevExpress.XtraBars.Navigation.TileBar tileBar1;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
-        private DevExpress.XtraBars.Navigation.TileBarItem AddBtn;
-        private DevExpress.XtraBars.Navigation.TileBarItem SaveBtn;
-        private DevExpress.XtraBars.Navigation.TileBarItem DeltBtn;
         private DevExpress.XtraBars.Navigation.TileBarItem RefreshBtn;
         private DevExpress.XtraGrid.GridControl FinanciergridControl;
         private System.Windows.Forms.BindingSource thefinancierBindingSource;
@@ -255,5 +266,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAccountID;
         private DevExpress.XtraGrid.Columns.GridColumn colAccount;
         private DevExpress.XtraGrid.Columns.GridColumn colSubTheFinancerAndProjects;
+        private DevExpress.XtraGrid.Columns.GridColumn SaveColm;
+        private DevExpress.XtraGrid.Columns.GridColumn DeleteColom;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit SaveBtn;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BtnDelete;
     }
 }

@@ -25,6 +25,39 @@ namespace XpremaProjectPro.Employee_forms
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+            if (employeeNameTextBox.Text == "")
+            {
+                employeeNameTextBox.BackColor = Color.OrangeRed;
+                employeeNameTextBox.Text = OperationX.RequiredField;
+                return;
+            }
+            else
+            {
+                employeeNameTextBox.BackColor = Color.White;
+            }
+            ///
+            if (employeeGenderComboBox.Text == "")
+            {
+                employeeGenderComboBox.BackColor = Color.OrangeRed;
+                employeeGenderComboBox.Text = OperationX.RequiredField;
+                return;
+            }
+            else
+            {
+                employeeGenderComboBox.BackColor = Color.White;
+            }
+            ///
+            if (employeejobNumberTextBox.Text == "")
+            {
+                employeejobNumberTextBox.BackColor = Color.OrangeRed;
+                employeejobNumberTextBox.Text = OperationX.RequiredField;
+                return;
+            }
+            else
+            {
+                employeejobNumberTextBox.BackColor = Color.White;
+            }
+            
             XpremaProjectPro.XpConnected.Employee emp = new Employee()
             {
                 EmployeeName=employeeNameTextBox.Text,
@@ -46,6 +79,11 @@ namespace XpremaProjectPro.Employee_forms
       
 
         private void addEmployeefrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeaddgroupControl_Paint(object sender, PaintEventArgs e)
         {
 
         }

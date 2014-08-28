@@ -92,5 +92,11 @@ namespace XpremaProjectPro
             financierMangementfrm frcmng = new financierMangementfrm();
             frcmng.ShowDialog();
         }
+
+        private void ManagmentSupplierBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SupplierMangmentFrm supfrm = new SupplierMangmentFrm();
+            supfrm.ShowDialog();
+        }
     }
 }

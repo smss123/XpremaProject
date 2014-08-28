@@ -498,6 +498,110 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
         </s:sequence>
       </s:complexType>
+      <s:element name="SupplierAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sp" type="tns:Supplier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplierAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplierEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sp" type="tns:Supplier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplierEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplierDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplierDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplierGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="SupplierGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SupplierGetAllResult" type="tns:ArrayOfSupplier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="financierAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fc" type="tns:Thefinancier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="financierAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="financierAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="financierEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fc" type="tns:Thefinancier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="financierEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="financierEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="financierDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="financierDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="financierDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="financierGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="financierGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="financierGetAllResult" type="tns:ArrayOfThefinancier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -596,6 +700,54 @@
   <wsdl:message name="EmployeeGetAllSoapOut">
     <wsdl:part name="parameters" element="tns:EmployeeGetAllResponse" />
   </wsdl:message>
+  <wsdl:message name="SupplierAddSoapIn">
+    <wsdl:part name="parameters" element="tns:SupplierAdd" />
+  </wsdl:message>
+  <wsdl:message name="SupplierAddSoapOut">
+    <wsdl:part name="parameters" element="tns:SupplierAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupplierEditSoapIn">
+    <wsdl:part name="parameters" element="tns:SupplierEdit" />
+  </wsdl:message>
+  <wsdl:message name="SupplierEditSoapOut">
+    <wsdl:part name="parameters" element="tns:SupplierEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupplierDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SupplierDelete" />
+  </wsdl:message>
+  <wsdl:message name="SupplierDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SupplierDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupplierGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:SupplierGetAll" />
+  </wsdl:message>
+  <wsdl:message name="SupplierGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:SupplierGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="financierAddSoapIn">
+    <wsdl:part name="parameters" element="tns:financierAdd" />
+  </wsdl:message>
+  <wsdl:message name="financierAddSoapOut">
+    <wsdl:part name="parameters" element="tns:financierAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="financierEditSoapIn">
+    <wsdl:part name="parameters" element="tns:financierEdit" />
+  </wsdl:message>
+  <wsdl:message name="financierEditSoapOut">
+    <wsdl:part name="parameters" element="tns:financierEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="financierDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:financierDelete" />
+  </wsdl:message>
+  <wsdl:message name="financierDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:financierDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="financierGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:financierGetAll" />
+  </wsdl:message>
+  <wsdl:message name="financierGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:financierGetAllResponse" />
+  </wsdl:message>
   <wsdl:portType name="XpremaConnectorSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -660,6 +812,38 @@
     <wsdl:operation name="EmployeeGetAll">
       <wsdl:input message="tns:EmployeeGetAllSoapIn" />
       <wsdl:output message="tns:EmployeeGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplierAdd">
+      <wsdl:input message="tns:SupplierAddSoapIn" />
+      <wsdl:output message="tns:SupplierAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplierEdit">
+      <wsdl:input message="tns:SupplierEditSoapIn" />
+      <wsdl:output message="tns:SupplierEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplierDelete">
+      <wsdl:input message="tns:SupplierDeleteSoapIn" />
+      <wsdl:output message="tns:SupplierDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplierGetAll">
+      <wsdl:input message="tns:SupplierGetAllSoapIn" />
+      <wsdl:output message="tns:SupplierGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="financierAdd">
+      <wsdl:input message="tns:financierAddSoapIn" />
+      <wsdl:output message="tns:financierAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="financierEdit">
+      <wsdl:input message="tns:financierEditSoapIn" />
+      <wsdl:output message="tns:financierEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="financierDelete">
+      <wsdl:input message="tns:financierDeleteSoapIn" />
+      <wsdl:output message="tns:financierDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="financierGetAll">
+      <wsdl:input message="tns:financierGetAllSoapIn" />
+      <wsdl:output message="tns:financierGetAllSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="XpremaConnectorSoap" type="tns:XpremaConnectorSoap">
@@ -808,6 +992,78 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SupplierAdd">
+      <soap:operation soapAction="Xpro.xprema.net/SupplierAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierEdit">
+      <soap:operation soapAction="Xpro.xprema.net/SupplierEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierDelete">
+      <soap:operation soapAction="Xpro.xprema.net/SupplierDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/SupplierGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierAdd">
+      <soap:operation soapAction="Xpro.xprema.net/financierAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierEdit">
+      <soap:operation soapAction="Xpro.xprema.net/financierEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierDelete">
+      <soap:operation soapAction="Xpro.xprema.net/financierDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/financierGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="XpremaConnectorSoap12" type="tns:XpremaConnectorSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -948,6 +1204,78 @@
     </wsdl:operation>
     <wsdl:operation name="EmployeeGetAll">
       <soap12:operation soapAction="Xpro.xprema.net/EmployeeGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/SupplierAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/SupplierEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/SupplierDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/SupplierGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/financierAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/financierEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/financierDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="financierGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/financierGetAll" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

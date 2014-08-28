@@ -10,13 +10,16 @@ namespace Xprema.Base.Commands
     {
         static Xprema_PrjectEntities db = new Xprema_PrjectEntities();
 
-        public static bool NewUser(Thefinancier finc)
+        public static bool Newfinancier(Thefinancier finc)
         {
             try
             {
+
                 db = new Xprema_PrjectEntities();
                 db.Configuration.ProxyCreationEnabled = false;
                 db.Configuration.LazyLoadingEnabled = false;
+                var q = db.Accounts.ToList()[0];
+                finc.AccountID = q.ID;
                 db.Thefinanciers.Add(finc);
                 db.SaveChanges();
                 return true;
@@ -29,7 +32,7 @@ namespace Xprema.Base.Commands
             }
         }
 
-        public static bool EditUser(Thefinancier finc)
+        public static bool Editfinancier(Thefinancier finc)
         {
             try
             {
@@ -57,7 +60,7 @@ namespace Xprema.Base.Commands
             }
         }
 
-        public static bool DeleteUser(int ID)
+        public static bool Deletefinancier(int ID)
         {
             try
             {

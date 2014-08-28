@@ -9,7 +9,7 @@ namespace Xprema.Base.Commands
   public  class SupplierCommand
     {
         static Xprema_PrjectEntities db = new Xprema_PrjectEntities();
-        public static bool NewEmployee(Supplier Sup)
+        public static bool newSupplier(Supplier Sup)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace Xprema.Base.Commands
             }
         }
 
-        public static bool EditEmployee(Supplier Sup)
+        public static bool EditSupplier(Supplier Sup)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Xprema.Base.Commands
             }
         }
 
-        public static bool DeleteSup(int ID)
+        public static bool DeleteSupplier(int ID)
         {
             try
             {

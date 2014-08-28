@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplierMangmentFrm));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -50,10 +52,15 @@
             this.colFax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAdderss = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProjectExpenses = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BtnSave = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BtnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuppliergridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar1
@@ -81,8 +88,8 @@
             // AddBtn
             // 
             this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Text = "Add";
-            this.AddBtn.Elements.Add(tileItemElement1);
+            tileItemElement5.Text = "Add";
+            this.AddBtn.Elements.Add(tileItemElement5);
             this.AddBtn.Id = 7;
             this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.AddBtn.Name = "AddBtn";
@@ -90,8 +97,8 @@
             // SaveBtn
             // 
             this.SaveBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.Text = "Save";
-            this.SaveBtn.Elements.Add(tileItemElement2);
+            tileItemElement6.Text = "Save";
+            this.SaveBtn.Elements.Add(tileItemElement6);
             this.SaveBtn.Id = 4;
             this.SaveBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.SaveBtn.Name = "SaveBtn";
@@ -99,8 +106,8 @@
             // DeltBtn
             // 
             this.DeltBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Text = "Delete";
-            this.DeltBtn.Elements.Add(tileItemElement3);
+            tileItemElement7.Text = "Delete";
+            this.DeltBtn.Elements.Add(tileItemElement7);
             this.DeltBtn.Id = 6;
             this.DeltBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.DeltBtn.Name = "DeltBtn";
@@ -108,8 +115,8 @@
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement4);
+            tileItemElement8.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement8);
             this.RefreshBtn.Id = 5;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
@@ -123,16 +130,17 @@
             this.SuppliergridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.SuppliergridControl.DataSource = this.supplierBindingSource;
             this.SuppliergridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
-            this.SuppliergridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
             this.SuppliergridControl.Location = new System.Drawing.Point(0, 98);
             this.SuppliergridControl.MainView = this.gridView1;
             this.SuppliergridControl.Name = "SuppliergridControl";
+            this.SuppliergridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.BtnSave,
+            this.BtnDelete});
             this.SuppliergridControl.Size = new System.Drawing.Size(877, 417);
             this.SuppliergridControl.TabIndex = 3;
             this.SuppliergridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.SuppliergridControl.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -144,7 +152,8 @@
             this.colFax,
             this.colEmail,
             this.colAdderss,
-            this.colProjectExpenses});
+            this.gridColumn1,
+            this.gridColumn2});
             this.gridView1.GridControl = this.SuppliergridControl;
             this.gridView1.Name = "gridView1";
             // 
@@ -164,7 +173,7 @@
             // 
             // colPhoneNumber
             // 
-            this.colPhoneNumber.FieldName = "ProjectExpenses";
+            this.colPhoneNumber.FieldName = "PhoneNumber";
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
             this.colPhoneNumber.VisibleIndex = 2;
@@ -197,12 +206,37 @@
             this.colAdderss.Visible = true;
             this.colAdderss.VisibleIndex = 6;
             // 
-            // colProjectExpenses
+            // gridColumn1
             // 
-            this.colProjectExpenses.FieldName = "ProjectExpenses";
-            this.colProjectExpenses.Name = "colProjectExpenses";
-            this.colProjectExpenses.Visible = true;
-            this.colProjectExpenses.VisibleIndex = 7;
+            this.gridColumn1.ColumnEdit = this.BtnSave;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 7;
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.AutoHeight = false;
+            this.BtnSave.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("BtnSave.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.ColumnEdit = this.BtnDelete;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 8;
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.AutoHeight = false;
+            this.BtnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("BtnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // SupplierMangmentFrm
             // 
@@ -213,9 +247,12 @@
             this.Controls.Add(this.tileBar1);
             this.Name = "SupplierMangmentFrm";
             this.Text = "SupplierMangmentFrm";
+            this.Load += new System.EventHandler(this.SupplierMangmentFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuppliergridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnDelete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,6 +275,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFax;
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colAdderss;
-        private DevExpress.XtraGrid.Columns.GridColumn colProjectExpenses;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BtnSave;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BtnDelete;
     }
 }
