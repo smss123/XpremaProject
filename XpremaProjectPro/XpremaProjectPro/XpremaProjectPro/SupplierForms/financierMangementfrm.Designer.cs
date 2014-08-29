@@ -46,9 +46,6 @@
             this.colFax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAdderss = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAccountID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAccount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSubTheFinancerAndProjects = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SaveColm = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SaveBtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.DeleteColom = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -119,9 +116,6 @@
             this.colFax,
             this.colEmail,
             this.colAdderss,
-            this.colAccountID,
-            this.colAccount,
-            this.colSubTheFinancerAndProjects,
             this.SaveColm,
             this.DeleteColom});
             this.gridView1.GridControl = this.FinanciergridControl;
@@ -136,6 +130,7 @@
             // 
             // colfinanciername
             // 
+            this.colfinanciername.Caption = "Name";
             this.colfinanciername.FieldName = "financiername";
             this.colfinanciername.Name = "colfinanciername";
             this.colfinanciername.Visible = true;
@@ -143,20 +138,23 @@
             // 
             // colPhoneNumber
             // 
+            this.colPhoneNumber.Caption = "Phone Number";
             this.colPhoneNumber.FieldName = "PhoneNumber";
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
-            this.colPhoneNumber.VisibleIndex = 2;
+            this.colPhoneNumber.VisibleIndex = 3;
             // 
             // colagentName
             // 
+            this.colagentName.Caption = "Agent Name";
             this.colagentName.FieldName = "agentName";
             this.colagentName.Name = "colagentName";
             this.colagentName.Visible = true;
-            this.colagentName.VisibleIndex = 3;
+            this.colagentName.VisibleIndex = 2;
             // 
             // colFax
             // 
+            this.colFax.Caption = "Fax";
             this.colFax.FieldName = "Fax";
             this.colFax.Name = "colFax";
             this.colFax.Visible = true;
@@ -164,6 +162,7 @@
             // 
             // colEmail
             // 
+            this.colEmail.Caption = "Email";
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
@@ -171,38 +170,19 @@
             // 
             // colAdderss
             // 
+            this.colAdderss.Caption = "Adderss";
             this.colAdderss.FieldName = "Adderss";
             this.colAdderss.Name = "colAdderss";
             this.colAdderss.Visible = true;
             this.colAdderss.VisibleIndex = 6;
             // 
-            // colAccountID
-            // 
-            this.colAccountID.FieldName = "AccountID";
-            this.colAccountID.Name = "colAccountID";
-            this.colAccountID.Visible = true;
-            this.colAccountID.VisibleIndex = 7;
-            // 
-            // colAccount
-            // 
-            this.colAccount.FieldName = "Account";
-            this.colAccount.Name = "colAccount";
-            this.colAccount.Visible = true;
-            this.colAccount.VisibleIndex = 8;
-            // 
-            // colSubTheFinancerAndProjects
-            // 
-            this.colSubTheFinancerAndProjects.FieldName = "SubTheFinancerAndProjects";
-            this.colSubTheFinancerAndProjects.Name = "colSubTheFinancerAndProjects";
-            this.colSubTheFinancerAndProjects.Visible = true;
-            this.colSubTheFinancerAndProjects.VisibleIndex = 9;
-            // 
             // SaveColm
             // 
+            this.SaveColm.Caption = "Save";
             this.SaveColm.ColumnEdit = this.SaveBtn;
             this.SaveColm.Name = "SaveColm";
             this.SaveColm.Visible = true;
-            this.SaveColm.VisibleIndex = 10;
+            this.SaveColm.VisibleIndex = 7;
             // 
             // SaveBtn
             // 
@@ -215,10 +195,11 @@
             // 
             // DeleteColom
             // 
+            this.DeleteColom.Caption = "Delete";
             this.DeleteColom.ColumnEdit = this.BtnDelete;
             this.DeleteColom.Name = "DeleteColom";
             this.DeleteColom.Visible = true;
-            this.DeleteColom.VisibleIndex = 11;
+            this.DeleteColom.VisibleIndex = 8;
             // 
             // BtnDelete
             // 
@@ -263,9 +244,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFax;
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colAdderss;
-        private DevExpress.XtraGrid.Columns.GridColumn colAccountID;
-        private DevExpress.XtraGrid.Columns.GridColumn colAccount;
-        private DevExpress.XtraGrid.Columns.GridColumn colSubTheFinancerAndProjects;
         private DevExpress.XtraGrid.Columns.GridColumn SaveColm;
         private DevExpress.XtraGrid.Columns.GridColumn DeleteColom;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit SaveBtn;

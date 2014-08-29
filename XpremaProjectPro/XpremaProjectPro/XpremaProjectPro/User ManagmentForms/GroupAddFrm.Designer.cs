@@ -84,27 +84,27 @@
             // 
             // groupNameTextBox
             // 
-            this.groupNameTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupNameTextBox.Location = new System.Drawing.Point(121, 14);
+            this.groupNameTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupNameTextBox.Location = new System.Drawing.Point(135, 14);
             this.groupNameTextBox.Name = "groupNameTextBox";
-            this.groupNameTextBox.Size = new System.Drawing.Size(256, 20);
+            this.groupNameTextBox.Size = new System.Drawing.Size(242, 20);
             this.groupNameTextBox.TabIndex = 7;
             // 
             // groupDescriptionRichTextBox
             // 
-            this.groupDescriptionRichTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupDescriptionRichTextBox.Location = new System.Drawing.Point(121, 40);
+            this.groupDescriptionRichTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupDescriptionRichTextBox.Location = new System.Drawing.Point(135, 40);
             this.groupDescriptionRichTextBox.Name = "groupDescriptionRichTextBox";
-            this.groupDescriptionRichTextBox.Size = new System.Drawing.Size(256, 52);
+            this.groupDescriptionRichTextBox.Size = new System.Drawing.Size(242, 52);
             this.groupDescriptionRichTextBox.TabIndex = 11;
             this.groupDescriptionRichTextBox.Text = "";
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(121, 98);
+            this.checkedListBox1.Location = new System.Drawing.Point(135, 98);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(256, 124);
+            this.checkedListBox1.Size = new System.Drawing.Size(242, 124);
             this.checkedListBox1.TabIndex = 10;
             // 
             // layoutControlGroup1
@@ -130,13 +130,15 @@
             // 
             // layoutControlItem3
             // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.checkedListBox1;
             this.layoutControlItem3.CustomizationFormText = "Permissions:";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 86);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(369, 142);
             this.layoutControlItem3.Text = "Permissions:";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(106, 16);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(120, 16);
             // 
             // simpleSeparator2
             // 
@@ -158,23 +160,27 @@
             // 
             // layoutControlItem4
             // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.groupDescriptionRichTextBox;
             this.layoutControlItem4.CustomizationFormText = "Group Description:";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(369, 56);
             this.layoutControlItem4.Text = "Group Description:";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(106, 16);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(120, 16);
             // 
             // layoutControlItem1
             // 
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.Control = this.groupNameTextBox;
             this.layoutControlItem1.CustomizationFormText = "Group Name:";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 2);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(369, 24);
             this.layoutControlItem1.Text = "Group Name:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(106, 16);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(120, 16);
             // 
             // simpleSeparator1
             // 

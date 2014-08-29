@@ -83,7 +83,7 @@
             this.EmployeeaddgroupControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeaddgroupControl.Location = new System.Drawing.Point(0, 0);
             this.EmployeeaddgroupControl.Name = "EmployeeaddgroupControl";
-            this.EmployeeaddgroupControl.Size = new System.Drawing.Size(472, 316);
+            this.EmployeeaddgroupControl.Size = new System.Drawing.Size(472, 304);
             this.EmployeeaddgroupControl.TabIndex = 0;
             this.EmployeeaddgroupControl.Text = "Add Employee";
             this.EmployeeaddgroupControl.Paint += new System.Windows.Forms.PaintEventHandler(this.EmployeeaddgroupControl_Paint);
@@ -121,62 +121,68 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(174, 145);
+            this.emailTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(190, 145);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(282, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(266, 20);
             this.emailTextBox.TabIndex = 5;
             // 
             // employeeGenderComboBox
             // 
+            this.employeeGenderComboBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeGenderComboBox.FormattingEnabled = true;
             this.employeeGenderComboBox.Items.AddRange(new object[] {
             "Mail",
             "Fimal"});
-            this.employeeGenderComboBox.Location = new System.Drawing.Point(174, 40);
+            this.employeeGenderComboBox.Location = new System.Drawing.Point(190, 40);
             this.employeeGenderComboBox.Name = "employeeGenderComboBox";
-            this.employeeGenderComboBox.Size = new System.Drawing.Size(282, 21);
+            this.employeeGenderComboBox.Size = new System.Drawing.Size(266, 24);
             this.employeeGenderComboBox.TabIndex = 7;
             // 
             // employeejobNumberTextBox
             // 
-            this.employeejobNumberTextBox.Location = new System.Drawing.Point(174, 67);
+            this.employeejobNumberTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeejobNumberTextBox.Location = new System.Drawing.Point(190, 67);
             this.employeejobNumberTextBox.Name = "employeejobNumberTextBox";
-            this.employeejobNumberTextBox.Size = new System.Drawing.Size(282, 20);
+            this.employeejobNumberTextBox.Size = new System.Drawing.Size(266, 20);
             this.employeejobNumberTextBox.TabIndex = 9;
             // 
             // employeeNameTextBox
             // 
-            this.employeeNameTextBox.Location = new System.Drawing.Point(174, 14);
+            this.employeeNameTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNameTextBox.Location = new System.Drawing.Point(190, 14);
             this.employeeNameTextBox.Name = "employeeNameTextBox";
-            this.employeeNameTextBox.Size = new System.Drawing.Size(282, 20);
+            this.employeeNameTextBox.Size = new System.Drawing.Size(266, 20);
             this.employeeNameTextBox.TabIndex = 11;
             // 
             // employeeNationalNumberTextBox
             // 
-            this.employeeNationalNumberTextBox.Location = new System.Drawing.Point(174, 171);
+            this.employeeNationalNumberTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNationalNumberTextBox.Location = new System.Drawing.Point(190, 171);
             this.employeeNationalNumberTextBox.Name = "employeeNationalNumberTextBox";
-            this.employeeNationalNumberTextBox.Size = new System.Drawing.Size(282, 20);
+            this.employeeNationalNumberTextBox.Size = new System.Drawing.Size(266, 20);
             this.employeeNationalNumberTextBox.TabIndex = 13;
             // 
             // mobilenumberTextBox
             // 
-            this.mobilenumberTextBox.Location = new System.Drawing.Point(174, 119);
+            this.mobilenumberTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mobilenumberTextBox.Location = new System.Drawing.Point(190, 119);
             this.mobilenumberTextBox.Name = "mobilenumberTextBox";
-            this.mobilenumberTextBox.Size = new System.Drawing.Size(282, 20);
+            this.mobilenumberTextBox.Size = new System.Drawing.Size(266, 20);
             this.mobilenumberTextBox.TabIndex = 17;
             // 
             // phoneNumberTextBox
             // 
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(174, 93);
+            this.phoneNumberTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(190, 93);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(282, 20);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(266, 20);
             this.phoneNumberTextBox.TabIndex = 19;
             // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
             this.layoutControlItem10,
@@ -201,7 +207,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.emailTextBox;
             this.layoutControlItem2.CustomizationFormText = "Email:";
@@ -209,11 +215,11 @@
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(448, 24);
             this.layoutControlItem2.Text = "Email:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(159, 16);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(175, 16);
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem10.Control = this.employeeNationalNumberTextBox;
             this.layoutControlItem10.CustomizationFormText = "Employee National Number:";
@@ -221,11 +227,11 @@
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(448, 24);
             this.layoutControlItem10.Text = "Employee National Number:";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(159, 16);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(175, 16);
             // 
             // layoutControlItem8
             // 
-            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem8.Control = this.employeeNameTextBox;
             this.layoutControlItem8.CustomizationFormText = "Employee Name:";
@@ -233,11 +239,11 @@
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(448, 24);
             this.layoutControlItem8.Text = "Employee Name:";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(159, 16);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(175, 16);
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.employeeGenderComboBox;
             this.layoutControlItem4.CustomizationFormText = "Employee Gender:";
@@ -245,11 +251,11 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(448, 25);
             this.layoutControlItem4.Text = "Employee Gender:";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(159, 16);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(175, 16);
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.employeejobNumberTextBox;
             this.layoutControlItem6.CustomizationFormText = "Employeejob Number:";
@@ -257,11 +263,11 @@
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(448, 24);
             this.layoutControlItem6.Text = "Employeejob Number:";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(159, 16);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(175, 16);
             // 
             // layoutControlItem14
             // 
-            this.layoutControlItem14.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem14.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem14.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem14.Control = this.mobilenumberTextBox;
             this.layoutControlItem14.CustomizationFormText = "Mobilenumber:";
@@ -269,11 +275,11 @@
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(448, 24);
             this.layoutControlItem14.Text = "Mobilenumber:";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(159, 16);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(175, 16);
             // 
             // layoutControlItem16
             // 
-            this.layoutControlItem16.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem16.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem16.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem16.Control = this.phoneNumberTextBox;
             this.layoutControlItem16.CustomizationFormText = "Phone Number:";
@@ -281,7 +287,7 @@
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(448, 24);
             this.layoutControlItem16.Text = "Phone Number:";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(159, 16);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(175, 16);
             // 
             // simpleSeparator1
             // 
@@ -359,7 +365,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 316);
+            this.ClientSize = new System.Drawing.Size(472, 304);
             this.Controls.Add(this.EmployeeaddgroupControl);
             this.Name = "addEmployeefrm";
             this.Text = "addEmployeefrm";

@@ -58,7 +58,11 @@ namespace XpremaProjectPro.User_ManagmentForms
                 GroupDescription = groupDescriptionRichTextBox.Text
             };
             proxy.GroupAdd(g: g);
+            XtraMessageBox.Show(OperationX.AddMessageDone, "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            
+               
+            }
         }
 
     }
-}

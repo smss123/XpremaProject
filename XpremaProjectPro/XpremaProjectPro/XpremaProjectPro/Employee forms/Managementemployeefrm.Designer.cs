@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Managementemployeefrm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
+            this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.employeegridControl = new DevExpress.XtraGrid.GridControl();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -49,8 +51,6 @@
             this.EditBtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.deleteBtn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.delbtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.employeegridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -68,9 +68,27 @@
             this.tileBar1.MaxId = 2;
             this.tileBar1.Name = "tileBar1";
             this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.tileBar1.Size = new System.Drawing.Size(787, 125);
+            this.tileBar1.Size = new System.Drawing.Size(974, 125);
             this.tileBar1.TabIndex = 0;
             this.tileBar1.Text = "tileBar1";
+            // 
+            // tileBarGroup2
+            // 
+            this.tileBarGroup2.Items.Add(this.RefreshBtn);
+            this.tileBarGroup2.Name = "tileBarGroup2";
+            // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement3.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement3.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement3);
+            this.RefreshBtn.Id = 1;
+            this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.RefreshBtn_ItemClick);
             // 
             // employeegridControl
             // 
@@ -83,7 +101,7 @@
             this.employeegridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.EditBtn,
             this.delbtn});
-            this.employeegridControl.Size = new System.Drawing.Size(787, 303);
+            this.employeegridControl.Size = new System.Drawing.Size(974, 409);
             this.employeegridControl.TabIndex = 1;
             this.employeegridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -99,14 +117,15 @@
             this.colEmployeeName,
             this.colEmployeejobNumber,
             this.colEmployeeGender,
-            this.colEmployeeNationalNumber,
             this.colPhoneNumber,
             this.colMobilenumber,
             this.colEmail,
+            this.colEmployeeNationalNumber,
             this.SaveBtn,
             this.deleteBtn});
             this.gridView1.GridControl = this.employeegridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
             // 
             // colID
             // 
@@ -114,55 +133,69 @@
             this.colID.Name = "colID";
             this.colID.Visible = true;
             this.colID.VisibleIndex = 0;
+            this.colID.Width = 55;
             // 
             // colEmployeeName
             // 
+            this.colEmployeeName.Caption = "Employee Name";
             this.colEmployeeName.FieldName = "EmployeeName";
             this.colEmployeeName.Name = "colEmployeeName";
             this.colEmployeeName.Visible = true;
             this.colEmployeeName.VisibleIndex = 1;
+            this.colEmployeeName.Width = 80;
             // 
             // colEmployeejobNumber
             // 
+            this.colEmployeejobNumber.Caption = "job Number";
             this.colEmployeejobNumber.FieldName = "EmployeejobNumber";
             this.colEmployeejobNumber.Name = "colEmployeejobNumber";
             this.colEmployeejobNumber.Visible = true;
-            this.colEmployeejobNumber.VisibleIndex = 2;
+            this.colEmployeejobNumber.VisibleIndex = 3;
+            this.colEmployeejobNumber.Width = 80;
             // 
             // colEmployeeGender
             // 
+            this.colEmployeeGender.Caption = "Gender";
             this.colEmployeeGender.FieldName = "EmployeeGender";
             this.colEmployeeGender.Name = "colEmployeeGender";
             this.colEmployeeGender.Visible = true;
-            this.colEmployeeGender.VisibleIndex = 3;
+            this.colEmployeeGender.VisibleIndex = 2;
+            this.colEmployeeGender.Width = 80;
             // 
             // colEmployeeNationalNumber
             // 
+            this.colEmployeeNationalNumber.Caption = "Nationa lNumber";
             this.colEmployeeNationalNumber.FieldName = "EmployeeNationalNumber";
             this.colEmployeeNationalNumber.Name = "colEmployeeNationalNumber";
             this.colEmployeeNationalNumber.Visible = true;
-            this.colEmployeeNationalNumber.VisibleIndex = 4;
+            this.colEmployeeNationalNumber.VisibleIndex = 7;
+            this.colEmployeeNationalNumber.Width = 137;
             // 
             // colPhoneNumber
             // 
             this.colPhoneNumber.FieldName = "PhoneNumber";
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
-            this.colPhoneNumber.VisibleIndex = 5;
+            this.colPhoneNumber.VisibleIndex = 4;
+            this.colPhoneNumber.Width = 80;
             // 
             // colMobilenumber
             // 
+            this.colMobilenumber.Caption = "Mobile";
             this.colMobilenumber.FieldName = "Mobilenumber";
             this.colMobilenumber.Name = "colMobilenumber";
             this.colMobilenumber.Visible = true;
-            this.colMobilenumber.VisibleIndex = 6;
+            this.colMobilenumber.VisibleIndex = 5;
+            this.colMobilenumber.Width = 80;
             // 
             // colEmail
             // 
+            this.colEmail.Caption = "Email";
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 7;
+            this.colEmail.VisibleIndex = 6;
+            this.colEmail.Width = 80;
             // 
             // SaveBtn
             // 
@@ -171,12 +204,13 @@
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Visible = true;
             this.SaveBtn.VisibleIndex = 8;
+            this.SaveBtn.Width = 79;
             // 
             // EditBtn
             // 
             this.EditBtn.AutoHeight = false;
             this.EditBtn.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("EditBtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("EditBtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.EditBtn.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.EditBtn_ButtonClick);
@@ -188,39 +222,22 @@
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Visible = true;
             this.deleteBtn.VisibleIndex = 9;
+            this.deleteBtn.Width = 83;
             // 
             // delbtn
             // 
             this.delbtn.AutoHeight = false;
             this.delbtn.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("delbtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("delbtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.delbtn.Name = "delbtn";
             this.delbtn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.delbtn.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.delbtn_ButtonClick);
-            // 
-            // tileBarGroup2
-            // 
-            this.tileBarGroup2.Items.Add(this.RefreshBtn);
-            this.tileBarGroup2.Name = "tileBarGroup2";
-            // 
-            // RefreshBtn
-            // 
-            this.RefreshBtn.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
-            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement1.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement1);
-            this.RefreshBtn.Id = 1;
-            this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.RefreshBtn_ItemClick);
             // 
             // Managementemployeefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 428);
+            this.ClientSize = new System.Drawing.Size(974, 534);
             this.Controls.Add(this.employeegridControl);
             this.Controls.Add(this.tileBar1);
             this.Name = "Managementemployeefrm";
