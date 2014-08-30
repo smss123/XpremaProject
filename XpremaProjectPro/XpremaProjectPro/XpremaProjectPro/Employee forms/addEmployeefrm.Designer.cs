@@ -54,6 +54,8 @@
             this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
             this.simpleSeparator7 = new DevExpress.XtraLayout.SimpleSeparator();
             this.simpleSeparator8 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleSeparator9 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeaddgroupControl)).BeginInit();
             this.EmployeeaddgroupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -74,16 +76,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator9)).BeginInit();
             this.SuspendLayout();
             // 
             // EmployeeaddgroupControl
             // 
-            this.EmployeeaddgroupControl.Controls.Add(this.addBtn);
             this.EmployeeaddgroupControl.Controls.Add(this.layoutControl1);
             this.EmployeeaddgroupControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeaddgroupControl.Location = new System.Drawing.Point(0, 0);
             this.EmployeeaddgroupControl.Name = "EmployeeaddgroupControl";
-            this.EmployeeaddgroupControl.Size = new System.Drawing.Size(472, 304);
+            this.EmployeeaddgroupControl.Size = new System.Drawing.Size(472, 284);
             this.EmployeeaddgroupControl.TabIndex = 0;
             this.EmployeeaddgroupControl.Text = "Add Employee";
             this.EmployeeaddgroupControl.Paint += new System.Windows.Forms.PaintEventHandler(this.EmployeeaddgroupControl_Paint);
@@ -94,15 +97,17 @@
             this.addBtn.Appearance.Options.UseFont = true;
             this.addBtn.Image = global::XpremaProjectPro.Properties.Resources.add_32x32;
             this.addBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.addBtn.Location = new System.Drawing.Point(5, 234);
+            this.addBtn.Location = new System.Drawing.Point(12, 195);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(117, 50);
+            this.addBtn.Size = new System.Drawing.Size(160, 38);
+            this.addBtn.StyleController = this.layoutControl1;
             this.addBtn.TabIndex = 1;
             this.addBtn.Text = "Add";
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.addBtn);
             this.layoutControl1.Controls.Add(this.emailTextBox);
             this.layoutControl1.Controls.Add(this.employeeGenderComboBox);
             this.layoutControl1.Controls.Add(this.employeejobNumberTextBox);
@@ -115,7 +120,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(764, 46, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(468, 207);
+            this.layoutControl1.Size = new System.Drawing.Size(468, 247);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -198,10 +203,12 @@
             this.simpleSeparator5,
             this.simpleSeparator6,
             this.simpleSeparator7,
-            this.simpleSeparator8});
+            this.simpleSeparator8,
+            this.layoutControlItem1,
+            this.simpleSeparator9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(468, 207);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(468, 247);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -356,16 +363,37 @@
             // 
             this.simpleSeparator8.AllowHotTrack = false;
             this.simpleSeparator8.CustomizationFormText = "simpleSeparator8";
-            this.simpleSeparator8.Location = new System.Drawing.Point(0, 183);
+            this.simpleSeparator8.Location = new System.Drawing.Point(0, 225);
             this.simpleSeparator8.Name = "simpleSeparator8";
-            this.simpleSeparator8.Size = new System.Drawing.Size(448, 4);
+            this.simpleSeparator8.Size = new System.Drawing.Size(448, 2);
             this.simpleSeparator8.Text = "simpleSeparator8";
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.addBtn;
+            this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 183);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(164, 42);
+            this.layoutControlItem1.Text = "layoutControlItem1";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextToControlDistance = 0;
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // simpleSeparator9
+            // 
+            this.simpleSeparator9.AllowHotTrack = false;
+            this.simpleSeparator9.CustomizationFormText = "simpleSeparator9";
+            this.simpleSeparator9.Location = new System.Drawing.Point(164, 183);
+            this.simpleSeparator9.Name = "simpleSeparator9";
+            this.simpleSeparator9.Size = new System.Drawing.Size(284, 42);
+            this.simpleSeparator9.Text = "simpleSeparator9";
             // 
             // addEmployeefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 304);
+            this.ClientSize = new System.Drawing.Size(472, 284);
             this.Controls.Add(this.EmployeeaddgroupControl);
             this.Name = "addEmployeefrm";
             this.Text = "addEmployeefrm";
@@ -390,6 +418,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,5 +452,7 @@
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator6;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator7;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator9;
     }
 }

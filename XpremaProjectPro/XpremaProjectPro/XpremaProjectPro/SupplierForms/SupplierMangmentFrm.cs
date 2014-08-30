@@ -54,5 +54,12 @@ namespace XpremaProjectPro.SupplierForms
         {
            
         }
+
+        private void AddBtn_ItemClick(object sender, TileItemEventArgs e)
+        {
+            SupplierAddFrm Addfrm = new SupplierAddFrm();
+            Addfrm.ShowDialog();
+
+        }
     }
 }

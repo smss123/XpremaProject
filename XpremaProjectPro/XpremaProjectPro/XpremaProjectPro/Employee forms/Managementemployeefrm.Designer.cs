@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Managementemployeefrm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -43,17 +44,20 @@
             this.colEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployeejobNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployeeGender = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmployeeNationalNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GenderComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMobilenumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmployeeNationalNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SaveBtn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EditBtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.deleteBtn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.delbtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.employeegridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delbtn)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +69,7 @@
             this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.tileBar1.Groups.Add(this.tileBarGroup2);
             this.tileBar1.Location = new System.Drawing.Point(0, 0);
-            this.tileBar1.MaxId = 2;
+            this.tileBar1.MaxId = 3;
             this.tileBar1.Name = "tileBar1";
             this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             this.tileBar1.Size = new System.Drawing.Size(974, 125);
@@ -74,6 +78,7 @@
             // 
             // tileBarGroup2
             // 
+            this.tileBarGroup2.Items.Add(this.AddBtn);
             this.tileBarGroup2.Items.Add(this.RefreshBtn);
             this.tileBarGroup2.Name = "tileBarGroup2";
             // 
@@ -81,10 +86,10 @@
             // 
             this.RefreshBtn.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
-            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement3.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement3);
+            tileItemElement2.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement2.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement2);
             this.RefreshBtn.Id = 1;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
@@ -100,7 +105,8 @@
             this.employeegridControl.Name = "employeegridControl";
             this.employeegridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.EditBtn,
-            this.delbtn});
+            this.delbtn,
+            this.GenderComboBox1});
             this.employeegridControl.Size = new System.Drawing.Size(974, 409);
             this.employeegridControl.TabIndex = 1;
             this.employeegridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -156,20 +162,22 @@
             // colEmployeeGender
             // 
             this.colEmployeeGender.Caption = "Gender";
+            this.colEmployeeGender.ColumnEdit = this.GenderComboBox1;
             this.colEmployeeGender.FieldName = "EmployeeGender";
             this.colEmployeeGender.Name = "colEmployeeGender";
             this.colEmployeeGender.Visible = true;
             this.colEmployeeGender.VisibleIndex = 2;
             this.colEmployeeGender.Width = 80;
             // 
-            // colEmployeeNationalNumber
+            // GenderComboBox1
             // 
-            this.colEmployeeNationalNumber.Caption = "Nationa lNumber";
-            this.colEmployeeNationalNumber.FieldName = "EmployeeNationalNumber";
-            this.colEmployeeNationalNumber.Name = "colEmployeeNationalNumber";
-            this.colEmployeeNationalNumber.Visible = true;
-            this.colEmployeeNationalNumber.VisibleIndex = 7;
-            this.colEmployeeNationalNumber.Width = 137;
+            this.GenderComboBox1.AutoHeight = false;
+            this.GenderComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.GenderComboBox1.Items.AddRange(new object[] {
+            "Mail",
+            "Fmail"});
+            this.GenderComboBox1.Name = "GenderComboBox1";
             // 
             // colPhoneNumber
             // 
@@ -197,6 +205,15 @@
             this.colEmail.VisibleIndex = 6;
             this.colEmail.Width = 80;
             // 
+            // colEmployeeNationalNumber
+            // 
+            this.colEmployeeNationalNumber.Caption = "Nationa lNumber";
+            this.colEmployeeNationalNumber.FieldName = "EmployeeNationalNumber";
+            this.colEmployeeNationalNumber.Name = "colEmployeeNationalNumber";
+            this.colEmployeeNationalNumber.Visible = true;
+            this.colEmployeeNationalNumber.VisibleIndex = 7;
+            this.colEmployeeNationalNumber.Width = 137;
+            // 
             // SaveBtn
             // 
             this.SaveBtn.Caption = "Save Changes";
@@ -210,7 +227,7 @@
             // 
             this.EditBtn.AutoHeight = false;
             this.EditBtn.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("EditBtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("EditBtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.EditBtn.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.EditBtn_ButtonClick);
@@ -228,10 +245,21 @@
             // 
             this.delbtn.AutoHeight = false;
             this.delbtn.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("delbtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("delbtn.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.delbtn.Name = "delbtn";
             this.delbtn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.delbtn.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.delbtn_ButtonClick);
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.AddBtn;
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement1.Text = "Add";
+            this.AddBtn.Elements.Add(tileItemElement1);
+            this.AddBtn.Id = 2;
+            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.AddBtn.Name = "AddBtn";
             // 
             // Managementemployeefrm
             // 
@@ -246,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeegridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delbtn)).EndInit();
             this.ResumeLayout(false);
@@ -272,5 +301,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit delbtn;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
         private DevExpress.XtraBars.Navigation.TileBarItem RefreshBtn;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox GenderComboBox1;
+        private DevExpress.XtraBars.Navigation.TileBarItem AddBtn;
     }
 }

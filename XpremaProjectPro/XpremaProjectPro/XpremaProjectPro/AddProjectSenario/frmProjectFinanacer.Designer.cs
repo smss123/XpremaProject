@@ -108,9 +108,11 @@
             // 
             // AddBtn
             // 
+            this.AddBtn.Image = global::XpremaProjectPro.Properties.Resources.add_32x32;
+            this.AddBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.AddBtn.Location = new System.Drawing.Point(12, 62);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(108, 38);
+            this.AddBtn.Size = new System.Drawing.Size(160, 38);
             this.AddBtn.StyleController = this.layoutControl1;
             this.AddBtn.TabIndex = 2;
             this.AddBtn.Text = "Add";
@@ -131,6 +133,7 @@
             this.FinanacerlookUpEdit.Properties.Appearance.Options.UseFont = true;
             this.FinanacerlookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.FinanacerlookUpEdit.Properties.NullText = "[Select Finanacer]";
             this.FinanacerlookUpEdit.Size = new System.Drawing.Size(357, 22);
             this.FinanacerlookUpEdit.StyleController = this.layoutControl1;
             this.FinanacerlookUpEdit.TabIndex = 4;
@@ -180,7 +183,7 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(34, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(112, 42);
+            this.layoutControlItem3.Size = new System.Drawing.Size(164, 42);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -191,9 +194,9 @@
             // 
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
-            this.simpleSeparator1.Location = new System.Drawing.Point(112, 50);
+            this.simpleSeparator1.Location = new System.Drawing.Point(164, 50);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(358, 42);
+            this.simpleSeparator1.Size = new System.Drawing.Size(306, 42);
             this.simpleSeparator1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 

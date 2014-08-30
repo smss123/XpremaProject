@@ -35,6 +35,7 @@
             this.SummarygroupControl = new DevExpress.XtraEditors.GroupControl();
             this.label1 = new System.Windows.Forms.Label();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.TimeLinetextBox = new System.Windows.Forms.TextBox();
             this.endDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.projectDescriptionTextBox = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.projectProfileBindingSource)).BeginInit();
@@ -91,7 +91,7 @@
             // 
             // Nextbtn
             // 
-            this.Nextbtn.Location = new System.Drawing.Point(492, 443);
+            this.Nextbtn.Location = new System.Drawing.Point(496, 446);
             this.Nextbtn.Name = "Nextbtn";
             this.Nextbtn.Size = new System.Drawing.Size(114, 38);
             this.Nextbtn.TabIndex = 3;
@@ -133,6 +133,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(614, 216);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Image = global::XpremaProjectPro.Properties.Resources.add_32x32;
+            this.AddBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.AddBtn.Location = new System.Drawing.Point(12, 160);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(160, 44);
+            this.AddBtn.StyleController = this.layoutControl1;
+            this.AddBtn.TabIndex = 17;
+            this.AddBtn.Text = "Add";
             // 
             // TimeLinetextBox
             // 
@@ -282,15 +293,6 @@
             this.layoutControlItem1.Text = "Time Line:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(129, 16);
             // 
-            // AddBtn
-            // 
-            this.AddBtn.Location = new System.Drawing.Point(12, 160);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(112, 44);
-            this.AddBtn.StyleController = this.layoutControl1;
-            this.AddBtn.TabIndex = 17;
-            this.AddBtn.Text = "Add";
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.AddBtn;
@@ -298,7 +300,7 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 148);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(82, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(116, 48);
+            this.layoutControlItem3.Size = new System.Drawing.Size(164, 48);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -309,9 +311,9 @@
             // 
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
-            this.simpleSeparator1.Location = new System.Drawing.Point(116, 148);
+            this.simpleSeparator1.Location = new System.Drawing.Point(164, 148);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(478, 48);
+            this.simpleSeparator1.Size = new System.Drawing.Size(430, 48);
             this.simpleSeparator1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 

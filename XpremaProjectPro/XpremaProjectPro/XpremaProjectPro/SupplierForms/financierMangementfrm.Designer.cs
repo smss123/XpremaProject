@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(financierMangementfrm));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.FinanciergridControl = new DevExpress.XtraGrid.GridControl();
             this.thefinancierBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -43,6 +45,7 @@
             this.colfinanciername = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colagentName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GenderComboBox = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.colFax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAdderss = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.FinanciergridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnDelete)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +68,7 @@
             this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.tileBar1.Groups.Add(this.tileBarGroup2);
             this.tileBar1.Location = new System.Drawing.Point(0, 0);
-            this.tileBar1.MaxId = 8;
+            this.tileBar1.MaxId = 9;
             this.tileBar1.Name = "tileBar1";
             this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             this.tileBar1.Size = new System.Drawing.Size(1103, 98);
@@ -73,14 +77,28 @@
             // 
             // tileBarGroup2
             // 
+            this.tileBarGroup2.Items.Add(this.AddBtn);
             this.tileBarGroup2.Items.Add(this.RefreshBtn);
             this.tileBarGroup2.Name = "tileBarGroup2";
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.AddBtn;
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement1.Text = "Add";
+            this.AddBtn.Elements.Add(tileItemElement1);
+            this.AddBtn.Id = 8;
+            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.AddBtn.Name = "AddBtn";
             // 
             // RefreshBtn
             // 
             this.RefreshBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Text = "Refresh";
-            this.RefreshBtn.Elements.Add(tileItemElement1);
+            tileItemElement2.Image = global::XpremaProjectPro.Properties.Resources.refbtn;
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement2.Text = "Refresh";
+            this.RefreshBtn.Elements.Add(tileItemElement2);
             this.RefreshBtn.Id = 5;
             this.RefreshBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.RefreshBtn.Name = "RefreshBtn";
@@ -95,7 +113,8 @@
             this.FinanciergridControl.Name = "FinanciergridControl";
             this.FinanciergridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.SaveBtn,
-            this.BtnDelete});
+            this.BtnDelete,
+            this.GenderComboBox});
             this.FinanciergridControl.Size = new System.Drawing.Size(1103, 471);
             this.FinanciergridControl.TabIndex = 4;
             this.FinanciergridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -120,6 +139,7 @@
             this.DeleteColom});
             this.gridView1.GridControl = this.FinanciergridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
             // 
             // colID
             // 
@@ -151,6 +171,17 @@
             this.colagentName.Name = "colagentName";
             this.colagentName.Visible = true;
             this.colagentName.VisibleIndex = 2;
+            // 
+            // GenderComboBox
+            // 
+            this.GenderComboBox.AutoHeight = false;
+            this.GenderComboBox.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.GenderComboBox.Items.AddRange(new object[] {
+            "Mail",
+            "Fmail"});
+            this.GenderComboBox.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+            this.GenderComboBox.Name = "GenderComboBox";
             // 
             // colFax
             // 
@@ -223,6 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.FinanciergridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnDelete)).EndInit();
             this.ResumeLayout(false);
@@ -248,5 +280,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn DeleteColom;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit SaveBtn;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BtnDelete;
+        private DevExpress.XtraBars.Navigation.TileBarItem AddBtn;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox GenderComboBox;
     }
 }

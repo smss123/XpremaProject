@@ -41,6 +41,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.UserAddgroupControl = new DevExpress.XtraEditors.GroupControl();
             this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -52,6 +54,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserAddgroupControl)).BeginInit();
             this.UserAddgroupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             this.SuspendLayout();
             // 
             // userNameTextBox
@@ -60,7 +64,7 @@
             this.userNameTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTextBox.Location = new System.Drawing.Point(88, 12);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(270, 21);
+            this.userNameTextBox.Size = new System.Drawing.Size(270, 26);
             this.userNameTextBox.TabIndex = 2;
             // 
             // userSystemBindingSource
@@ -71,13 +75,14 @@
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userSystemBindingSource, "Password", true));
             this.passwordTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(88, 37);
+            this.passwordTextBox.Location = new System.Drawing.Point(88, 42);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(270, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(270, 25);
             this.passwordTextBox.TabIndex = 4;
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.AddBtn);
             this.layoutControl1.Controls.Add(this.GroupNamelookUpEdit);
             this.layoutControl1.Controls.Add(this.userNameTextBox);
             this.layoutControl1.Controls.Add(this.passwordTextBox);
@@ -87,13 +92,13 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(750, 155, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(370, 104);
+            this.layoutControl1.Size = new System.Drawing.Size(370, 152);
             this.layoutControl1.TabIndex = 13;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // GroupNamelookUpEdit
             // 
-            this.GroupNamelookUpEdit.Location = new System.Drawing.Point(88, 61);
+            this.GroupNamelookUpEdit.Location = new System.Drawing.Point(88, 71);
             this.GroupNamelookUpEdit.Name = "GroupNamelookUpEdit";
             this.GroupNamelookUpEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupNamelookUpEdit.Properties.Appearance.Options.UseFont = true;
@@ -104,6 +109,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupDescription", "Group Description", 95, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.GroupNamelookUpEdit.Properties.DataSource = this.userGroupBindingSource;
             this.GroupNamelookUpEdit.Properties.DisplayMember = "GroupName";
+            this.GroupNamelookUpEdit.Properties.NullText = "[Select Group]";
             this.GroupNamelookUpEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.GroupNamelookUpEdit.Properties.ValueMember = "Id";
             this.GroupNamelookUpEdit.Size = new System.Drawing.Size(270, 22);
@@ -126,10 +132,12 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem3,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem4,
+            this.simpleSeparator1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(370, 104);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(370, 152);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -139,10 +147,10 @@
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.Control = this.passwordTextBox;
             this.layoutControlItem1.CustomizationFormText = "User Name:";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 25);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(83, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(350, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(350, 29);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.Text = "Password:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(73, 16);
@@ -153,10 +161,10 @@
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.GroupNamelookUpEdit;
             this.layoutControlItem3.CustomizationFormText = "Group";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 49);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 59);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(113, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(350, 35);
+            this.layoutControlItem3.Size = new System.Drawing.Size(350, 31);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "Group:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(73, 16);
@@ -170,7 +178,7 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(83, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(350, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(350, 30);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.Text = "User name:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(73, 16);
@@ -178,11 +186,10 @@
             // UserAddgroupControl
             // 
             this.UserAddgroupControl.Controls.Add(this.layoutControl1);
-            this.UserAddgroupControl.Controls.Add(this.AddBtn);
             this.UserAddgroupControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UserAddgroupControl.Location = new System.Drawing.Point(0, 0);
             this.UserAddgroupControl.Name = "UserAddgroupControl";
-            this.UserAddgroupControl.Size = new System.Drawing.Size(374, 197);
+            this.UserAddgroupControl.Size = new System.Drawing.Size(374, 181);
             this.UserAddgroupControl.TabIndex = 7;
             this.UserAddgroupControl.Text = "Add User ";
             this.UserAddgroupControl.Paint += new System.Windows.Forms.PaintEventHandler(this.UserAddgroupControl_Paint);
@@ -193,18 +200,40 @@
             this.AddBtn.Appearance.Options.UseFont = true;
             this.AddBtn.Image = global::XpremaProjectPro.Properties.Resources.add_32x32;
             this.AddBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.AddBtn.Location = new System.Drawing.Point(5, 131);
+            this.AddBtn.Location = new System.Drawing.Point(12, 102);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(117, 50);
+            this.AddBtn.Size = new System.Drawing.Size(160, 38);
+            this.AddBtn.StyleController = this.layoutControl1;
             this.AddBtn.TabIndex = 12;
             this.AddBtn.Text = "Add";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.AddBtn;
+            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 90);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(164, 42);
+            this.layoutControlItem4.Text = "layoutControlItem4";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextToControlDistance = 0;
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // simpleSeparator1
+            // 
+            this.simpleSeparator1.AllowHotTrack = false;
+            this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
+            this.simpleSeparator1.Location = new System.Drawing.Point(164, 90);
+            this.simpleSeparator1.Name = "simpleSeparator1";
+            this.simpleSeparator1.Size = new System.Drawing.Size(186, 42);
+            this.simpleSeparator1.Text = "simpleSeparator1";
             // 
             // AddUsersFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 197);
+            this.ClientSize = new System.Drawing.Size(374, 181);
             this.Controls.Add(this.UserAddgroupControl);
             this.Name = "AddUsersFrm";
             this.Text = "AddUsersFrm";
@@ -220,6 +249,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserAddgroupControl)).EndInit();
             this.UserAddgroupControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,5 +269,7 @@
         private DevExpress.XtraEditors.LookUpEdit GroupNamelookUpEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
     }
 }

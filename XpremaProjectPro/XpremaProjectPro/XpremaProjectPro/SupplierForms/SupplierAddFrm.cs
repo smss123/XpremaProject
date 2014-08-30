@@ -25,7 +25,7 @@ namespace XpremaProjectPro.SupplierForms
             if (nameTextBox.Text == "")
             {
                 nameTextBox.BackColor = Color.OrangeRed;
-                nameTextBox.Text = OperationX.RequiredField;
+                nameTextBox.Focus();
                 return;
             }
             else

@@ -45,3 +45,4 @@ C:\Users\Heroo\Desktop\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Ba
 C:\Users\Heroo\Desktop\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Heroo\Desktop\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.dll
 C:\Users\Heroo\Desktop\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.pdb
+C:\Users\Heroo\Documents\GitHub\XpremaProject\XpremaProjectPro\XpremaProjectPro\Xprema.Base\obj\Debug\Xprema.Base.csprojResolveAssemblyReference.cache
