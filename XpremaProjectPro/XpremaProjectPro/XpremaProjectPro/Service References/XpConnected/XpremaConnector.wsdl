@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Xpro.xprema.net" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="Xpro.xprema.net" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Xpro.xprema.net" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="Xpro.xprema.net" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="Xpro.xprema.net">
       <s:element name="HelloWorld">
@@ -602,6 +602,266 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ProjectProfileAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pro" type="tns:ProjectProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProjectProfileAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProjectProfileAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProjectProfileEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pro" type="tns:ProjectProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProjectProfileEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProjectProfileEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProjectProfileDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProjectProfileDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProjectProfileDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProjectProfileGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="ProjectProfileGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProjectProfileGetAllResult" type="tns:ArrayOfProjectProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubTheFinancerAndProjectCommandAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sb" type="tns:SubTheFinancerAndProject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubTheFinancerAndProjectCommandAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubTheFinancerAndProjectCommandAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubTheFinancerAndProjectEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pro" type="tns:SubTheFinancerAndProject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubTheFinancerAndProjectEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubTheFinancerAndProjectEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubTheFinancerAndProjecDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubTheFinancerAndProjecDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubTheFinancerAndProjecDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubTheFinancerAndProjectGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="SubTheFinancerAndProjectGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubTheFinancerAndProjectGetAllResult" type="tns:ArrayOfSubTheFinancerAndProject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContractAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cont" type="tns:Contract" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContractAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ContractAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContractEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cont" type="tns:Contract" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContractEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ContractEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContractDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContractDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ContractDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContractGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="ContractGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContractGetAllResult" type="tns:ArrayOfContract" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Activ" type="tns:ProjectActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Activ" type="tns:ProjectActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActivityDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="ActivityGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActivityGetAllResult" type="tns:ArrayOfProjectActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subActivityAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SActiv" type="tns:ProjectSubActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subActivityAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="subActivityAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subActivityEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SActiv" type="tns:ProjectSubActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subActivityEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="subActivityEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subActivityDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subActivityDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="subActivityDeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subActivityGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="subActivityGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subActivityGetAllResult" type="tns:ArrayOfProjectSubActivity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -748,6 +1008,126 @@
   <wsdl:message name="financierGetAllSoapOut">
     <wsdl:part name="parameters" element="tns:financierGetAllResponse" />
   </wsdl:message>
+  <wsdl:message name="ProjectProfileAddSoapIn">
+    <wsdl:part name="parameters" element="tns:ProjectProfileAdd" />
+  </wsdl:message>
+  <wsdl:message name="ProjectProfileAddSoapOut">
+    <wsdl:part name="parameters" element="tns:ProjectProfileAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProjectProfileEditSoapIn">
+    <wsdl:part name="parameters" element="tns:ProjectProfileEdit" />
+  </wsdl:message>
+  <wsdl:message name="ProjectProfileEditSoapOut">
+    <wsdl:part name="parameters" element="tns:ProjectProfileEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProjectProfileDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:ProjectProfileDelete" />
+  </wsdl:message>
+  <wsdl:message name="ProjectProfileDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:ProjectProfileDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProjectProfileGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:ProjectProfileGetAll" />
+  </wsdl:message>
+  <wsdl:message name="ProjectProfileGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:ProjectProfileGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjectCommandAddSoapIn">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjectCommandAdd" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjectCommandAddSoapOut">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjectCommandAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjectEditSoapIn">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjectEdit" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjectEditSoapOut">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjectEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjecDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjecDelete" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjecDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjecDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjectGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjectGetAll" />
+  </wsdl:message>
+  <wsdl:message name="SubTheFinancerAndProjectGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:SubTheFinancerAndProjectGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContractAddSoapIn">
+    <wsdl:part name="parameters" element="tns:ContractAdd" />
+  </wsdl:message>
+  <wsdl:message name="ContractAddSoapOut">
+    <wsdl:part name="parameters" element="tns:ContractAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContractEditSoapIn">
+    <wsdl:part name="parameters" element="tns:ContractEdit" />
+  </wsdl:message>
+  <wsdl:message name="ContractEditSoapOut">
+    <wsdl:part name="parameters" element="tns:ContractEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContractDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:ContractDelete" />
+  </wsdl:message>
+  <wsdl:message name="ContractDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:ContractDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContractGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:ContractGetAll" />
+  </wsdl:message>
+  <wsdl:message name="ContractGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:ContractGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivityAddSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivityAdd" />
+  </wsdl:message>
+  <wsdl:message name="ActivityAddSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivityAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivityEditSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivityEdit" />
+  </wsdl:message>
+  <wsdl:message name="ActivityEditSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivityEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivityDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivityDelete" />
+  </wsdl:message>
+  <wsdl:message name="ActivityDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivityDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivityGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivityGetAll" />
+  </wsdl:message>
+  <wsdl:message name="ActivityGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivityGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="subActivityAddSoapIn">
+    <wsdl:part name="parameters" element="tns:subActivityAdd" />
+  </wsdl:message>
+  <wsdl:message name="subActivityAddSoapOut">
+    <wsdl:part name="parameters" element="tns:subActivityAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="subActivityEditSoapIn">
+    <wsdl:part name="parameters" element="tns:subActivityEdit" />
+  </wsdl:message>
+  <wsdl:message name="subActivityEditSoapOut">
+    <wsdl:part name="parameters" element="tns:subActivityEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="subActivityDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:subActivityDelete" />
+  </wsdl:message>
+  <wsdl:message name="subActivityDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:subActivityDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="subActivityGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:subActivityGetAll" />
+  </wsdl:message>
+  <wsdl:message name="subActivityGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:subActivityGetAllResponse" />
+  </wsdl:message>
   <wsdl:portType name="XpremaConnectorSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -844,6 +1224,86 @@
     <wsdl:operation name="financierGetAll">
       <wsdl:input message="tns:financierGetAllSoapIn" />
       <wsdl:output message="tns:financierGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileAdd">
+      <wsdl:input message="tns:ProjectProfileAddSoapIn" />
+      <wsdl:output message="tns:ProjectProfileAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileEdit">
+      <wsdl:input message="tns:ProjectProfileEditSoapIn" />
+      <wsdl:output message="tns:ProjectProfileEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileDelete">
+      <wsdl:input message="tns:ProjectProfileDeleteSoapIn" />
+      <wsdl:output message="tns:ProjectProfileDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileGetAll">
+      <wsdl:input message="tns:ProjectProfileGetAllSoapIn" />
+      <wsdl:output message="tns:ProjectProfileGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectCommandAdd">
+      <wsdl:input message="tns:SubTheFinancerAndProjectCommandAddSoapIn" />
+      <wsdl:output message="tns:SubTheFinancerAndProjectCommandAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectEdit">
+      <wsdl:input message="tns:SubTheFinancerAndProjectEditSoapIn" />
+      <wsdl:output message="tns:SubTheFinancerAndProjectEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjecDelete">
+      <wsdl:input message="tns:SubTheFinancerAndProjecDeleteSoapIn" />
+      <wsdl:output message="tns:SubTheFinancerAndProjecDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectGetAll">
+      <wsdl:input message="tns:SubTheFinancerAndProjectGetAllSoapIn" />
+      <wsdl:output message="tns:SubTheFinancerAndProjectGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractAdd">
+      <wsdl:input message="tns:ContractAddSoapIn" />
+      <wsdl:output message="tns:ContractAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractEdit">
+      <wsdl:input message="tns:ContractEditSoapIn" />
+      <wsdl:output message="tns:ContractEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractDelete">
+      <wsdl:input message="tns:ContractDeleteSoapIn" />
+      <wsdl:output message="tns:ContractDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractGetAll">
+      <wsdl:input message="tns:ContractGetAllSoapIn" />
+      <wsdl:output message="tns:ContractGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivityAdd">
+      <wsdl:input message="tns:ActivityAddSoapIn" />
+      <wsdl:output message="tns:ActivityAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivityEdit">
+      <wsdl:input message="tns:ActivityEditSoapIn" />
+      <wsdl:output message="tns:ActivityEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivityDelete">
+      <wsdl:input message="tns:ActivityDeleteSoapIn" />
+      <wsdl:output message="tns:ActivityDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivityGetAll">
+      <wsdl:input message="tns:ActivityGetAllSoapIn" />
+      <wsdl:output message="tns:ActivityGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="subActivityAdd">
+      <wsdl:input message="tns:subActivityAddSoapIn" />
+      <wsdl:output message="tns:subActivityAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="subActivityEdit">
+      <wsdl:input message="tns:subActivityEditSoapIn" />
+      <wsdl:output message="tns:subActivityEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="subActivityDelete">
+      <wsdl:input message="tns:subActivityDeleteSoapIn" />
+      <wsdl:output message="tns:subActivityDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="subActivityGetAll">
+      <wsdl:input message="tns:subActivityGetAllSoapIn" />
+      <wsdl:output message="tns:subActivityGetAllSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="XpremaConnectorSoap" type="tns:XpremaConnectorSoap">
@@ -1064,6 +1524,186 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ProjectProfileAdd">
+      <soap:operation soapAction="Xpro.xprema.net/ProjectProfileAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileEdit">
+      <soap:operation soapAction="Xpro.xprema.net/ProjectProfileEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileDelete">
+      <soap:operation soapAction="Xpro.xprema.net/ProjectProfileDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/ProjectProfileGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectCommandAdd">
+      <soap:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjectCommandAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectEdit">
+      <soap:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjectEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjecDelete">
+      <soap:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjecDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjectGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractAdd">
+      <soap:operation soapAction="Xpro.xprema.net/ContractAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractEdit">
+      <soap:operation soapAction="Xpro.xprema.net/ContractEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractDelete">
+      <soap:operation soapAction="Xpro.xprema.net/ContractDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/ContractGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityAdd">
+      <soap:operation soapAction="Xpro.xprema.net/ActivityAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityEdit">
+      <soap:operation soapAction="Xpro.xprema.net/ActivityEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityDelete">
+      <soap:operation soapAction="Xpro.xprema.net/ActivityDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/ActivityGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityAdd">
+      <soap:operation soapAction="Xpro.xprema.net/subActivityAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityEdit">
+      <soap:operation soapAction="Xpro.xprema.net/subActivityEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityDelete">
+      <soap:operation soapAction="Xpro.xprema.net/subActivityDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityGetAll">
+      <soap:operation soapAction="Xpro.xprema.net/subActivityGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="XpremaConnectorSoap12" type="tns:XpremaConnectorSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1276,6 +1916,186 @@
     </wsdl:operation>
     <wsdl:operation name="financierGetAll">
       <soap12:operation soapAction="Xpro.xprema.net/financierGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/ProjectProfileAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/ProjectProfileEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/ProjectProfileDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectProfileGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/ProjectProfileGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectCommandAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjectCommandAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjectEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjecDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjecDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTheFinancerAndProjectGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/SubTheFinancerAndProjectGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/ContractAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/ContractEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/ContractDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/ContractGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/ActivityAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/ActivityEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/ActivityDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivityGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/ActivityGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityAdd">
+      <soap12:operation soapAction="Xpro.xprema.net/subActivityAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityEdit">
+      <soap12:operation soapAction="Xpro.xprema.net/subActivityEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityDelete">
+      <soap12:operation soapAction="Xpro.xprema.net/subActivityDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subActivityGetAll">
+      <soap12:operation soapAction="Xpro.xprema.net/subActivityGetAll" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -37,22 +37,22 @@ namespace XpremaProjectPro.XpConnected {
         private string AccountNaturalField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.Transaction[] TransactionsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.Transaction> TransactionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectActivity[] ProjectActivitiesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectActivity> ProjectActivitiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectExpens[] ProjectExpensesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectExpens> ProjectExpensesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectProfile[] ProjectProfilesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectProfile> ProjectProfilesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectSubActivity[] ProjectSubActivitiesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectSubActivity> ProjectSubActivitiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.Thefinancier[] ThefinanciersField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.Thefinancier> ThefinanciersField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -130,7 +130,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public XpremaProjectPro.XpConnected.Transaction[] Transactions {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Transaction> Transactions {
             get {
                 return this.TransactionsField;
             }
@@ -143,7 +143,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public XpremaProjectPro.XpConnected.ProjectActivity[] ProjectActivities {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectActivity> ProjectActivities {
             get {
                 return this.ProjectActivitiesField;
             }
@@ -156,7 +156,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public XpremaProjectPro.XpConnected.ProjectExpens[] ProjectExpenses {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectExpens> ProjectExpenses {
             get {
                 return this.ProjectExpensesField;
             }
@@ -169,7 +169,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public XpremaProjectPro.XpConnected.ProjectProfile[] ProjectProfiles {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectProfile> ProjectProfiles {
             get {
                 return this.ProjectProfilesField;
             }
@@ -182,7 +182,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public XpremaProjectPro.XpConnected.ProjectSubActivity[] ProjectSubActivities {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectSubActivity> ProjectSubActivities {
             get {
                 return this.ProjectSubActivitiesField;
             }
@@ -195,7 +195,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public XpremaProjectPro.XpConnected.Thefinancier[] Thefinanciers {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Thefinancier> Thefinanciers {
             get {
                 return this.ThefinanciersField;
             }
@@ -405,7 +405,7 @@ namespace XpremaProjectPro.XpConnected {
         private XpremaProjectPro.XpConnected.Account AccountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectSubActivity[] ProjectSubActivitiesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectSubActivity> ProjectSubActivitiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private XpremaProjectPro.XpConnected.ProjectProfile ProjectProfileField;
@@ -564,7 +564,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
-        public XpremaProjectPro.XpConnected.ProjectSubActivity[] ProjectSubActivities {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectSubActivity> ProjectSubActivities {
             get {
                 return this.ProjectSubActivitiesField;
             }
@@ -848,19 +848,19 @@ namespace XpremaProjectPro.XpConnected {
         private XpremaProjectPro.XpConnected.Account AccountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.Attachment[] AttachmentsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.Attachment> AttachmentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.Contract[] ContractsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> ContractsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectActivity[] ProjectActivitiesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectActivity> ProjectActivitiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectOrder[] ProjectOrdersField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectOrder> ProjectOrdersField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.SubTheFinancerAndProject[] SubTheFinancerAndProjectsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.SubTheFinancerAndProject> SubTheFinancerAndProjectsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1003,7 +1003,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public XpremaProjectPro.XpConnected.Attachment[] Attachments {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Attachment> Attachments {
             get {
                 return this.AttachmentsField;
             }
@@ -1016,7 +1016,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
-        public XpremaProjectPro.XpConnected.Contract[] Contracts {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> Contracts {
             get {
                 return this.ContractsField;
             }
@@ -1029,7 +1029,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
-        public XpremaProjectPro.XpConnected.ProjectActivity[] ProjectActivities {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectActivity> ProjectActivities {
             get {
                 return this.ProjectActivitiesField;
             }
@@ -1042,7 +1042,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
-        public XpremaProjectPro.XpConnected.ProjectOrder[] ProjectOrders {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectOrder> ProjectOrders {
             get {
                 return this.ProjectOrdersField;
             }
@@ -1055,7 +1055,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
-        public XpremaProjectPro.XpConnected.SubTheFinancerAndProject[] SubTheFinancerAndProjects {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.SubTheFinancerAndProject> SubTheFinancerAndProjects {
             get {
                 return this.SubTheFinancerAndProjectsField;
             }
@@ -1116,7 +1116,7 @@ namespace XpremaProjectPro.XpConnected {
         private XpremaProjectPro.XpConnected.ProjectActivity ProjectActivityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectExpens[] ProjectExpensesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectExpens> ProjectExpensesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1285,7 +1285,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
-        public XpremaProjectPro.XpConnected.ProjectExpens[] ProjectExpenses {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectExpens> ProjectExpenses {
             get {
                 return this.ProjectExpensesField;
             }
@@ -1342,7 +1342,7 @@ namespace XpremaProjectPro.XpConnected {
         private XpremaProjectPro.XpConnected.Account AccountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.SubTheFinancerAndProject[] SubTheFinancerAndProjectsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.SubTheFinancerAndProject> SubTheFinancerAndProjectsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1472,7 +1472,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public XpremaProjectPro.XpConnected.SubTheFinancerAndProject[] SubTheFinancerAndProjects {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.SubTheFinancerAndProject> SubTheFinancerAndProjects {
             get {
                 return this.SubTheFinancerAndProjectsField;
             }
@@ -1524,7 +1524,7 @@ namespace XpremaProjectPro.XpConnected {
         private string AdderssField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.ProjectExpens[] ProjectExpensesField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectExpens> ProjectExpensesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1628,7 +1628,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public XpremaProjectPro.XpConnected.ProjectExpens[] ProjectExpenses {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectExpens> ProjectExpenses {
             get {
                 return this.ProjectExpensesField;
             }
@@ -2037,7 +2037,7 @@ namespace XpremaProjectPro.XpConnected {
         private int ProjectProfile_IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.Attachment[] AttachmentsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.Attachment> AttachmentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private XpremaProjectPro.XpConnected.ProjectProfile ProjectProfileField;
@@ -2118,7 +2118,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public XpremaProjectPro.XpConnected.Attachment[] Attachments {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Attachment> Attachments {
             get {
                 return this.AttachmentsField;
             }
@@ -2279,7 +2279,7 @@ namespace XpremaProjectPro.XpConnected {
         private System.Nullable<int> UserGroup_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.Contract[] ContractsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> ContractsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private XpremaProjectPro.XpConnected.UserGroup UserGroupField;
@@ -2347,7 +2347,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public XpremaProjectPro.XpConnected.Contract[] Contracts {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> Contracts {
             get {
                 return this.ContractsField;
             }
@@ -2415,7 +2415,7 @@ namespace XpremaProjectPro.XpConnected {
         private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.Contract[] ContractsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> ContractsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2532,7 +2532,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public XpremaProjectPro.XpConnected.Contract[] Contracts {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> Contracts {
             get {
                 return this.ContractsField;
             }
@@ -2572,10 +2572,10 @@ namespace XpremaProjectPro.XpConnected {
         private string GroupDescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.GroupPermession[] GroupPermessionsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.GroupPermession> GroupPermessionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.UserSystem[] UserSystemsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserSystem> UserSystemsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2627,7 +2627,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public XpremaProjectPro.XpConnected.GroupPermession[] GroupPermessions {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.GroupPermession> GroupPermessions {
             get {
                 return this.GroupPermessionsField;
             }
@@ -2640,7 +2640,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public XpremaProjectPro.XpConnected.UserSystem[] UserSystems {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserSystem> UserSystems {
             get {
                 return this.UserSystemsField;
             }
@@ -2801,7 +2801,7 @@ namespace XpremaProjectPro.XpConnected {
         private string PropertyNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private XpremaProjectPro.XpConnected.GroupPermession[] GroupPermessionsField;
+        private System.Collections.Generic.List<XpremaProjectPro.XpConnected.GroupPermession> GroupPermessionsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2853,7 +2853,7 @@ namespace XpremaProjectPro.XpConnected {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public XpremaProjectPro.XpConnected.GroupPermession[] GroupPermessions {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.GroupPermession> GroupPermessions {
             get {
                 return this.GroupPermessionsField;
             }
@@ -3041,6 +3041,141 @@ namespace XpremaProjectPro.XpConnected {
         
         [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/financierGetAll", ReplyAction="*")]
         System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.financierGetAllResponse> financierGetAllAsync(XpremaProjectPro.XpConnected.financierGetAllRequest request);
+        
+        // CODEGEN: Generating message contract since element name Pro from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileAdd", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ProjectProfileAddResponse ProjectProfileAdd(XpremaProjectPro.XpConnected.ProjectProfileAddRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileAdd", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileAddResponse> ProjectProfileAddAsync(XpremaProjectPro.XpConnected.ProjectProfileAddRequest request);
+        
+        // CODEGEN: Generating message contract since element name Pro from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileEdit", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ProjectProfileEditResponse ProjectProfileEdit(XpremaProjectPro.XpConnected.ProjectProfileEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileEdit", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileEditResponse> ProjectProfileEditAsync(XpremaProjectPro.XpConnected.ProjectProfileEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileDelete", ReplyAction="*")]
+        bool ProjectProfileDelete(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileDelete", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> ProjectProfileDeleteAsync(int ID);
+        
+        // CODEGEN: Generating message contract since element name ProjectProfileGetAllResult from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileGetAll", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ProjectProfileGetAllResponse ProjectProfileGetAll(XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ProjectProfileGetAll", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileGetAllResponse> ProjectProfileGetAllAsync(XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest request);
+        
+        // CODEGEN: Generating message contract since element name sb from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjectCommandAdd", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponse SubTheFinancerAndProjectCommandAdd(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjectCommandAdd", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponse> SubTheFinancerAndProjectCommandAddAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest request);
+        
+        // CODEGEN: Generating message contract since element name Pro from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjectEdit", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponse SubTheFinancerAndProjectEdit(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjectEdit", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponse> SubTheFinancerAndProjectEditAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjecDelete", ReplyAction="*")]
+        bool SubTheFinancerAndProjecDelete(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjecDelete", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> SubTheFinancerAndProjecDeleteAsync(int ID);
+        
+        // CODEGEN: Generating message contract since element name SubTheFinancerAndProjectGetAllResult from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjectGetAll", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponse SubTheFinancerAndProjectGetAll(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/SubTheFinancerAndProjectGetAll", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponse> SubTheFinancerAndProjectGetAllAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest request);
+        
+        // CODEGEN: Generating message contract since element name Cont from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractAdd", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ContractAddResponse ContractAdd(XpremaProjectPro.XpConnected.ContractAddRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractAdd", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractAddResponse> ContractAddAsync(XpremaProjectPro.XpConnected.ContractAddRequest request);
+        
+        // CODEGEN: Generating message contract since element name Cont from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractEdit", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ContractEditResponse ContractEdit(XpremaProjectPro.XpConnected.ContractEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractEdit", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractEditResponse> ContractEditAsync(XpremaProjectPro.XpConnected.ContractEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractDelete", ReplyAction="*")]
+        bool ContractDelete(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractDelete", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> ContractDeleteAsync(int ID);
+        
+        // CODEGEN: Generating message contract since element name ContractGetAllResult from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractGetAll", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ContractGetAllResponse ContractGetAll(XpremaProjectPro.XpConnected.ContractGetAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ContractGetAll", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractGetAllResponse> ContractGetAllAsync(XpremaProjectPro.XpConnected.ContractGetAllRequest request);
+        
+        // CODEGEN: Generating message contract since element name Activ from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityAdd", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ActivityAddResponse ActivityAdd(XpremaProjectPro.XpConnected.ActivityAddRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityAdd", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityAddResponse> ActivityAddAsync(XpremaProjectPro.XpConnected.ActivityAddRequest request);
+        
+        // CODEGEN: Generating message contract since element name Activ from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityEdit", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ActivityEditResponse ActivityEdit(XpremaProjectPro.XpConnected.ActivityEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityEdit", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityEditResponse> ActivityEditAsync(XpremaProjectPro.XpConnected.ActivityEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityDelete", ReplyAction="*")]
+        bool ActivityDelete(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityDelete", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> ActivityDeleteAsync(int ID);
+        
+        // CODEGEN: Generating message contract since element name ActivityGetAllResult from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityGetAll", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.ActivityGetAllResponse ActivityGetAll(XpremaProjectPro.XpConnected.ActivityGetAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/ActivityGetAll", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityGetAllResponse> ActivityGetAllAsync(XpremaProjectPro.XpConnected.ActivityGetAllRequest request);
+        
+        // CODEGEN: Generating message contract since element name SActiv from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityAdd", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.subActivityAddResponse subActivityAdd(XpremaProjectPro.XpConnected.subActivityAddRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityAdd", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityAddResponse> subActivityAddAsync(XpremaProjectPro.XpConnected.subActivityAddRequest request);
+        
+        // CODEGEN: Generating message contract since element name SActiv from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityEdit", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.subActivityEditResponse subActivityEdit(XpremaProjectPro.XpConnected.subActivityEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityEdit", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityEditResponse> subActivityEditAsync(XpremaProjectPro.XpConnected.subActivityEditRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityDelete", ReplyAction="*")]
+        bool subActivityDelete(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityDelete", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> subActivityDeleteAsync(int ID);
+        
+        // CODEGEN: Generating message contract since element name subActivityGetAllResult from namespace Xpro.xprema.net is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityGetAll", ReplyAction="*")]
+        XpremaProjectPro.XpConnected.subActivityGetAllResponse subActivityGetAll(XpremaProjectPro.XpConnected.subActivityGetAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Xpro.xprema.net/subActivityGetAll", ReplyAction="*")]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityGetAllResponse> subActivityGetAllAsync(XpremaProjectPro.XpConnected.subActivityGetAllRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3155,12 +3290,12 @@ namespace XpremaProjectPro.XpConnected {
     public partial class getAccountsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.Account[] getAccountsResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Account> getAccountsResult;
         
         public getAccountsResponseBody() {
         }
         
-        public getAccountsResponseBody(XpremaProjectPro.XpConnected.Account[] getAccountsResult) {
+        public getAccountsResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.Account> getAccountsResult) {
             this.getAccountsResult = getAccountsResult;
         }
     }
@@ -3216,12 +3351,12 @@ namespace XpremaProjectPro.XpConnected {
     public partial class GetAllGroupResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.UserGroup[] GetAllGroupResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserGroup> GetAllGroupResult;
         
         public GetAllGroupResponseBody() {
         }
         
-        public GetAllGroupResponseBody(XpremaProjectPro.XpConnected.UserGroup[] GetAllGroupResult) {
+        public GetAllGroupResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserGroup> GetAllGroupResult) {
             this.GetAllGroupResult = GetAllGroupResult;
         }
     }
@@ -3277,12 +3412,12 @@ namespace XpremaProjectPro.XpConnected {
     public partial class getallsupResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.Supplier[] getallsupResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Supplier> getallsupResult;
         
         public getallsupResponseBody() {
         }
         
-        public getallsupResponseBody(XpremaProjectPro.XpConnected.Supplier[] getallsupResult) {
+        public getallsupResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.Supplier> getallsupResult) {
             this.getallsupResult = getallsupResult;
         }
     }
@@ -3474,12 +3609,12 @@ namespace XpremaProjectPro.XpConnected {
     public partial class GroupGetAllResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.UserGroup[] GroupGetAllResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserGroup> GroupGetAllResult;
         
         public GroupGetAllResponseBody() {
         }
         
-        public GroupGetAllResponseBody(XpremaProjectPro.XpConnected.UserGroup[] GroupGetAllResult) {
+        public GroupGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserGroup> GroupGetAllResult) {
             this.GroupGetAllResult = GroupGetAllResult;
         }
     }
@@ -3671,12 +3806,12 @@ namespace XpremaProjectPro.XpConnected {
     public partial class UserGetAllResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.UserSystem[] UserGetAllResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserSystem> UserGetAllResult;
         
         public UserGetAllResponseBody() {
         }
         
-        public UserGetAllResponseBody(XpremaProjectPro.XpConnected.UserSystem[] UserGetAllResult) {
+        public UserGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserSystem> UserGetAllResult) {
             this.UserGetAllResult = UserGetAllResult;
         }
     }
@@ -3868,12 +4003,12 @@ namespace XpremaProjectPro.XpConnected {
     public partial class EmployeeGetAllResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.Employee[] EmployeeGetAllResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> EmployeeGetAllResult;
         
         public EmployeeGetAllResponseBody() {
         }
         
-        public EmployeeGetAllResponseBody(XpremaProjectPro.XpConnected.Employee[] EmployeeGetAllResult) {
+        public EmployeeGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> EmployeeGetAllResult) {
             this.EmployeeGetAllResult = EmployeeGetAllResult;
         }
     }
@@ -4065,12 +4200,12 @@ namespace XpremaProjectPro.XpConnected {
     public partial class SupplierGetAllResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.Supplier[] SupplierGetAllResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Supplier> SupplierGetAllResult;
         
         public SupplierGetAllResponseBody() {
         }
         
-        public SupplierGetAllResponseBody(XpremaProjectPro.XpConnected.Supplier[] SupplierGetAllResult) {
+        public SupplierGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.Supplier> SupplierGetAllResult) {
             this.SupplierGetAllResult = SupplierGetAllResult;
         }
     }
@@ -4262,13 +4397,998 @@ namespace XpremaProjectPro.XpConnected {
     public partial class financierGetAllResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public XpremaProjectPro.XpConnected.Thefinancier[] financierGetAllResult;
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Thefinancier> financierGetAllResult;
         
         public financierGetAllResponseBody() {
         }
         
-        public financierGetAllResponseBody(XpremaProjectPro.XpConnected.Thefinancier[] financierGetAllResult) {
+        public financierGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.Thefinancier> financierGetAllResult) {
             this.financierGetAllResult = financierGetAllResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProjectProfileAddRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProjectProfileAdd", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfileAddRequestBody Body;
+        
+        public ProjectProfileAddRequest() {
+        }
+        
+        public ProjectProfileAddRequest(XpremaProjectPro.XpConnected.ProjectProfileAddRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ProjectProfileAddRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfile Pro;
+        
+        public ProjectProfileAddRequestBody() {
+        }
+        
+        public ProjectProfileAddRequestBody(XpremaProjectPro.XpConnected.ProjectProfile Pro) {
+            this.Pro = Pro;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProjectProfileAddResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProjectProfileAddResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfileAddResponseBody Body;
+        
+        public ProjectProfileAddResponse() {
+        }
+        
+        public ProjectProfileAddResponse(XpremaProjectPro.XpConnected.ProjectProfileAddResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ProjectProfileAddResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ProjectProfileAddResult;
+        
+        public ProjectProfileAddResponseBody() {
+        }
+        
+        public ProjectProfileAddResponseBody(bool ProjectProfileAddResult) {
+            this.ProjectProfileAddResult = ProjectProfileAddResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProjectProfileEditRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProjectProfileEdit", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfileEditRequestBody Body;
+        
+        public ProjectProfileEditRequest() {
+        }
+        
+        public ProjectProfileEditRequest(XpremaProjectPro.XpConnected.ProjectProfileEditRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ProjectProfileEditRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfile Pro;
+        
+        public ProjectProfileEditRequestBody() {
+        }
+        
+        public ProjectProfileEditRequestBody(XpremaProjectPro.XpConnected.ProjectProfile Pro) {
+            this.Pro = Pro;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProjectProfileEditResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProjectProfileEditResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfileEditResponseBody Body;
+        
+        public ProjectProfileEditResponse() {
+        }
+        
+        public ProjectProfileEditResponse(XpremaProjectPro.XpConnected.ProjectProfileEditResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ProjectProfileEditResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ProjectProfileEditResult;
+        
+        public ProjectProfileEditResponseBody() {
+        }
+        
+        public ProjectProfileEditResponseBody(bool ProjectProfileEditResult) {
+            this.ProjectProfileEditResult = ProjectProfileEditResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProjectProfileGetAllRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProjectProfileGetAll", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfileGetAllRequestBody Body;
+        
+        public ProjectProfileGetAllRequest() {
+        }
+        
+        public ProjectProfileGetAllRequest(XpremaProjectPro.XpConnected.ProjectProfileGetAllRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ProjectProfileGetAllRequestBody {
+        
+        public ProjectProfileGetAllRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProjectProfileGetAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProjectProfileGetAllResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectProfileGetAllResponseBody Body;
+        
+        public ProjectProfileGetAllResponse() {
+        }
+        
+        public ProjectProfileGetAllResponse(XpremaProjectPro.XpConnected.ProjectProfileGetAllResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ProjectProfileGetAllResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectProfile> ProjectProfileGetAllResult;
+        
+        public ProjectProfileGetAllResponseBody() {
+        }
+        
+        public ProjectProfileGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectProfile> ProjectProfileGetAllResult) {
+            this.ProjectProfileGetAllResult = ProjectProfileGetAllResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SubTheFinancerAndProjectCommandAddRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SubTheFinancerAndProjectCommandAdd", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequestBody Body;
+        
+        public SubTheFinancerAndProjectCommandAddRequest() {
+        }
+        
+        public SubTheFinancerAndProjectCommandAddRequest(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class SubTheFinancerAndProjectCommandAddRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProject sb;
+        
+        public SubTheFinancerAndProjectCommandAddRequestBody() {
+        }
+        
+        public SubTheFinancerAndProjectCommandAddRequestBody(XpremaProjectPro.XpConnected.SubTheFinancerAndProject sb) {
+            this.sb = sb;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SubTheFinancerAndProjectCommandAddResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SubTheFinancerAndProjectCommandAddResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponseBody Body;
+        
+        public SubTheFinancerAndProjectCommandAddResponse() {
+        }
+        
+        public SubTheFinancerAndProjectCommandAddResponse(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class SubTheFinancerAndProjectCommandAddResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool SubTheFinancerAndProjectCommandAddResult;
+        
+        public SubTheFinancerAndProjectCommandAddResponseBody() {
+        }
+        
+        public SubTheFinancerAndProjectCommandAddResponseBody(bool SubTheFinancerAndProjectCommandAddResult) {
+            this.SubTheFinancerAndProjectCommandAddResult = SubTheFinancerAndProjectCommandAddResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SubTheFinancerAndProjectEditRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SubTheFinancerAndProjectEdit", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequestBody Body;
+        
+        public SubTheFinancerAndProjectEditRequest() {
+        }
+        
+        public SubTheFinancerAndProjectEditRequest(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class SubTheFinancerAndProjectEditRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProject Pro;
+        
+        public SubTheFinancerAndProjectEditRequestBody() {
+        }
+        
+        public SubTheFinancerAndProjectEditRequestBody(XpremaProjectPro.XpConnected.SubTheFinancerAndProject Pro) {
+            this.Pro = Pro;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SubTheFinancerAndProjectEditResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SubTheFinancerAndProjectEditResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponseBody Body;
+        
+        public SubTheFinancerAndProjectEditResponse() {
+        }
+        
+        public SubTheFinancerAndProjectEditResponse(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class SubTheFinancerAndProjectEditResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool SubTheFinancerAndProjectEditResult;
+        
+        public SubTheFinancerAndProjectEditResponseBody() {
+        }
+        
+        public SubTheFinancerAndProjectEditResponseBody(bool SubTheFinancerAndProjectEditResult) {
+            this.SubTheFinancerAndProjectEditResult = SubTheFinancerAndProjectEditResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SubTheFinancerAndProjectGetAllRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SubTheFinancerAndProjectGetAll", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequestBody Body;
+        
+        public SubTheFinancerAndProjectGetAllRequest() {
+        }
+        
+        public SubTheFinancerAndProjectGetAllRequest(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class SubTheFinancerAndProjectGetAllRequestBody {
+        
+        public SubTheFinancerAndProjectGetAllRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SubTheFinancerAndProjectGetAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SubTheFinancerAndProjectGetAllResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponseBody Body;
+        
+        public SubTheFinancerAndProjectGetAllResponse() {
+        }
+        
+        public SubTheFinancerAndProjectGetAllResponse(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class SubTheFinancerAndProjectGetAllResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.SubTheFinancerAndProject> SubTheFinancerAndProjectGetAllResult;
+        
+        public SubTheFinancerAndProjectGetAllResponseBody() {
+        }
+        
+        public SubTheFinancerAndProjectGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.SubTheFinancerAndProject> SubTheFinancerAndProjectGetAllResult) {
+            this.SubTheFinancerAndProjectGetAllResult = SubTheFinancerAndProjectGetAllResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContractAddRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContractAdd", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ContractAddRequestBody Body;
+        
+        public ContractAddRequest() {
+        }
+        
+        public ContractAddRequest(XpremaProjectPro.XpConnected.ContractAddRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ContractAddRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.Contract Cont;
+        
+        public ContractAddRequestBody() {
+        }
+        
+        public ContractAddRequestBody(XpremaProjectPro.XpConnected.Contract Cont) {
+            this.Cont = Cont;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContractAddResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContractAddResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ContractAddResponseBody Body;
+        
+        public ContractAddResponse() {
+        }
+        
+        public ContractAddResponse(XpremaProjectPro.XpConnected.ContractAddResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ContractAddResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ContractAddResult;
+        
+        public ContractAddResponseBody() {
+        }
+        
+        public ContractAddResponseBody(bool ContractAddResult) {
+            this.ContractAddResult = ContractAddResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContractEditRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContractEdit", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ContractEditRequestBody Body;
+        
+        public ContractEditRequest() {
+        }
+        
+        public ContractEditRequest(XpremaProjectPro.XpConnected.ContractEditRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ContractEditRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.Contract Cont;
+        
+        public ContractEditRequestBody() {
+        }
+        
+        public ContractEditRequestBody(XpremaProjectPro.XpConnected.Contract Cont) {
+            this.Cont = Cont;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContractEditResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContractEditResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ContractEditResponseBody Body;
+        
+        public ContractEditResponse() {
+        }
+        
+        public ContractEditResponse(XpremaProjectPro.XpConnected.ContractEditResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ContractEditResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ContractEditResult;
+        
+        public ContractEditResponseBody() {
+        }
+        
+        public ContractEditResponseBody(bool ContractEditResult) {
+            this.ContractEditResult = ContractEditResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContractGetAllRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContractGetAll", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ContractGetAllRequestBody Body;
+        
+        public ContractGetAllRequest() {
+        }
+        
+        public ContractGetAllRequest(XpremaProjectPro.XpConnected.ContractGetAllRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ContractGetAllRequestBody {
+        
+        public ContractGetAllRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ContractGetAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ContractGetAllResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ContractGetAllResponseBody Body;
+        
+        public ContractGetAllResponse() {
+        }
+        
+        public ContractGetAllResponse(XpremaProjectPro.XpConnected.ContractGetAllResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ContractGetAllResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> ContractGetAllResult;
+        
+        public ContractGetAllResponseBody() {
+        }
+        
+        public ContractGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> ContractGetAllResult) {
+            this.ContractGetAllResult = ContractGetAllResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActivityAddRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActivityAdd", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ActivityAddRequestBody Body;
+        
+        public ActivityAddRequest() {
+        }
+        
+        public ActivityAddRequest(XpremaProjectPro.XpConnected.ActivityAddRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ActivityAddRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectActivity Activ;
+        
+        public ActivityAddRequestBody() {
+        }
+        
+        public ActivityAddRequestBody(XpremaProjectPro.XpConnected.ProjectActivity Activ) {
+            this.Activ = Activ;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActivityAddResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActivityAddResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ActivityAddResponseBody Body;
+        
+        public ActivityAddResponse() {
+        }
+        
+        public ActivityAddResponse(XpremaProjectPro.XpConnected.ActivityAddResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ActivityAddResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ActivityAddResult;
+        
+        public ActivityAddResponseBody() {
+        }
+        
+        public ActivityAddResponseBody(bool ActivityAddResult) {
+            this.ActivityAddResult = ActivityAddResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActivityEditRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActivityEdit", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ActivityEditRequestBody Body;
+        
+        public ActivityEditRequest() {
+        }
+        
+        public ActivityEditRequest(XpremaProjectPro.XpConnected.ActivityEditRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ActivityEditRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectActivity Activ;
+        
+        public ActivityEditRequestBody() {
+        }
+        
+        public ActivityEditRequestBody(XpremaProjectPro.XpConnected.ProjectActivity Activ) {
+            this.Activ = Activ;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActivityEditResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActivityEditResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ActivityEditResponseBody Body;
+        
+        public ActivityEditResponse() {
+        }
+        
+        public ActivityEditResponse(XpremaProjectPro.XpConnected.ActivityEditResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ActivityEditResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ActivityEditResult;
+        
+        public ActivityEditResponseBody() {
+        }
+        
+        public ActivityEditResponseBody(bool ActivityEditResult) {
+            this.ActivityEditResult = ActivityEditResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActivityGetAllRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActivityGetAll", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ActivityGetAllRequestBody Body;
+        
+        public ActivityGetAllRequest() {
+        }
+        
+        public ActivityGetAllRequest(XpremaProjectPro.XpConnected.ActivityGetAllRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ActivityGetAllRequestBody {
+        
+        public ActivityGetAllRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActivityGetAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActivityGetAllResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.ActivityGetAllResponseBody Body;
+        
+        public ActivityGetAllResponse() {
+        }
+        
+        public ActivityGetAllResponse(XpremaProjectPro.XpConnected.ActivityGetAllResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class ActivityGetAllResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectActivity> ActivityGetAllResult;
+        
+        public ActivityGetAllResponseBody() {
+        }
+        
+        public ActivityGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectActivity> ActivityGetAllResult) {
+            this.ActivityGetAllResult = ActivityGetAllResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class subActivityAddRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="subActivityAdd", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.subActivityAddRequestBody Body;
+        
+        public subActivityAddRequest() {
+        }
+        
+        public subActivityAddRequest(XpremaProjectPro.XpConnected.subActivityAddRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class subActivityAddRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectSubActivity SActiv;
+        
+        public subActivityAddRequestBody() {
+        }
+        
+        public subActivityAddRequestBody(XpremaProjectPro.XpConnected.ProjectSubActivity SActiv) {
+            this.SActiv = SActiv;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class subActivityAddResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="subActivityAddResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.subActivityAddResponseBody Body;
+        
+        public subActivityAddResponse() {
+        }
+        
+        public subActivityAddResponse(XpremaProjectPro.XpConnected.subActivityAddResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class subActivityAddResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool subActivityAddResult;
+        
+        public subActivityAddResponseBody() {
+        }
+        
+        public subActivityAddResponseBody(bool subActivityAddResult) {
+            this.subActivityAddResult = subActivityAddResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class subActivityEditRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="subActivityEdit", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.subActivityEditRequestBody Body;
+        
+        public subActivityEditRequest() {
+        }
+        
+        public subActivityEditRequest(XpremaProjectPro.XpConnected.subActivityEditRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class subActivityEditRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public XpremaProjectPro.XpConnected.ProjectSubActivity SActiv;
+        
+        public subActivityEditRequestBody() {
+        }
+        
+        public subActivityEditRequestBody(XpremaProjectPro.XpConnected.ProjectSubActivity SActiv) {
+            this.SActiv = SActiv;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class subActivityEditResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="subActivityEditResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.subActivityEditResponseBody Body;
+        
+        public subActivityEditResponse() {
+        }
+        
+        public subActivityEditResponse(XpremaProjectPro.XpConnected.subActivityEditResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class subActivityEditResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool subActivityEditResult;
+        
+        public subActivityEditResponseBody() {
+        }
+        
+        public subActivityEditResponseBody(bool subActivityEditResult) {
+            this.subActivityEditResult = subActivityEditResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class subActivityGetAllRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="subActivityGetAll", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.subActivityGetAllRequestBody Body;
+        
+        public subActivityGetAllRequest() {
+        }
+        
+        public subActivityGetAllRequest(XpremaProjectPro.XpConnected.subActivityGetAllRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class subActivityGetAllRequestBody {
+        
+        public subActivityGetAllRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class subActivityGetAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="subActivityGetAllResponse", Namespace="Xpro.xprema.net", Order=0)]
+        public XpremaProjectPro.XpConnected.subActivityGetAllResponseBody Body;
+        
+        public subActivityGetAllResponse() {
+        }
+        
+        public subActivityGetAllResponse(XpremaProjectPro.XpConnected.subActivityGetAllResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Xpro.xprema.net")]
+    public partial class subActivityGetAllResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectSubActivity> subActivityGetAllResult;
+        
+        public subActivityGetAllResponseBody() {
+        }
+        
+        public subActivityGetAllResponseBody(System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectSubActivity> subActivityGetAllResult) {
+            this.subActivityGetAllResult = subActivityGetAllResult;
         }
     }
     
@@ -4327,7 +5447,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.getAccounts(request);
         }
         
-        public XpremaProjectPro.XpConnected.Account[] getAccounts() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Account> getAccounts() {
             XpremaProjectPro.XpConnected.getAccountsRequest inValue = new XpremaProjectPro.XpConnected.getAccountsRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.getAccountsRequestBody();
             XpremaProjectPro.XpConnected.getAccountsResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).getAccounts(inValue);
@@ -4350,7 +5470,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.GetAllGroup(request);
         }
         
-        public XpremaProjectPro.XpConnected.UserGroup[] GetAllGroup() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserGroup> GetAllGroup() {
             XpremaProjectPro.XpConnected.GetAllGroupRequest inValue = new XpremaProjectPro.XpConnected.GetAllGroupRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.GetAllGroupRequestBody();
             XpremaProjectPro.XpConnected.GetAllGroupResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).GetAllGroup(inValue);
@@ -4373,7 +5493,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.getallsup(request);
         }
         
-        public XpremaProjectPro.XpConnected.Supplier[] getallsup() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Supplier> getallsup() {
             XpremaProjectPro.XpConnected.getallsupRequest inValue = new XpremaProjectPro.XpConnected.getallsupRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.getallsupRequestBody();
             XpremaProjectPro.XpConnected.getallsupResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).getallsup(inValue);
@@ -4454,7 +5574,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.GroupGetAll(request);
         }
         
-        public XpremaProjectPro.XpConnected.UserGroup[] GroupGetAll() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserGroup> GroupGetAll() {
             XpremaProjectPro.XpConnected.GroupGetAllRequest inValue = new XpremaProjectPro.XpConnected.GroupGetAllRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.GroupGetAllRequestBody();
             XpremaProjectPro.XpConnected.GroupGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).GroupGetAll(inValue);
@@ -4535,7 +5655,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.UserGetAll(request);
         }
         
-        public XpremaProjectPro.XpConnected.UserSystem[] UserGetAll() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.UserSystem> UserGetAll() {
             XpremaProjectPro.XpConnected.UserGetAllRequest inValue = new XpremaProjectPro.XpConnected.UserGetAllRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.UserGetAllRequestBody();
             XpremaProjectPro.XpConnected.UserGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).UserGetAll(inValue);
@@ -4616,7 +5736,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.EmployeeGetAll(request);
         }
         
-        public XpremaProjectPro.XpConnected.Employee[] EmployeeGetAll() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Employee> EmployeeGetAll() {
             XpremaProjectPro.XpConnected.EmployeeGetAllRequest inValue = new XpremaProjectPro.XpConnected.EmployeeGetAllRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.EmployeeGetAllRequestBody();
             XpremaProjectPro.XpConnected.EmployeeGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).EmployeeGetAll(inValue);
@@ -4697,7 +5817,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.SupplierGetAll(request);
         }
         
-        public XpremaProjectPro.XpConnected.Supplier[] SupplierGetAll() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Supplier> SupplierGetAll() {
             XpremaProjectPro.XpConnected.SupplierGetAllRequest inValue = new XpremaProjectPro.XpConnected.SupplierGetAllRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.SupplierGetAllRequestBody();
             XpremaProjectPro.XpConnected.SupplierGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).SupplierGetAll(inValue);
@@ -4778,7 +5898,7 @@ namespace XpremaProjectPro.XpConnected {
             return base.Channel.financierGetAll(request);
         }
         
-        public XpremaProjectPro.XpConnected.Thefinancier[] financierGetAll() {
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Thefinancier> financierGetAll() {
             XpremaProjectPro.XpConnected.financierGetAllRequest inValue = new XpremaProjectPro.XpConnected.financierGetAllRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.financierGetAllRequestBody();
             XpremaProjectPro.XpConnected.financierGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).financierGetAll(inValue);
@@ -4794,6 +5914,411 @@ namespace XpremaProjectPro.XpConnected {
             XpremaProjectPro.XpConnected.financierGetAllRequest inValue = new XpremaProjectPro.XpConnected.financierGetAllRequest();
             inValue.Body = new XpremaProjectPro.XpConnected.financierGetAllRequestBody();
             return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).financierGetAllAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ProjectProfileAddResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ProjectProfileAdd(XpremaProjectPro.XpConnected.ProjectProfileAddRequest request) {
+            return base.Channel.ProjectProfileAdd(request);
+        }
+        
+        public bool ProjectProfileAdd(XpremaProjectPro.XpConnected.ProjectProfile Pro) {
+            XpremaProjectPro.XpConnected.ProjectProfileAddRequest inValue = new XpremaProjectPro.XpConnected.ProjectProfileAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ProjectProfileAddRequestBody();
+            inValue.Body.Pro = Pro;
+            XpremaProjectPro.XpConnected.ProjectProfileAddResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ProjectProfileAdd(inValue);
+            return retVal.Body.ProjectProfileAddResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileAddResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ProjectProfileAddAsync(XpremaProjectPro.XpConnected.ProjectProfileAddRequest request) {
+            return base.Channel.ProjectProfileAddAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileAddResponse> ProjectProfileAddAsync(XpremaProjectPro.XpConnected.ProjectProfile Pro) {
+            XpremaProjectPro.XpConnected.ProjectProfileAddRequest inValue = new XpremaProjectPro.XpConnected.ProjectProfileAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ProjectProfileAddRequestBody();
+            inValue.Body.Pro = Pro;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ProjectProfileAddAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ProjectProfileEditResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ProjectProfileEdit(XpremaProjectPro.XpConnected.ProjectProfileEditRequest request) {
+            return base.Channel.ProjectProfileEdit(request);
+        }
+        
+        public bool ProjectProfileEdit(XpremaProjectPro.XpConnected.ProjectProfile Pro) {
+            XpremaProjectPro.XpConnected.ProjectProfileEditRequest inValue = new XpremaProjectPro.XpConnected.ProjectProfileEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ProjectProfileEditRequestBody();
+            inValue.Body.Pro = Pro;
+            XpremaProjectPro.XpConnected.ProjectProfileEditResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ProjectProfileEdit(inValue);
+            return retVal.Body.ProjectProfileEditResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileEditResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ProjectProfileEditAsync(XpremaProjectPro.XpConnected.ProjectProfileEditRequest request) {
+            return base.Channel.ProjectProfileEditAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileEditResponse> ProjectProfileEditAsync(XpremaProjectPro.XpConnected.ProjectProfile Pro) {
+            XpremaProjectPro.XpConnected.ProjectProfileEditRequest inValue = new XpremaProjectPro.XpConnected.ProjectProfileEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ProjectProfileEditRequestBody();
+            inValue.Body.Pro = Pro;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ProjectProfileEditAsync(inValue);
+        }
+        
+        public bool ProjectProfileDelete(int ID) {
+            return base.Channel.ProjectProfileDelete(ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ProjectProfileDeleteAsync(int ID) {
+            return base.Channel.ProjectProfileDeleteAsync(ID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ProjectProfileGetAllResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ProjectProfileGetAll(XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest request) {
+            return base.Channel.ProjectProfileGetAll(request);
+        }
+        
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectProfile> ProjectProfileGetAll() {
+            XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest inValue = new XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ProjectProfileGetAllRequestBody();
+            XpremaProjectPro.XpConnected.ProjectProfileGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ProjectProfileGetAll(inValue);
+            return retVal.Body.ProjectProfileGetAllResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileGetAllResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ProjectProfileGetAllAsync(XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest request) {
+            return base.Channel.ProjectProfileGetAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ProjectProfileGetAllResponse> ProjectProfileGetAllAsync() {
+            XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest inValue = new XpremaProjectPro.XpConnected.ProjectProfileGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ProjectProfileGetAllRequestBody();
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ProjectProfileGetAllAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.SubTheFinancerAndProjectCommandAdd(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest request) {
+            return base.Channel.SubTheFinancerAndProjectCommandAdd(request);
+        }
+        
+        public bool SubTheFinancerAndProjectCommandAdd(XpremaProjectPro.XpConnected.SubTheFinancerAndProject sb) {
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest inValue = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequestBody();
+            inValue.Body.sb = sb;
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).SubTheFinancerAndProjectCommandAdd(inValue);
+            return retVal.Body.SubTheFinancerAndProjectCommandAddResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.SubTheFinancerAndProjectCommandAddAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest request) {
+            return base.Channel.SubTheFinancerAndProjectCommandAddAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddResponse> SubTheFinancerAndProjectCommandAddAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProject sb) {
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest inValue = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectCommandAddRequestBody();
+            inValue.Body.sb = sb;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).SubTheFinancerAndProjectCommandAddAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.SubTheFinancerAndProjectEdit(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest request) {
+            return base.Channel.SubTheFinancerAndProjectEdit(request);
+        }
+        
+        public bool SubTheFinancerAndProjectEdit(XpremaProjectPro.XpConnected.SubTheFinancerAndProject Pro) {
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest inValue = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequestBody();
+            inValue.Body.Pro = Pro;
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).SubTheFinancerAndProjectEdit(inValue);
+            return retVal.Body.SubTheFinancerAndProjectEditResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.SubTheFinancerAndProjectEditAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest request) {
+            return base.Channel.SubTheFinancerAndProjectEditAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditResponse> SubTheFinancerAndProjectEditAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProject Pro) {
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest inValue = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectEditRequestBody();
+            inValue.Body.Pro = Pro;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).SubTheFinancerAndProjectEditAsync(inValue);
+        }
+        
+        public bool SubTheFinancerAndProjecDelete(int ID) {
+            return base.Channel.SubTheFinancerAndProjecDelete(ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> SubTheFinancerAndProjecDeleteAsync(int ID) {
+            return base.Channel.SubTheFinancerAndProjecDeleteAsync(ID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.SubTheFinancerAndProjectGetAll(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest request) {
+            return base.Channel.SubTheFinancerAndProjectGetAll(request);
+        }
+        
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.SubTheFinancerAndProject> SubTheFinancerAndProjectGetAll() {
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest inValue = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequestBody();
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).SubTheFinancerAndProjectGetAll(inValue);
+            return retVal.Body.SubTheFinancerAndProjectGetAllResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.SubTheFinancerAndProjectGetAllAsync(XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest request) {
+            return base.Channel.SubTheFinancerAndProjectGetAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllResponse> SubTheFinancerAndProjectGetAllAsync() {
+            XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest inValue = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.SubTheFinancerAndProjectGetAllRequestBody();
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).SubTheFinancerAndProjectGetAllAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ContractAddResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ContractAdd(XpremaProjectPro.XpConnected.ContractAddRequest request) {
+            return base.Channel.ContractAdd(request);
+        }
+        
+        public bool ContractAdd(XpremaProjectPro.XpConnected.Contract Cont) {
+            XpremaProjectPro.XpConnected.ContractAddRequest inValue = new XpremaProjectPro.XpConnected.ContractAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ContractAddRequestBody();
+            inValue.Body.Cont = Cont;
+            XpremaProjectPro.XpConnected.ContractAddResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ContractAdd(inValue);
+            return retVal.Body.ContractAddResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractAddResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ContractAddAsync(XpremaProjectPro.XpConnected.ContractAddRequest request) {
+            return base.Channel.ContractAddAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractAddResponse> ContractAddAsync(XpremaProjectPro.XpConnected.Contract Cont) {
+            XpremaProjectPro.XpConnected.ContractAddRequest inValue = new XpremaProjectPro.XpConnected.ContractAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ContractAddRequestBody();
+            inValue.Body.Cont = Cont;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ContractAddAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ContractEditResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ContractEdit(XpremaProjectPro.XpConnected.ContractEditRequest request) {
+            return base.Channel.ContractEdit(request);
+        }
+        
+        public bool ContractEdit(XpremaProjectPro.XpConnected.Contract Cont) {
+            XpremaProjectPro.XpConnected.ContractEditRequest inValue = new XpremaProjectPro.XpConnected.ContractEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ContractEditRequestBody();
+            inValue.Body.Cont = Cont;
+            XpremaProjectPro.XpConnected.ContractEditResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ContractEdit(inValue);
+            return retVal.Body.ContractEditResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractEditResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ContractEditAsync(XpremaProjectPro.XpConnected.ContractEditRequest request) {
+            return base.Channel.ContractEditAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractEditResponse> ContractEditAsync(XpremaProjectPro.XpConnected.Contract Cont) {
+            XpremaProjectPro.XpConnected.ContractEditRequest inValue = new XpremaProjectPro.XpConnected.ContractEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ContractEditRequestBody();
+            inValue.Body.Cont = Cont;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ContractEditAsync(inValue);
+        }
+        
+        public bool ContractDelete(int ID) {
+            return base.Channel.ContractDelete(ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ContractDeleteAsync(int ID) {
+            return base.Channel.ContractDeleteAsync(ID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ContractGetAllResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ContractGetAll(XpremaProjectPro.XpConnected.ContractGetAllRequest request) {
+            return base.Channel.ContractGetAll(request);
+        }
+        
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.Contract> ContractGetAll() {
+            XpremaProjectPro.XpConnected.ContractGetAllRequest inValue = new XpremaProjectPro.XpConnected.ContractGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ContractGetAllRequestBody();
+            XpremaProjectPro.XpConnected.ContractGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ContractGetAll(inValue);
+            return retVal.Body.ContractGetAllResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractGetAllResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ContractGetAllAsync(XpremaProjectPro.XpConnected.ContractGetAllRequest request) {
+            return base.Channel.ContractGetAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ContractGetAllResponse> ContractGetAllAsync() {
+            XpremaProjectPro.XpConnected.ContractGetAllRequest inValue = new XpremaProjectPro.XpConnected.ContractGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ContractGetAllRequestBody();
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ContractGetAllAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ActivityAddResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ActivityAdd(XpremaProjectPro.XpConnected.ActivityAddRequest request) {
+            return base.Channel.ActivityAdd(request);
+        }
+        
+        public bool ActivityAdd(XpremaProjectPro.XpConnected.ProjectActivity Activ) {
+            XpremaProjectPro.XpConnected.ActivityAddRequest inValue = new XpremaProjectPro.XpConnected.ActivityAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ActivityAddRequestBody();
+            inValue.Body.Activ = Activ;
+            XpremaProjectPro.XpConnected.ActivityAddResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ActivityAdd(inValue);
+            return retVal.Body.ActivityAddResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityAddResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ActivityAddAsync(XpremaProjectPro.XpConnected.ActivityAddRequest request) {
+            return base.Channel.ActivityAddAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityAddResponse> ActivityAddAsync(XpremaProjectPro.XpConnected.ProjectActivity Activ) {
+            XpremaProjectPro.XpConnected.ActivityAddRequest inValue = new XpremaProjectPro.XpConnected.ActivityAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ActivityAddRequestBody();
+            inValue.Body.Activ = Activ;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ActivityAddAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ActivityEditResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ActivityEdit(XpremaProjectPro.XpConnected.ActivityEditRequest request) {
+            return base.Channel.ActivityEdit(request);
+        }
+        
+        public bool ActivityEdit(XpremaProjectPro.XpConnected.ProjectActivity Activ) {
+            XpremaProjectPro.XpConnected.ActivityEditRequest inValue = new XpremaProjectPro.XpConnected.ActivityEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ActivityEditRequestBody();
+            inValue.Body.Activ = Activ;
+            XpremaProjectPro.XpConnected.ActivityEditResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ActivityEdit(inValue);
+            return retVal.Body.ActivityEditResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityEditResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ActivityEditAsync(XpremaProjectPro.XpConnected.ActivityEditRequest request) {
+            return base.Channel.ActivityEditAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityEditResponse> ActivityEditAsync(XpremaProjectPro.XpConnected.ProjectActivity Activ) {
+            XpremaProjectPro.XpConnected.ActivityEditRequest inValue = new XpremaProjectPro.XpConnected.ActivityEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ActivityEditRequestBody();
+            inValue.Body.Activ = Activ;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ActivityEditAsync(inValue);
+        }
+        
+        public bool ActivityDelete(int ID) {
+            return base.Channel.ActivityDelete(ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ActivityDeleteAsync(int ID) {
+            return base.Channel.ActivityDeleteAsync(ID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.ActivityGetAllResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.ActivityGetAll(XpremaProjectPro.XpConnected.ActivityGetAllRequest request) {
+            return base.Channel.ActivityGetAll(request);
+        }
+        
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectActivity> ActivityGetAll() {
+            XpremaProjectPro.XpConnected.ActivityGetAllRequest inValue = new XpremaProjectPro.XpConnected.ActivityGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ActivityGetAllRequestBody();
+            XpremaProjectPro.XpConnected.ActivityGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ActivityGetAll(inValue);
+            return retVal.Body.ActivityGetAllResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityGetAllResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.ActivityGetAllAsync(XpremaProjectPro.XpConnected.ActivityGetAllRequest request) {
+            return base.Channel.ActivityGetAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.ActivityGetAllResponse> ActivityGetAllAsync() {
+            XpremaProjectPro.XpConnected.ActivityGetAllRequest inValue = new XpremaProjectPro.XpConnected.ActivityGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.ActivityGetAllRequestBody();
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).ActivityGetAllAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.subActivityAddResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.subActivityAdd(XpremaProjectPro.XpConnected.subActivityAddRequest request) {
+            return base.Channel.subActivityAdd(request);
+        }
+        
+        public bool subActivityAdd(XpremaProjectPro.XpConnected.ProjectSubActivity SActiv) {
+            XpremaProjectPro.XpConnected.subActivityAddRequest inValue = new XpremaProjectPro.XpConnected.subActivityAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.subActivityAddRequestBody();
+            inValue.Body.SActiv = SActiv;
+            XpremaProjectPro.XpConnected.subActivityAddResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).subActivityAdd(inValue);
+            return retVal.Body.subActivityAddResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityAddResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.subActivityAddAsync(XpremaProjectPro.XpConnected.subActivityAddRequest request) {
+            return base.Channel.subActivityAddAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityAddResponse> subActivityAddAsync(XpremaProjectPro.XpConnected.ProjectSubActivity SActiv) {
+            XpremaProjectPro.XpConnected.subActivityAddRequest inValue = new XpremaProjectPro.XpConnected.subActivityAddRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.subActivityAddRequestBody();
+            inValue.Body.SActiv = SActiv;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).subActivityAddAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.subActivityEditResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.subActivityEdit(XpremaProjectPro.XpConnected.subActivityEditRequest request) {
+            return base.Channel.subActivityEdit(request);
+        }
+        
+        public bool subActivityEdit(XpremaProjectPro.XpConnected.ProjectSubActivity SActiv) {
+            XpremaProjectPro.XpConnected.subActivityEditRequest inValue = new XpremaProjectPro.XpConnected.subActivityEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.subActivityEditRequestBody();
+            inValue.Body.SActiv = SActiv;
+            XpremaProjectPro.XpConnected.subActivityEditResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).subActivityEdit(inValue);
+            return retVal.Body.subActivityEditResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityEditResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.subActivityEditAsync(XpremaProjectPro.XpConnected.subActivityEditRequest request) {
+            return base.Channel.subActivityEditAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityEditResponse> subActivityEditAsync(XpremaProjectPro.XpConnected.ProjectSubActivity SActiv) {
+            XpremaProjectPro.XpConnected.subActivityEditRequest inValue = new XpremaProjectPro.XpConnected.subActivityEditRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.subActivityEditRequestBody();
+            inValue.Body.SActiv = SActiv;
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).subActivityEditAsync(inValue);
+        }
+        
+        public bool subActivityDelete(int ID) {
+            return base.Channel.subActivityDelete(ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> subActivityDeleteAsync(int ID) {
+            return base.Channel.subActivityDeleteAsync(ID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        XpremaProjectPro.XpConnected.subActivityGetAllResponse XpremaProjectPro.XpConnected.XpremaConnectorSoap.subActivityGetAll(XpremaProjectPro.XpConnected.subActivityGetAllRequest request) {
+            return base.Channel.subActivityGetAll(request);
+        }
+        
+        public System.Collections.Generic.List<XpremaProjectPro.XpConnected.ProjectSubActivity> subActivityGetAll() {
+            XpremaProjectPro.XpConnected.subActivityGetAllRequest inValue = new XpremaProjectPro.XpConnected.subActivityGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.subActivityGetAllRequestBody();
+            XpremaProjectPro.XpConnected.subActivityGetAllResponse retVal = ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).subActivityGetAll(inValue);
+            return retVal.Body.subActivityGetAllResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityGetAllResponse> XpremaProjectPro.XpConnected.XpremaConnectorSoap.subActivityGetAllAsync(XpremaProjectPro.XpConnected.subActivityGetAllRequest request) {
+            return base.Channel.subActivityGetAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<XpremaProjectPro.XpConnected.subActivityGetAllResponse> subActivityGetAllAsync() {
+            XpremaProjectPro.XpConnected.subActivityGetAllRequest inValue = new XpremaProjectPro.XpConnected.subActivityGetAllRequest();
+            inValue.Body = new XpremaProjectPro.XpConnected.subActivityGetAllRequestBody();
+            return ((XpremaProjectPro.XpConnected.XpremaConnectorSoap)(this)).subActivityGetAllAsync(inValue);
         }
     }
 }

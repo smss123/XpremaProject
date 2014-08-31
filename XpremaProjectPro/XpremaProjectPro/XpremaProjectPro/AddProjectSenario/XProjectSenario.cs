@@ -9,10 +9,14 @@ namespace XpremaProjectPro.AddProjectSenario
     internal class XProjectSenario
     {
         public static  ProjectProfile ProjectSenarioSetting { get; set; }
+        public static void ini()
+        {
+            ProjectSenarioSetting = new ProjectProfile();
+        }
         private static XpremaConnectorSoapClient proxy = new XpremaConnectorSoapClient();
         public static void Commit()
         {
-          //  proxy.
+            proxy.ProjectProfileAdd(ProjectSenarioSetting);
         }
     }
 }
