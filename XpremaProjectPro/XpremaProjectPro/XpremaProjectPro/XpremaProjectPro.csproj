@@ -98,6 +98,7 @@
     <Compile Include="AddProjectSenario\ProjectPlane\frmProjectSubActivity.Designer.cs">
       <DependentUpon>frmProjectSubActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProjectSenario\XProjectSenario.cs" />
     <Compile Include="Employee forms\addEmployeefrm.cs">
       <SubType>Form</SubType>
     </Compile>

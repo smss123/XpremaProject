@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Managementemployeefrm));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.RefreshBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.employeegridControl = new DevExpress.XtraGrid.GridControl();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -53,7 +54,6 @@
             this.EditBtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.deleteBtn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.delbtn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.AddBtn = new DevExpress.XtraBars.Navigation.TileBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.employeegridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -81,6 +81,17 @@
             this.tileBarGroup2.Items.Add(this.AddBtn);
             this.tileBarGroup2.Items.Add(this.RefreshBtn);
             this.tileBarGroup2.Name = "tileBarGroup2";
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.AddBtn;
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement1.Text = "Add";
+            this.AddBtn.Elements.Add(tileItemElement1);
+            this.AddBtn.Id = 2;
+            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.AddBtn.Name = "AddBtn";
             // 
             // RefreshBtn
             // 
@@ -250,17 +261,6 @@
             this.delbtn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.delbtn.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.delbtn_ButtonClick);
             // 
-            // AddBtn
-            // 
-            this.AddBtn.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Image = global::XpremaProjectPro.Properties.Resources.AddBtn;
-            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement1.Text = "Add";
-            this.AddBtn.Elements.Add(tileItemElement1);
-            this.AddBtn.Id = 2;
-            this.AddBtn.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.AddBtn.Name = "AddBtn";
-            // 
             // Managementemployeefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +271,7 @@
             this.Name = "Managementemployeefrm";
             this.Text = "XtraForm1";
             this.Load += new System.EventHandler(this.Managementemployeefrm_Load);
+            this.Shown += new System.EventHandler(this.Managementemployeefrm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.employeegridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

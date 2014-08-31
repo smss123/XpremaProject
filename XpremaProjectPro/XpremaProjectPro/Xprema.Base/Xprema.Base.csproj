@@ -54,8 +54,13 @@
     <Compile Include="Attachment.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
+    <Compile Include="Commands\ActivityCommand.cs" />
+    <Compile Include="Commands\ContractCommand.cs" />
     <Compile Include="Commands\EmployeeCommand.cs" />
     <Compile Include="Commands\GroupCommand.cs" />
+    <Compile Include="Commands\ProjectProfileCommand.cs" />
+    <Compile Include="Commands\SubActivityCommand.cs" />
+    <Compile Include="Commands\SubTheFinancerAndProjectCommand.cs" />
     <Compile Include="Commands\SupplierCommand.cs" />
     <Compile Include="Commands\ThefinancierCommand.cs" />
     <Compile Include="Commands\UserCommand.cs" />

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using XpremaProjectPro.XpConnected;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 
 namespace XpremaProjectPro.Employee_forms
 {
@@ -25,6 +26,9 @@ namespace XpremaProjectPro.Employee_forms
         private void Managementemployeefrm_Load(object sender, EventArgs e)
         {
            employeeBindingSource.DataSource = proxy.EmployeeGetAll();
+           
+
+           
         }
 
         private void EditBtn_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -55,6 +59,13 @@ namespace XpremaProjectPro.Employee_forms
         {
             employeeBindingSource.DataSource = null;
             employeeBindingSource.DataSource = proxy.EmployeeGetAll();
+            
+            
+        }
+
+        private void Managementemployeefrm_Shown(object sender, EventArgs e)
+        {
+           
         }
     }
 }

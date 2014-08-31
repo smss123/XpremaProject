@@ -165,7 +165,7 @@ public class XpremaConnector : System.Web.Services.WebService {
     #endregion
 
 
-    #region"Thefinancier"
+#region"Thefinancier"
     [WebMethod(true, System.EnterpriseServices.TransactionOption.Supported)]
     public bool financierAdd(Thefinancier fc)
     {
@@ -192,4 +192,143 @@ public class XpremaConnector : System.Web.Services.WebService {
 
 
     #endregion
+
+#region"ProjectProfile"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.Supported)]
+    public bool ProjectProfileAdd(ProjectProfile Pro)
+    {
+        return ProjectProfileCommand.NewProjectProfile(Pro);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool ProjectProfileEdit(ProjectProfile Pro)
+    {
+        return ProjectProfileCommand.EditProjectProfile(Pro);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool ProjectProfileDelete(int ID)
+    {
+        return ProjectProfileCommand.DeleteProjectProfile(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<ProjectProfile> ProjectProfileGetAll()
+    {
+        return ProjectProfileCommand.GetAll();
+    }
+
+    #endregion
+
+
+#region"SubTheFinancerAndProjectCommand"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.Supported)]
+    public bool SubTheFinancerAndProjectCommandAdd(SubTheFinancerAndProject sb)
+    {
+        return SubTheFinancerAndProjectCommand.NewSubTheFinancerAndProject(sb);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool SubTheFinancerAndProjectEdit(SubTheFinancerAndProject Pro)
+    {
+        return SubTheFinancerAndProjectCommand.EditSubTheFinancerAndProject(Pro);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool SubTheFinancerAndProjecDelete(int ID)
+    {
+        return SubTheFinancerAndProjectCommand.DeleteSubTheFinancerAndProject(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<SubTheFinancerAndProject> SubTheFinancerAndProjectGetAll()
+    {
+        return SubTheFinancerAndProjectCommand.GetAll();
+    }
+
+    #endregion
+
+
+#region"Contract"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.Supported)]
+    public bool ContractAdd(Contract Cont)
+    {
+        return ContractCommand.NewContract(Cont);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool ContractEdit(Contract Cont)
+    {
+        return ContractCommand.EditContract(Cont);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool ContractDelete(int ID)
+    {
+        return ContractCommand.DeleteContract(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<Contract> ContractGetAll()
+    {
+        return ContractCommand.GetAll();
+    }
+
+    #endregion
+
+#region"Activity"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.Supported)]
+    public bool ActivityAdd(ProjectActivity Activ)
+    {
+        return ActivityCommand.NewActivity(Activ);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool ActivityEdit(ProjectActivity Activ)
+    {
+        return ActivityCommand.EditActivity(Activ);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool ActivityDelete(int ID)
+    {
+        return ActivityCommand.DeleteActivity(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<ProjectActivity> ActivityGetAll()
+    {
+        return ActivityCommand.GetAll();
+    }
+
+    #endregion
+
+#region"SubActivity"
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.Supported)]
+    public bool subActivityAdd(ProjectSubActivity SActiv)
+    {
+        return SubActivityCommand.NewSubActivity(SActiv);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool subActivityEdit(ProjectSubActivity SActiv)
+    {
+        return SubActivityCommand.EditSubActivity(SActiv);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public bool subActivityDelete(int ID)
+    {
+        return SubActivityCommand.DeleteSubActivity(ID: ID);
+    }
+
+    [WebMethod(true, System.EnterpriseServices.TransactionOption.RequiresNew)]
+    public List<ProjectSubActivity> subActivityGetAll()
+    {
+        return SubActivityCommand.GetAll();
+    }
+
+    #endregion
+
+
 }
