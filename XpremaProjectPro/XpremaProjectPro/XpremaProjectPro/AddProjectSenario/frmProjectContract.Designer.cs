@@ -49,6 +49,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ContractgroupControl)).BeginInit();
             this.ContractgroupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContractgridControl)).BeginInit();
@@ -69,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // ContractgroupControl
@@ -195,7 +197,10 @@
             this.EmployeelookUpEdit.Properties.Appearance.Options.UseFont = true;
             this.EmployeelookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EmployeelookUpEdit.Properties.DataSource = this.bindingSource1;
+            this.EmployeelookUpEdit.Properties.DisplayMember = "EmployeeName";
             this.EmployeelookUpEdit.Properties.NullText = "[Select Employee]";
+            this.EmployeelookUpEdit.Properties.ValueMember = "ID";
             this.EmployeelookUpEdit.Size = new System.Drawing.Size(461, 22);
             this.EmployeelookUpEdit.StyleController = this.layoutControl1;
             this.EmployeelookUpEdit.TabIndex = 4;
@@ -295,6 +300,10 @@
             this.simpleSeparator1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(Xprema.Base.Employee);
+            // 
             // frmProjectContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,6 +332,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,5 +359,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.SimpleButton NextBtn;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

@@ -17,5 +17,12 @@ namespace XpremaProjectPro.AddProjectSenario
         {
             InitializeComponent();
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            frmProjectAddBasicInfo frm = new frmProjectAddBasicInfo();
+            frm.Show();
+            this.Close();
+        }
     }
 }

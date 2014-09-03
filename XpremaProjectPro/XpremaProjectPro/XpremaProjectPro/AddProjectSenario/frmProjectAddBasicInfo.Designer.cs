@@ -33,9 +33,8 @@
             this.ProjectAddgroupControl = new DevExpress.XtraEditors.GroupControl();
             this.Nextbtn = new DevExpress.XtraEditors.SimpleButton();
             this.SummarygroupControl = new DevExpress.XtraEditors.GroupControl();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSummry = new System.Windows.Forms.Label();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.TimeLinetextBox = new System.Windows.Forms.TextBox();
             this.endDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.projectDescriptionTextBox = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.projectProfileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectAddgroupControl)).BeginInit();
@@ -69,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +96,7 @@
             // 
             // SummarygroupControl
             // 
-            this.SummarygroupControl.Controls.Add(this.label1);
+            this.SummarygroupControl.Controls.Add(this.lblSummry);
             this.SummarygroupControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.SummarygroupControl.Location = new System.Drawing.Point(2, 237);
             this.SummarygroupControl.Name = "SummarygroupControl";
@@ -107,18 +104,17 @@
             this.SummarygroupControl.TabIndex = 2;
             this.SummarygroupControl.Text = "Summary";
             // 
-            // label1
+            // lblSummry
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Project Summry";
+            this.lblSummry.AutoSize = true;
+            this.lblSummry.Location = new System.Drawing.Point(16, 35);
+            this.lblSummry.Name = "lblSummry";
+            this.lblSummry.Size = new System.Drawing.Size(82, 13);
+            this.lblSummry.TabIndex = 1;
+            this.lblSummry.Text = "Project Summry";
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.AddBtn);
             this.layoutControl1.Controls.Add(this.TimeLinetextBox);
             this.layoutControl1.Controls.Add(this.endDateDateEdit);
             this.layoutControl1.Controls.Add(this.projectDescriptionTextBox);
@@ -133,17 +129,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(614, 216);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.Image = global::XpremaProjectPro.Properties.Resources.add_32x32;
-            this.AddBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.AddBtn.Location = new System.Drawing.Point(12, 160);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(160, 44);
-            this.AddBtn.StyleController = this.layoutControl1;
-            this.AddBtn.TabIndex = 17;
-            this.AddBtn.Text = "Add";
             // 
             // TimeLinetextBox
             // 
@@ -225,7 +210,6 @@
             this.layoutControlItem10,
             this.layoutControlItem6,
             this.layoutControlItem1,
-            this.layoutControlItem3,
             this.simpleSeparator1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
@@ -293,27 +277,13 @@
             this.layoutControlItem1.Text = "Time Line:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(129, 16);
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.AddBtn;
-            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 148);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(82, 26);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(164, 48);
-            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem3.Text = "layoutControlItem3";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextToControlDistance = 0;
-            this.layoutControlItem3.TextVisible = false;
-            // 
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
-            this.simpleSeparator1.Location = new System.Drawing.Point(164, 148);
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 148);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(430, 48);
+            this.simpleSeparator1.Size = new System.Drawing.Size(594, 48);
             this.simpleSeparator1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 
@@ -344,7 +314,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             this.ResumeLayout(false);
 
@@ -355,7 +324,7 @@
         private System.Windows.Forms.BindingSource projectProfileBindingSource;
         private DevExpress.XtraEditors.GroupControl ProjectAddgroupControl;
         private DevExpress.XtraEditors.GroupControl SummarygroupControl;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSummry;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private System.Windows.Forms.TextBox TimeLinetextBox;
         private DevExpress.XtraEditors.DateEdit endDateDateEdit;
@@ -371,8 +340,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.SimpleButton Nextbtn;
-        private DevExpress.XtraEditors.SimpleButton AddBtn;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
     }
 }

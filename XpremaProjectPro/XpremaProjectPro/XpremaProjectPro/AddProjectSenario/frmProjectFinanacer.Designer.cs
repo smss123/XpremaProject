@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.NextBtn = new DevExpress.XtraEditors.SimpleButton();
             this.FinanacerCostgridControl = new DevExpress.XtraGrid.GridControl();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ColFName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColCost = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.CosttextBox = new System.Windows.Forms.TextBox();
@@ -41,9 +45,11 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.thefinancierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FinanacerCostgridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -53,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -74,10 +81,12 @@
             this.NextBtn.Size = new System.Drawing.Size(113, 41);
             this.NextBtn.TabIndex = 2;
             this.NextBtn.Text = "Next";
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // FinanacerCostgridControl
             // 
             this.FinanacerCostgridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FinanacerCostgridControl.DataSource = this.bindingSource1;
             this.FinanacerCostgridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.FinanacerCostgridControl.Location = new System.Drawing.Point(2, 133);
             this.FinanacerCostgridControl.MainView = this.gridView1;
@@ -87,10 +96,33 @@
             this.FinanacerCostgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(XpremaProjectPro.AddProjectSenario.Fin);
+            // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ColFName,
+            this.ColCost});
             this.gridView1.GridControl = this.FinanacerCostgridControl;
             this.gridView1.Name = "gridView1";
+            // 
+            // ColFName
+            // 
+            this.ColFName.Caption = "Financier Name";
+            this.ColFName.FieldName = "Name";
+            this.ColFName.Name = "ColFName";
+            this.ColFName.Visible = true;
+            this.ColFName.VisibleIndex = 0;
+            // 
+            // ColCost
+            // 
+            this.ColCost.Caption = "Total Cost";
+            this.ColCost.FieldName = "TotalCost";
+            this.ColCost.Name = "ColCost";
+            this.ColCost.Visible = true;
+            this.ColCost.VisibleIndex = 1;
             // 
             // layoutControl1
             // 
@@ -116,6 +148,7 @@
             this.AddBtn.StyleController = this.layoutControl1;
             this.AddBtn.TabIndex = 2;
             this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // CosttextBox
             // 
@@ -133,7 +166,13 @@
             this.FinanacerlookUpEdit.Properties.Appearance.Options.UseFont = true;
             this.FinanacerlookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.FinanacerlookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("financiername", "Name1"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PhoneNumber", "Name2")});
+            this.FinanacerlookUpEdit.Properties.DataSource = this.thefinancierBindingSource;
+            this.FinanacerlookUpEdit.Properties.DisplayMember = "financiername";
             this.FinanacerlookUpEdit.Properties.NullText = "[Select Finanacer]";
+            this.FinanacerlookUpEdit.Properties.ValueMember = "AccountID";
             this.FinanacerlookUpEdit.Size = new System.Drawing.Size(357, 22);
             this.FinanacerlookUpEdit.StyleController = this.layoutControl1;
             this.FinanacerlookUpEdit.TabIndex = 4;
@@ -200,6 +239,10 @@
             this.simpleSeparator1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 
+            // thefinancierBindingSource
+            // 
+            this.thefinancierBindingSource.DataSource = typeof(XpremaProjectPro.XpConnected.Thefinancier);
+            // 
             // frmProjectFinanacer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,9 +251,11 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "frmProjectFinanacer";
             this.Text = "frmProjectFinanacer";
+            this.Load += new System.EventHandler(this.frmProjectFinanacer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FinanacerCostgridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -220,6 +265,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +285,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        private DevExpress.XtraGrid.Columns.GridColumn ColFName;
+        private DevExpress.XtraGrid.Columns.GridColumn ColCost;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource thefinancierBindingSource;
     }
 }

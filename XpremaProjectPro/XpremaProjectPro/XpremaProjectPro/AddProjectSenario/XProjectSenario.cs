@@ -9,6 +9,7 @@ namespace XpremaProjectPro.AddProjectSenario
     internal class XProjectSenario
     {
         public static  ProjectProfile ProjectSenarioSetting { get; set; }
+        public static List<Fin> ProjectFinceer { get; set; }
         public static void ini()
         {
             ProjectSenarioSetting = new ProjectProfile();
