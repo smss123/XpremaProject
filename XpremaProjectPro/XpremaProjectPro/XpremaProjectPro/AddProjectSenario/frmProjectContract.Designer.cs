@@ -32,7 +32,14 @@
             this.ContractgroupControl = new DevExpress.XtraEditors.GroupControl();
             this.NextBtn = new DevExpress.XtraEditors.SimpleButton();
             this.ContractgridControl = new DevExpress.XtraGrid.GridControl();
+            this.proContractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmpID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTimeLine = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSelaryAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.TimelinetextBox = new System.Windows.Forms.TextBox();
@@ -41,6 +48,7 @@
             this.endDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.startDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.EmployeelookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -49,10 +57,10 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ContractgroupControl)).BeginInit();
             this.ContractgroupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContractgridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proContractBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -62,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.startDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeelookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -70,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // ContractgroupControl
@@ -92,10 +100,12 @@
             this.NextBtn.Size = new System.Drawing.Size(113, 41);
             this.NextBtn.TabIndex = 3;
             this.NextBtn.Text = "Next";
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // ContractgridControl
             // 
             this.ContractgridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ContractgridControl.DataSource = this.proContractBindingSource;
             this.ContractgridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ContractgridControl.Location = new System.Drawing.Point(2, 215);
             this.ContractgridControl.MainView = this.gridView1;
@@ -105,10 +115,63 @@
             this.ContractgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // proContractBindingSource
+            // 
+            this.proContractBindingSource.DataSource = typeof(XpremaProjectPro.AddProjectSenario.ProContract);
+            // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmpID,
+            this.colName,
+            this.colTimeLine,
+            this.colStartDate,
+            this.colEndDate,
+            this.colSelaryAmount});
             this.gridView1.GridControl = this.ContractgridControl;
             this.gridView1.Name = "gridView1";
+            // 
+            // colEmpID
+            // 
+            this.colEmpID.FieldName = "EmpID";
+            this.colEmpID.Name = "colEmpID";
+            this.colEmpID.Visible = true;
+            this.colEmpID.VisibleIndex = 0;
+            // 
+            // colName
+            // 
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 1;
+            // 
+            // colTimeLine
+            // 
+            this.colTimeLine.FieldName = "TimeLine";
+            this.colTimeLine.Name = "colTimeLine";
+            this.colTimeLine.Visible = true;
+            this.colTimeLine.VisibleIndex = 2;
+            // 
+            // colStartDate
+            // 
+            this.colStartDate.FieldName = "StartDate";
+            this.colStartDate.Name = "colStartDate";
+            this.colStartDate.Visible = true;
+            this.colStartDate.VisibleIndex = 3;
+            // 
+            // colEndDate
+            // 
+            this.colEndDate.FieldName = "EndDate";
+            this.colEndDate.Name = "colEndDate";
+            this.colEndDate.Visible = true;
+            this.colEndDate.VisibleIndex = 4;
+            // 
+            // colSelaryAmount
+            // 
+            this.colSelaryAmount.FieldName = "SelaryAmount";
+            this.colSelaryAmount.Name = "colSelaryAmount";
+            this.colSelaryAmount.Visible = true;
+            this.colSelaryAmount.VisibleIndex = 5;
             // 
             // layoutControl1
             // 
@@ -137,6 +200,7 @@
             this.AddBtn.StyleController = this.layoutControl1;
             this.AddBtn.TabIndex = 10;
             this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // TimelinetextBox
             // 
@@ -204,6 +268,10 @@
             this.EmployeelookUpEdit.Size = new System.Drawing.Size(461, 22);
             this.EmployeelookUpEdit.StyleController = this.layoutControl1;
             this.EmployeelookUpEdit.TabIndex = 4;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(Xprema.Base.Employee);
             // 
             // layoutControlGroup1
             // 
@@ -300,10 +368,6 @@
             this.simpleSeparator1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(Xprema.Base.Employee);
-            // 
             // frmProjectContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,9 +376,11 @@
             this.Controls.Add(this.ContractgroupControl);
             this.Name = "frmProjectContract";
             this.Text = "frmProjectContract";
+            this.Load += new System.EventHandler(this.frmProjectContract_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ContractgroupControl)).EndInit();
             this.ContractgroupControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ContractgridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proContractBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -324,6 +390,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.startDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startDateDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeelookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -332,7 +399,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,5 +426,12 @@
         private DevExpress.XtraEditors.SimpleButton NextBtn;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource proContractBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmpID;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colTimeLine;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colSelaryAmount;
     }
 }

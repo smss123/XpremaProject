@@ -23,7 +23,7 @@ namespace XpremaProjectPro
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new MainForm());
-            Application.Run(new frmProjectFinanacer());
+            Application.Run(new frmProjectContract());
         }
     }
 }

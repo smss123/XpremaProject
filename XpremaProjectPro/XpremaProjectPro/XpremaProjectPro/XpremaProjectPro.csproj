@@ -87,6 +87,7 @@
     <Compile Include="AddProjectSenario\frmProjectFinanacer.Designer.cs">
       <DependentUpon>frmProjectFinanacer.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProjectSenario\ProContract.cs" />
     <Compile Include="AddProjectSenario\ProjectPlane\frmProjectActivity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +278,7 @@
     <None Include="Properties\DataSources\Xprema.Base.View_Account_ByBalance.datasource" />
     <None Include="Properties\DataSources\Xprema.Base.Xprema_PrjectEntities.datasource" />
     <None Include="Properties\DataSources\XpremaProjectPro.AddProjectSenario.Fin.datasource" />
+    <None Include="Properties\DataSources\XpremaProjectPro.AddProjectSenario.ProContract.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

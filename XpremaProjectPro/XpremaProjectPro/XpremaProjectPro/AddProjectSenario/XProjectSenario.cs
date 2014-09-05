@@ -10,6 +10,7 @@ namespace XpremaProjectPro.AddProjectSenario
     {
         public static  ProjectProfile ProjectSenarioSetting { get; set; }
         public static List<Fin> ProjectFinceer { get; set; }
+        public static List<ProContract> Contracts { get; set; }
         public static void ini()
         {
             ProjectSenarioSetting = new ProjectProfile();
