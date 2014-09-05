@@ -33,16 +33,21 @@ namespace XpremaProjectPro.AddProjectSenario
             {
                 EmpID = int.Parse(EmployeelookUpEdit.EditValue.ToString()),
                 StartDate = DateTime.Parse(startDateDateEdit.EditValue.ToString()),
-                  Name = EmployeelookUpEdit.Text,
-                   SelaryAmount = double.Parse(selaryAmountTextBox.Text),
+                Name = EmployeelookUpEdit.Text,
+                SelaryAmount = double.Parse(selaryAmountTextBox.Text),
                 EndDate = DateTime.Parse(endDateDateEdit.EditValue.ToString()),
-                 TimeLine= int.Parse(TimelinetextBox.Text)
+                TimeLine= int.Parse(TimelinetextBox.Text)
             });
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
             XProjectSenario.Contracts = ls;
+            frmProjectXEnd frm = new frmProjectXEnd();
+            XProjectSenario.ContractInfo = true;
+            frm.Show();
+            this.Hide();
+
             
         }
     }

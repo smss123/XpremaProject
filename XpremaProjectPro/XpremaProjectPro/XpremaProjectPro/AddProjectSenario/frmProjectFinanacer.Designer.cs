@@ -40,12 +40,12 @@
             this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.CosttextBox = new System.Windows.Forms.TextBox();
             this.FinanacerlookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.thefinancierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.thefinancierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FinanacerCostgridControl)).BeginInit();
@@ -54,12 +54,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FinanacerlookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -167,8 +167,8 @@
             this.FinanacerlookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.FinanacerlookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("financiername", "Name1"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PhoneNumber", "Name2")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("financiername", "Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PhoneNumber", "Phone Number")});
             this.FinanacerlookUpEdit.Properties.DataSource = this.thefinancierBindingSource;
             this.FinanacerlookUpEdit.Properties.DisplayMember = "financiername";
             this.FinanacerlookUpEdit.Properties.NullText = "[Select Finanacer]";
@@ -176,6 +176,10 @@
             this.FinanacerlookUpEdit.Size = new System.Drawing.Size(357, 22);
             this.FinanacerlookUpEdit.StyleController = this.layoutControl1;
             this.FinanacerlookUpEdit.TabIndex = 4;
+            // 
+            // thefinancierBindingSource
+            // 
+            this.thefinancierBindingSource.DataSource = typeof(XpremaProjectPro.XpConnected.Thefinancier);
             // 
             // layoutControlGroup1
             // 
@@ -239,10 +243,6 @@
             this.simpleSeparator1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 
-            // thefinancierBindingSource
-            // 
-            this.thefinancierBindingSource.DataSource = typeof(XpremaProjectPro.XpConnected.Thefinancier);
-            // 
             // frmProjectFinanacer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,12 +260,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FinanacerlookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thefinancierBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

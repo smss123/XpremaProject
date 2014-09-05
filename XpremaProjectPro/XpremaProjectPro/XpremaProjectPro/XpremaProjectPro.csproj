@@ -87,6 +87,12 @@
     <Compile Include="AddProjectSenario\frmProjectFinanacer.Designer.cs">
       <DependentUpon>frmProjectFinanacer.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProjectSenario\frmProjectXEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectXEnd.Designer.cs">
+      <DependentUpon>frmProjectXEnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProjectSenario\ProContract.cs" />
     <Compile Include="AddProjectSenario\ProjectPlane\frmProjectActivity.cs">
       <SubType>Form</SubType>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddProjectSenario\frmProjectFinanacer.resx">
       <DependentUpon>frmProjectFinanacer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectSenario\frmProjectXEnd.resx">
+      <DependentUpon>frmProjectXEnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProjectSenario\ProjectPlane\frmProjectActivity.resx">
       <DependentUpon>frmProjectActivity.cs</DependentUpon>

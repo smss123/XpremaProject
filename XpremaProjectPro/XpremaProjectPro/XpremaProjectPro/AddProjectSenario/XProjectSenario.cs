@@ -14,11 +14,22 @@ namespace XpremaProjectPro.AddProjectSenario
         public static void ini()
         {
             ProjectSenarioSetting = new ProjectProfile();
+            ProjectFinceer = new List<Fin>();
+            Contracts = new List<ProContract>();
         }
         private static XpremaConnectorSoapClient proxy = new XpremaConnectorSoapClient();
         public static void Commit()
         {
             proxy.ProjectProfileAdd(ProjectSenarioSetting);
         }
+
+        //-------------------------------------------------------------
+        public static  bool BasicInfo { get; set; }
+        public static  bool  ContractInfo { get; set; }
+        public static  bool  FinancerInfo { get; set; }
+        public static  bool  ProjectActivityInfo { get; set; }
+        public static  bool  ProjectSubActivity { get; set; }
+
+        //-------------------------------------------------------------
     }
 }

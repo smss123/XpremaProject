@@ -82,7 +82,7 @@
             this.ProjectAddgroupControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectAddgroupControl.Location = new System.Drawing.Point(0, 0);
             this.ProjectAddgroupControl.Name = "ProjectAddgroupControl";
-            this.ProjectAddgroupControl.Size = new System.Drawing.Size(618, 493);
+            this.ProjectAddgroupControl.Size = new System.Drawing.Size(618, 490);
             this.ProjectAddgroupControl.TabIndex = 0;
             this.ProjectAddgroupControl.Text = "Add Project ";
             // 
@@ -93,6 +93,7 @@
             this.Nextbtn.Size = new System.Drawing.Size(114, 38);
             this.Nextbtn.TabIndex = 3;
             this.Nextbtn.Text = "Next";
+            this.Nextbtn.Click += new System.EventHandler(this.Nextbtn_Click);
             // 
             // SummarygroupControl
             // 
@@ -106,10 +107,10 @@
             // 
             // lblSummry
             // 
-            this.lblSummry.AutoSize = true;
+            this.lblSummry.Font = new System.Drawing.Font("Traditional Arabic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSummry.Location = new System.Drawing.Point(16, 35);
             this.lblSummry.Name = "lblSummry";
-            this.lblSummry.Size = new System.Drawing.Size(82, 13);
+            this.lblSummry.Size = new System.Drawing.Size(554, 140);
             this.lblSummry.TabIndex = 1;
             this.lblSummry.Text = "Project Summry";
             // 
@@ -137,6 +138,8 @@
             this.TimeLinetextBox.Name = "TimeLinetextBox";
             this.TimeLinetextBox.Size = new System.Drawing.Size(458, 20);
             this.TimeLinetextBox.TabIndex = 16;
+            this.TimeLinetextBox.Text = "{Enter Time Line as Month}";
+            this.TimeLinetextBox.TextChanged += new System.EventHandler(this.TimeLinetextBox_TextChanged);
             // 
             // endDateDateEdit
             // 
@@ -153,6 +156,7 @@
             this.endDateDateEdit.Size = new System.Drawing.Size(458, 22);
             this.endDateDateEdit.StyleController = this.layoutControl1;
             this.endDateDateEdit.TabIndex = 5;
+            this.endDateDateEdit.EditValueChanged += new System.EventHandler(this.endDateDateEdit_EditValueChanged);
             // 
             // projectDescriptionTextBox
             // 
@@ -162,6 +166,7 @@
             this.projectDescriptionTextBox.Name = "projectDescriptionTextBox";
             this.projectDescriptionTextBox.Size = new System.Drawing.Size(458, 20);
             this.projectDescriptionTextBox.TabIndex = 9;
+            this.projectDescriptionTextBox.TextChanged += new System.EventHandler(this.projectDescriptionTextBox_TextChanged);
             // 
             // projectNameTextBox
             // 
@@ -171,6 +176,7 @@
             this.projectNameTextBox.Name = "projectNameTextBox";
             this.projectNameTextBox.Size = new System.Drawing.Size(458, 20);
             this.projectNameTextBox.TabIndex = 11;
+            this.projectNameTextBox.TextChanged += new System.EventHandler(this.projectNameTextBox_TextChanged);
             // 
             // startDateDateEdit
             // 
@@ -187,6 +193,7 @@
             this.startDateDateEdit.Size = new System.Drawing.Size(458, 22);
             this.startDateDateEdit.StyleController = this.layoutControl1;
             this.startDateDateEdit.TabIndex = 13;
+            this.startDateDateEdit.EditValueChanged += new System.EventHandler(this.startDateDateEdit_EditValueChanged);
             // 
             // totalCostTextBox
             // 
@@ -196,6 +203,7 @@
             this.totalCostTextBox.Name = "totalCostTextBox";
             this.totalCostTextBox.Size = new System.Drawing.Size(458, 20);
             this.totalCostTextBox.TabIndex = 15;
+            this.totalCostTextBox.TextChanged += new System.EventHandler(this.totalCostTextBox_TextChanged);
             // 
             // layoutControlGroup1
             // 
@@ -291,16 +299,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 493);
+            this.ClientSize = new System.Drawing.Size(618, 490);
             this.Controls.Add(this.ProjectAddgroupControl);
             this.Name = "frmProjectAddBasicInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProjectAddBasicInfo";
             ((System.ComponentModel.ISupportInitialize)(this.projectProfileBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectAddgroupControl)).EndInit();
             this.ProjectAddgroupControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SummarygroupControl)).EndInit();
             this.SummarygroupControl.ResumeLayout(false);
-            this.SummarygroupControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.endDateDateEdit.Properties.CalendarTimeProperties)).EndInit();

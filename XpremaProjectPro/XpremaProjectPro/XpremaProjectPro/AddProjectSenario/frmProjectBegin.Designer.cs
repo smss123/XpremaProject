@@ -30,8 +30,8 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,30 +53,30 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Create Basinc Info For New Projet";
             // 
-            // simpleButton1
+            // btnNext
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(454, 436);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(100, 41);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Next";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnNext.Location = new System.Drawing.Point(454, 436);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(100, 41);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton2
+            // btnCancel
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(348, 436);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(100, 41);
-            this.simpleButton2.TabIndex = 3;
-            this.simpleButton2.Text = "Cance";
+            this.btnCancel.Location = new System.Drawing.Point(348, 436);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 41);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cance";
             // 
             // frmProjectBegin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 487);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmProjectBegin";
@@ -91,7 +91,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnNext;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
     }
 }

@@ -22,25 +22,26 @@ namespace XpremaProjectPro.AddProjectSenario
         public List<Fin> Ls { get; set; }
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            Ls.Add(new Fin() { Name = FinanacerlookUpEdit.Text, TotalCost = double.Parse(CosttextBox.Text), AccountID = int.Parse(FinanacerlookUpEdit.EditValue.ToString()) });
+           
+            bindingSource1.Add(new Fin() { Name = FinanacerlookUpEdit.Text, TotalCost = double.Parse(CosttextBox.Text), AccountID = int.Parse(FinanacerlookUpEdit.EditValue.ToString()) });
             bindingSource1.DataSource = Ls;  
         }
 
         private void frmProjectFinanacer_Load(object sender, EventArgs e)
         {
+            Ls = new List<Fin>();
             thefinancierBindingSource.DataSource = proxy.financierGetAll();
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            foreach (var item in Ls)
-            {
-                XProjectSenario.ProjectFinceer.Clear();
-                XProjectSenario.ProjectFinceer.AddRange(Ls);
-
-            }
+            XProjectSenario.ProjectFinceer.Clear();
+            XProjectSenario.ProjectFinceer.AddRange(Ls);
+            XProjectSenario.FinancerInfo = true;
             frmProjectContract frm = new frmProjectContract();
+
             frm.Show();
+            this.Hide();
         }
     }
 }
