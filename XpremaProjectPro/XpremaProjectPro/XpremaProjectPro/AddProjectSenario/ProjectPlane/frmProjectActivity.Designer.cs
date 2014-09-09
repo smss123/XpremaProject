@@ -32,7 +32,14 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.NextBtn = new DevExpress.XtraEditors.SimpleButton();
             this.ActivityGridControl = new DevExpress.XtraGrid.GridControl();
+            this.ProActiviitybindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActivityName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotalCost = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.totalCostTextBox = new System.Windows.Forms.TextBox();
@@ -52,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivityGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProActiviitybindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -89,10 +97,12 @@
             this.NextBtn.Size = new System.Drawing.Size(113, 41);
             this.NextBtn.TabIndex = 3;
             this.NextBtn.Text = "Next";
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // ActivityGridControl
             // 
             this.ActivityGridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ActivityGridControl.DataSource = this.ProActiviitybindingSource;
             this.ActivityGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ActivityGridControl.Location = new System.Drawing.Point(2, 203);
             this.ActivityGridControl.MainView = this.gridView1;
@@ -102,10 +112,63 @@
             this.ActivityGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // ProActiviitybindingSource
+            // 
+            this.ProActiviitybindingSource.DataSource = typeof(XpremaProjectPro.AddProjectSenario.ProjectPlane.ActivateObj);
+            // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID,
+            this.colActivityName,
+            this.colDescription,
+            this.colStartDate,
+            this.colEndDate,
+            this.colTotalCost});
             this.gridView1.GridControl = this.ActivityGridControl;
             this.gridView1.Name = "gridView1";
+            // 
+            // colID
+            // 
+            this.colID.FieldName = "ID";
+            this.colID.Name = "colID";
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 0;
+            // 
+            // colActivityName
+            // 
+            this.colActivityName.FieldName = "ActivityName";
+            this.colActivityName.Name = "colActivityName";
+            this.colActivityName.Visible = true;
+            this.colActivityName.VisibleIndex = 1;
+            // 
+            // colDescription
+            // 
+            this.colDescription.FieldName = "Description";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 2;
+            // 
+            // colStartDate
+            // 
+            this.colStartDate.FieldName = "StartDate";
+            this.colStartDate.Name = "colStartDate";
+            this.colStartDate.Visible = true;
+            this.colStartDate.VisibleIndex = 3;
+            // 
+            // colEndDate
+            // 
+            this.colEndDate.FieldName = "EndDate";
+            this.colEndDate.Name = "colEndDate";
+            this.colEndDate.Visible = true;
+            this.colEndDate.VisibleIndex = 4;
+            // 
+            // colTotalCost
+            // 
+            this.colTotalCost.FieldName = "TotalCost";
+            this.colTotalCost.Name = "colTotalCost";
+            this.colTotalCost.Visible = true;
+            this.colTotalCost.VisibleIndex = 5;
             // 
             // layoutControl1
             // 
@@ -132,6 +195,7 @@
             this.AddBtn.StyleController = this.layoutControl1;
             this.AddBtn.TabIndex = 10;
             this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // totalCostTextBox
             // 
@@ -298,9 +362,11 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "frmProjectActivity";
             this.Text = "frmProjectActivity";
+            this.Load += new System.EventHandler(this.frmProjectActivity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActivityGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProActiviitybindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -343,5 +409,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.SimpleButton NextBtn;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        private System.Windows.Forms.BindingSource ProActiviitybindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID;
+        private DevExpress.XtraGrid.Columns.GridColumn colActivityName;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalCost;
     }
 }

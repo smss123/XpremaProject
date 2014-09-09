@@ -81,6 +81,12 @@
     <Compile Include="AddProjectSenario\frmProjectContract.Designer.cs">
       <DependentUpon>frmProjectContract.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProjectSenario\frmProjectEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectSenario\frmProjectEnd.Designer.cs">
+      <DependentUpon>frmProjectEnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProjectSenario\frmProjectFinanacer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,7 @@
       <DependentUpon>frmProjectXEnd.cs</DependentUpon>
     </Compile>
     <Compile Include="AddProjectSenario\ProContract.cs" />
+    <Compile Include="AddProjectSenario\ProjectPlane\ActivateObj.cs" />
     <Compile Include="AddProjectSenario\ProjectPlane\frmProjectActivity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,7 @@
     <Compile Include="AddProjectSenario\ProjectPlane\frmProjectSubActivity.Designer.cs">
       <DependentUpon>frmProjectSubActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProjectSenario\ProjectPlane\SubActivityObj.cs" />
     <Compile Include="AddProjectSenario\XProjectSenario.cs" />
     <Compile Include="Employee forms\addEmployeefrm.cs">
       <SubType>Form</SubType>
@@ -202,6 +210,9 @@
     <EmbeddedResource Include="AddProjectSenario\frmProjectContract.resx">
       <DependentUpon>frmProjectContract.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectSenario\frmProjectEnd.resx">
+      <DependentUpon>frmProjectEnd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProjectSenario\frmProjectFinanacer.resx">
       <DependentUpon>frmProjectFinanacer.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +299,8 @@
     <None Include="Properties\DataSources\Xprema.Base.Xprema_PrjectEntities.datasource" />
     <None Include="Properties\DataSources\XpremaProjectPro.AddProjectSenario.Fin.datasource" />
     <None Include="Properties\DataSources\XpremaProjectPro.AddProjectSenario.ProContract.datasource" />
+    <None Include="Properties\DataSources\XpremaProjectPro.AddProjectSenario.ProjectPlane.ActivateObj.datasource" />
+    <None Include="Properties\DataSources\XpremaProjectPro.AddProjectSenario.ProjectPlane.SubActivityObj.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

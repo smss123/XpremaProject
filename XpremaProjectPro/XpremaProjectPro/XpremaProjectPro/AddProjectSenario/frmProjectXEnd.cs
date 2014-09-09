@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using XpremaProjectPro.AddProjectSenario.ProjectPlane;
 
 namespace XpremaProjectPro.AddProjectSenario
 {
@@ -30,6 +31,13 @@ namespace XpremaProjectPro.AddProjectSenario
         private void FinshedList_SelectedValueChanged(object sender, EventArgs e)
         {
             string str = FinshedList.SelectedValue.ToString();
+            if (str=="Sub Activity Info")
+            {
+                frmProjectActivity frm = new frmProjectActivity();
+                frm.ShowDialog();
+               
+
+            }
            
         }
     }

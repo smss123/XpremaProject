@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XpremaProjectPro.AddProjectSenario.ProjectPlane;
 using XpremaProjectPro.XpConnected;
 namespace XpremaProjectPro.AddProjectSenario
 {
@@ -11,11 +12,16 @@ namespace XpremaProjectPro.AddProjectSenario
         public static  ProjectProfile ProjectSenarioSetting { get; set; }
         public static List<Fin> ProjectFinceer { get; set; }
         public static List<ProContract> Contracts { get; set; }
+        public static List<ActivateObj> ProjectActivate { get; set; }
+        public static  List<SubActivityObj> SubProjectActive { get; set; }
         public static void ini()
         {
             ProjectSenarioSetting = new ProjectProfile();
             ProjectFinceer = new List<Fin>();
             Contracts = new List<ProContract>();
+            ProjectActivate = new List<ActivateObj>();
+            SubProjectActive = new List<SubActivityObj>();
+
         }
         private static XpremaConnectorSoapClient proxy = new XpremaConnectorSoapClient();
         public static void Commit()
